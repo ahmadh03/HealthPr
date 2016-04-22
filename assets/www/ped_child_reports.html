@@ -1,0 +1,813 @@
+<div class="navbar">
+   <div class="navbar-inner">
+     <div class="left sliding"><a href="loginnormal.html" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+     <div class="center sliding white">Manage Prediatrics Child</div>
+    <div class="right theme-white searchicon" >
+      <a href="#" onclick="MobileAppInfo()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i></a>
+      </div>
+      <div class="right theme-white navicon" >
+        <a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+        </a>
+      </div>
+   </div>
+ </div>
+ 
+<div class="pages">
+  <div data-page="ped_child_reports" class="page" >
+  	<div style="overflow-y:scroll; height:inherit; padding-top: 38px;">
+      <div class="content-block-title"></div>
+        <div class="list-block accordion-list">
+          <ul>
+            <li class="accordion-item"><a href="#" class="item-content item-link">
+              <div class="item-inner">
+                <div class="item-title white">Child Name</div>
+              </div>
+              </a>
+                <div class="accordion-item-content">
+                  <div class="list-block">
+                    <ul style="background-color: white">
+                      <li>
+                        <div class="item-content">
+                          <div class="item-media"></div>
+                          <div class="item-inner">
+                            <div class="item-title label">Child Name </div>
+                            <div class="item-input">
+                              <input type="text" name="child_ped_Name" id="child_ped_Name" placeholder="Child Name " readonly>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content">
+                          <div class="item-media"></div>
+                          <div class="item-inner">
+                            <div class="item-title label">Child Date of Birth </div>
+                            <div class="item-input">
+                              <input type="text" name="child_ped_date" id="child_ped_date" placeholder="Date " readonly>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+            </li>
+
+            <li class="accordion-item"><a href="#" class="item-content item-link">
+              <div class="item-inner">
+                <div class="item-title white">Pediatrics Family History </div>
+              </div>
+              </a>
+                <div class="accordion-item-content">
+                  <div class="list-block">
+                    <ul style="background-color: white;padding-bottom: 21px;">
+                      <li>
+                <div class="item-content " >
+                  <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-title label">Date</div>
+                    <div class="item-input">
+                      <input type="text" name="fam_ped_his_huh" id="fam_ped_his_huh" placeholder="Date Completed" readonly>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content " >
+                  <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-title label">Child's Name</div>
+                    <div class="item-input" id="familypedch">
+                      <input type="text" name="fam_ped_his_cn" id="fam_ped_his_cn" placeholder="Child's Name" readonly>
+                      <input type="hidden" name="fam_ped_his_cn_id" id="fam_ped_his_cn_id" >
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <div id="parentcontact_hide">
+                <h4><div style="margin-left: 28px;">Contact Information for Parent</div></h4>
+                <li>
+                  <input type="hidden" id="rowIdFH" value="0" />
+                  <div class="item-content " >
+                    <div class="item-media"></div>
+                    <div class="item-inner">
+                      <div class="item-title label">Name</div>
+                      <div class="item-input">
+                        <input type="text" name="fam_ped_his_pname" id="fam_ped_his_pname_0" placeholder="Name" readonly>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content " >
+                    <div class="item-media"></div>
+                    <div class="item-inner">
+                      <div class="item-title label">Email</div>
+                      <div class="item-input">
+                        <input type="text" name="fam_ped_his_pemail" id="fam_ped_his_pemail_0" placeholder="Email" readonly>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content " >
+                    <div class="item-media"></div>
+                    <div class="item-inner">
+                      <div class="item-title label">Home address</div>
+                      <div class="item-input">
+                        <input type="text" name="fam_ped_his_hadres" id="fam_ped_his_hadres_0" placeholder="Home address" readonly> 
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content " >
+                    <div class="item-media"></div>
+                    <div class="item-inner">
+                      <div class="item-title label">Home Phone</div>
+                      <div class="item-input">
+                        <input type="text" name="fam_ped_his_pephne" id="fam_ped_his_pephne_0" placeholder="Home Phone" readonly>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content " >
+                    <div class="item-media"></div>
+                    <div class="item-inner">
+                      <div class="item-title label">Work Phone</div>
+                      <div class="item-input">
+                        <input type="text" name="fam_ped_his_pewpnno" id="fam_ped_his_pewpnno_0" placeholder="Work Phone" readonly>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content " >
+                    <div class="item-media"></div>
+                    <div class="item-inner">
+                      <div class="item-title label">Cell/Other</div>
+                      <div class="item-input">
+                        <input type="text" name="fam_ped_his_pecel" id="fam_ped_his_pecel_0" placeholder="Cell/Other" readonly>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li id="responce8"></li>
+              </div>
+            <!--   <button name="addButton" id='addButton' onClick="addFields8()" style="float:right;border:none;background:none;"><i class="fa fa-plus-circle fa-2x"></i></button>
+            <button name="deleteButton" id='deleteButton' onClick="deleteFields8(this)" style="float:right;border:none;background:none;"><i class="fa fa-minus-circle fa-2x"></i>
+            </button>
+             --><div style="margin:5%;"></div>
+            <li>        
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;">
+                          <div class="item-title label">The Child Live with ?</div>
+                           <div class="item-input">
+                               <label class="label-radio item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio1" id="fam_ped_his_tchlw" value="1" >
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Mother  </div>
+                                    </div>
+                                  </label>
+                                  <label class="label-radio item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio1" id="fam_ped_his_tchlw1" value="2" >
+                                    <div class="item-inner">
+                                      <div class="item-title">  Father </div>
+                                    </div>
+                                  </label>
+                                  <label class="label-radio item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio1" id="fam_ped_his_tchlw2" value="3" >
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">   Mother / Father   </div>
+                                    </div>
+                                  </label>
+                                  <label class="label-radio item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio1" id="fam_ped_his_tchlw3" value="4" >
+                                    <div class="item-inner">
+                                      <div class="item-title">  Mother / Partner  </div>
+                                    </div>
+                                  </label>
+                                  <label class="label-radio item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio1" id="fam_ped_his_tchlw4" value="5" >
+                                    <div class="item-inner">
+                                      <div class="item-title">  Grandparent / Other  </div>
+                                    </div>
+                                  </label>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                  <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;">
+                          <div class="item-title label">Are there cultural or religious practices that might affect your child's medical care ?</div>
+                           <div class="item-input">
+                               <label class="label-radio item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio2" id="fam_ped_his_atcrptmymc" value="1" >
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-radio item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio2" id="fam_ped_his_atcrptmymc1" value="0" >
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                          <div class="item-content " >
+                            <div class="item-media"></div>
+                            <div class="item-inner">
+                              <div class="item-title label">If yes, please explain (e.g. blood transfusion, dietary rules,etc)?</div>
+                              <div class="item-input">
+                                <input type="text" name="fam_ped_his_pe" id="fam_ped_his_pe" placeholder="please explain" readonly>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      <li>
+                      <div class="item-content">
+                          <div class="item-media"></div>
+                            <div class="item-inner" style="padding-bottom: 4px;">
+                                <div class="item-title label">Is there tabacoo use in/around your household?</div>
+                                  <div class="item-input">
+                                     <label class="label-radio item-content">
+                                          <!-- Checked by default -->
+                                          <input type="radio" name="my-radio3" id="fam_ped_his_ittuah" value="1" >
+                                          <div class="item-inner" style="padding-bottom: 4px;">
+                                            <div class="item-title">  Yes  </div>
+                                          </div>
+                                        </label>
+                                     <label class="label-radio item-content">
+                                          <!-- Checked by default -->
+                                          <input type="radio" name="my-radio3" id="fam_ped_his_ittuah1" value="0" >
+                                          <div class="item-inner">
+                                            <div class="item-title"> No </div>
+                                          </div>
+                                        </label>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+            </li>
+
+            <li class="accordion-item"><a href="#" class="item-content item-link">
+              <div class="item-inner">
+                <div class="item-title white">Pediatrics Birth History </div>
+              </div>
+              </a>
+                <div class="accordion-item-content">
+                  <div class="list-block">
+                    <ul style="background-color: white;padding-bottom:21px;">
+                      <li>
+                <div class="item-content " >
+                  <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-title label">Child Name </div>
+                    <div class="item-input" id="birth_his_chaildname">
+                      <input type="text" name="birth_his_cname" id="birth_his_cname" placeholder="Child Name " readonly>
+                      <input type="hidden" name="birth_his_cname_id" id="birth_his_cname_id" >
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content " >
+                  <div class="item-media"></div>
+                  <div class="item-inner" style="margin-left:0px;">
+                    <div class="item-title label" style="width:100%;">Place of Birth of your Child ?</div>
+                    
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content " >
+                  <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-input" style="margin-left:-13px;">
+                      <input type="text" name="birth_his_pb" id="birth_his_pb" placeholder="Place of Birth" readonly>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Any Induced Labor?</div>
+                           
+                          </div>
+                        </div>
+                        <div class="item-input">
+                               <label class="label-radio item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio1" id="birth_his_ail" value="1" >
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-radio item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio1" id="birth_his_ail1" value="0" >
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                            </div>
+                      </li>
+                      <li>
+                   <li>
+                  <div class="item-content " >
+                    <div class="item-media"></div>
+                    <div class="item-inner" style="margin-left:0px;">
+                      <div class="item-title label" style="width:100%;">Duration of Labor</div>
+                      
+                    </div>
+                  </div>
+                </li>
+              <li>
+                <div class="item-content " >
+                  <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-input" style="margin-left:-13px;">
+                      <input type="text" name="birth_his_dol" id="birth_his_dol" placeholder="Duration of Labor" readonly>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                  <div class="item-content " >
+                    <div class="item-media"></div>
+                    <div class="item-inner" style="margin-left:0px;">
+                      <div class="item-title label" style="width:100%;">Gestation period of pregnancy</div>
+                      
+                    </div>
+                  </div>
+                </li>
+              <li>
+                <div class="item-content " >
+                  <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-input" style="margin-left:-13px;">
+                      <input type="text" name="birth_his_pop" id="birth_his_pop" placeholder="period of pregnancy" readonly>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Method of Delivery</div>
+                           
+                          </div>
+                        </div>
+                        <div class="item-input">
+                               <label class="label-radio item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio2" id="birth_his_mod" value="0" >
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">   Breech   </div>
+                                    </div>
+                                  </label>
+                               <label class="label-radio item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio2" id="birth_his_mod1" value="1" >
+                                    <div class="item-inner">
+                                      <div class="item-title">  Caesarean  </div>
+                                    </div>
+                                  </label>
+                                  <label class="label-radio item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio2" id="birth_his_mod2" value="2" >
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">   Forceps   </div>
+                                    </div>
+                                  </label>
+                               <label class="label-radio item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio2" id="birth_his_mod3" value="3" >
+                                    <div class="item-inner">
+                                      <div class="item-title"> Spontaneous Vaginal  </div>
+                                    </div>
+                                  </label>
+                            </div>
+                      </li>
+                      <li>
+                  <div class="item-content " >
+                    <div class="item-media"></div>
+                    <div class="item-inner" style="margin-left:0px;">
+                      <div class="item-title label" style="width:100%;">Child's birth weight</div>
+                      
+                    </div>
+                  </div>
+                </li>
+              <li>
+                <div class="item-content " >
+                  <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-input" style="margin-left:-13px;">
+                      <input type="text" name="birth_his_bw" id="birth_his_bw" placeholder="birth weight" readonly>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              
+              <li>
+                  <div class="item-content " >
+                    <div class="item-media"></div>
+                    <div class="item-inner" style="margin-left:0px;">
+                      <div class="item-title label" style="width:100%;">Apgar Score (if Known)</div>
+                      
+                    </div>
+                  </div>
+                </li>
+              <li>
+                <div class="item-content " >
+                  <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-input" style="margin-left:-13px;">
+                      <input type="text" name="birth_his_aps" id="birth_his_aps" placeholder="Apgar Score (if Known)" readonly>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>During the hospital stay, did your child have any of the following ?</li>
+              <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Anti biotic treatment</div>
+                           
+                          </div>
+                        </div>
+                        <div class="item-input">
+                               <label class="label-radio item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio3" id="birth_his_abiot" value="1" >
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-radio item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio3" id="birth_his_abiot1" value="0" >
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                            </div>
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Blue spells</div>
+                           
+                          </div>
+                        </div>
+                        <div class="item-input">
+                               <label class="label-radio item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio4" id="birth_his_blsp" value="1" >
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-radio item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio4" id="birth_his_blsp1" value="0" >
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                            </div>
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Convulsions</div>
+                           
+                          </div>
+                        </div>
+                        <div class="item-input">
+                               <label class="label-radio item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio5" id="birth_his_co" value="1" >
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-radio item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio5" id="birth_his_co1" value="0" >
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                            </div>
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">jaundice</div>
+                           
+                          </div>
+                        </div>
+                        <div class="item-input">
+                               <label class="label-radio item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio6" id="birth_his_jaun" value="1" >
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-radio item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio6" id="birth_his_jaun1" value="0" >
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                            </div>
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Skin rash</div>
+                           
+                          </div>
+                        </div>
+                        <div class="item-input">
+                               <label class="label-radio item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio7" id="birth_his_skinr" value="1" >
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-radio item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio7" id="birth_his_skinr1" value="0" >
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                            </div>
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Did child remain in hospital longer than mother?</div>
+                           
+                          </div>
+                        </div>
+                        <div class="item-input">
+                               <label class="label-radio item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio8" id="birth_his_dcrihltm" value="1" >
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-radio item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio8" id="birth_his_dcrihltm1" value="0" >
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                            </div>
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">How was/is baby fed?</div>
+                           
+                          </div>
+                        </div>
+                        <div class="item-input">
+                               <label class="label-radio item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio9" id="birth_his_hwbf" value="1" >
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-radio item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio9" id="birth_his_hwbf1" value="0" >
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                            </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+            </li>
+
+
+            <li class="accordion-item"><a href="#" class="item-content item-link">
+              <div class="item-inner">
+                <div class="item-title white">Pediatrics Development History </div>
+              </div>
+              </a>
+                <div class="accordion-item-content">
+                  <div class="list-block">
+                    <ul style="background-color: white;padding-bottom:26px;">
+                      <li>
+                        <div class="item-content " >
+                          <div class="item-media"></div>
+                          <div class="item-inner" style="margin-left: -19px;">
+                            <div class="item-title label">Child Name </div>
+                            <div class="item-input" id="develophistory">
+                              <input type="text" name="deve_his_chainame" id="deve_his_chainame" placeholder="Child Name " readonly>
+                              <input type="hidden" name="deve_his_chn_id" id="deve_his_chn_id" placeholder="Child Name ">
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content " >
+                          <div class="item-media"></div>
+                          <div class="item-inner" style="margin-left:0px;">
+                            <div class="item-title label" style="width:100%;">Hold up head</div>
+                            
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content " >
+                          <div class="item-media"></div>
+                          <div class="item-inner">
+                            <div class="item-input" style="margin-left: -13px;">
+                              <input type="text" name="deve_his_huh" id="deve_his_huh" placeholder="Hold up head" readonly>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content " >
+                          <div class="item-media"></div>
+                          <div class="item-inner" style="margin-left:0px;">
+                            <div class="item-title label" style="width:100%;">Roll over</div>
+                            
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content " >
+                          <div class="item-media"></div>
+                          <div class="item-inner">
+                            <div class="item-input" style="margin-left: -13px;">
+                             <input type="text" name="deve_his_rover" id="deve_his_rover" placeholder="Roll over" readonly>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content " >
+                          <div class="item-media"></div>
+                          <div class="item-inner" style="margin-left:0px;">
+                            <div class="item-title label" style="width:100%;">Sit unsupported</div>
+                            
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content " >
+                          <div class="item-media"></div>
+                          <div class="item-inner">
+                            <div class="item-input" style="margin-left: -13px;">
+                             <input type="text" name="deve_his_sitsup" id="deve_his_sitsup" placeholder="Sit unsupported" readonly>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content " >
+                          <div class="item-media"></div>
+                          <div class="item-inner" style="margin-left:0px;">
+                            <div class="item-title label" style="width:100%;">Stand alone</div>
+                            
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content " >
+                          <div class="item-media"></div>
+                          <div class="item-inner">
+                            <div class="item-input" style="margin-left: -13px;">
+                             <input type="text" name="deve_his_salone" id="deve_his_salone" placeholder="Stand alone" readonly>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content " >
+                          <div class="item-media"></div>
+                          <div class="item-inner" style="margin-left: -13px;">
+                            <div class="item-title label">Walk</div>
+                            <div class="item-input">
+                              <input type="text" name="deve_his_walk" id="deve_his_walk" placeholder="Walk" readonly>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content " >
+                          <div class="item-media"></div>
+                          <div class="item-inner" style="margin-left: -13px;">
+                            <div class="item-title label">Talk</div>
+                            <div class="item-input">
+                              <input type="text" name="deve_his_talk" id="deve_his_talk" placeholder="Talk" readonly>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content " >
+                          <div class="item-media"></div>
+                          <div class="item-inner" style="margin-left: -13px;">
+                            <div class="item-title label">Toilet Train</div>
+                            <div class="item-input">
+                              <input type="text" name="deve_his_tt" id="deve_his_tt" placeholder="Toilet Train" readonly>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content " >
+                          <div class="item-media"></div>
+                          <div class="item-inner" style="margin-left:0px;">
+                            <div class="item-title label" style="width:100%;">Feed him/herself</div>
+                            
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content " >
+                          <div class="item-media"></div>
+                          <div class="item-inner">
+                            <div class="item-input" style="margin-left: -13px;">
+                             <input type="text" name="deve_his_fed" id="deve_his_fed" placeholder="Feed him/herself" readonly>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content " >
+                          <div class="item-media"></div>
+                          <div class="item-inner" style="margin-left:0px;">
+                            <div class="item-title label" style="width:100%;">Dress him/herself</div>
+                            
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content " >
+                          <div class="item-media"></div>
+                          <div class="item-inner">
+                            <div class="item-input" style="margin-left: -13px;">
+                             <input type="text" name="deve_his_dress" id="deve_his_dress" placeholder="Dress him/herself" readonly>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+            </li>
+          </ul>
+        </div>
+        <div class="toolbar tabbar" style="position:absolute;background:#0DB7C4; height: 59px;" id="pdfpedId">
+        
+    
+    </div>  
+    </div>
+  </div>
+</div>

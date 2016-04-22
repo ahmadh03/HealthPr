@@ -1,0 +1,405 @@
+   <div class="navbar">
+   <div class="navbar-inner">
+     <div class="left sliding"><a href="loginnormal.html" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+     <div class="center sliding" style="margin-right:80px;">Custom Summary</div>
+    <div class="right theme-white searchicon" >
+        <a href="#" onclick="customhealthsummaryInfo()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i></a>
+      </div>
+      <div class="right theme-white navicon" >
+        <a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+        </a>
+      </div>
+   </div>
+ </div>
+ 
+<div class="pages">
+  <div data-page="health_summary_custom" class="page" >
+    <div style="overflow-y:scroll; height:inherit">
+      <div class="list-block" style="margin-bottom: 70px;">
+         <ul style="background-color:#FFFFFF;margin-top: 50px;">
+          <li>
+            <label class="label-checkbox item-content">
+              <input type="checkbox" name="my-checkbox" value="Books" onchange="if(this.checked) {$('.checkboxcheckall').prop('checked', true);}else{ $('.checkboxcheckall').prop('checked', false);}">
+                <div class="item-media">
+                  <i class="icon icon-form-checkbox"></i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title">CHECK ALL</div>
+                </div>
+            </label>
+          </li>
+          <li>
+            <label class="label-checkbox item-content">
+              <input type="checkbox" id="checkboxvalue_1" class="checkboxcheckall" value="1" name="userprofile">
+                <div class="item-media">
+                  <i class="icon icon-form-checkbox"></i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title">USER PROFILE</div>
+                </div>
+            </label>
+          </li>
+          <li>
+            <label class="label-checkbox item-content">
+              <input type="checkbox" id="checkboxvalue_2" class="checkboxcheckall" value="1" name="physicianprovider">
+                <div class="item-media">
+                  <i class="icon icon-form-checkbox"></i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title">PHYSICIAN PROVIDER</div>
+                </div>
+            </label>
+          </li>
+          <li>
+            <label class="label-checkbox item-content">
+              <input type="checkbox" id="checkboxvalue_3" class="checkboxcheckall" value="1" name="emergencycontact">
+                <div class="item-media">
+                  <i class="icon icon-form-checkbox"></i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title">EMERGENCY CONTACTS</div>
+                </div>
+            </label>
+          </li>
+          <li>
+            <label class="label-checkbox item-content">
+              <input type="checkbox" id="checkboxvalue_4" class="checkboxcheckall" value="1" name="healthinsurance">
+                <div class="item-media">
+                  <i class="icon icon-form-checkbox"></i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title">HEALTH INSURANCE</div>
+                </div>
+            </label>
+          </li>
+          <li>
+            <label class="label-checkbox item-content">
+              <input type="checkbox" id="checkboxvalue_5" class="checkboxcheckall" value="1" name="medicallgalcond">
+                <div class="item-media">
+                  <i class="icon icon-form-checkbox"></i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title">MEDICAL AND LEGAL DIRECTIVES</div>
+                </div>
+            </label>
+          </li>
+          <li>
+            <label class="label-checkbox item-content">
+              <input type="checkbox" id="checkboxvalue_6" class="checkboxcheckall" value="1" name="currentmedcond">
+                <div class="item-media">
+                  <i class="icon icon-form-checkbox"></i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title">CURRENT MEDICAL CONDITIONS</div>
+                </div>
+            </label>
+          </li>
+          <li>
+            <label class="label-checkbox item-content">
+              <input type="checkbox" id="checkboxvalue_7" class="checkboxcheckall" value="1" name="previousmedcond">
+                <div class="item-media">
+                  <i class="icon icon-form-checkbox"></i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title">PREVIOUS MEDICAL CONDITIONS</div>
+                </div>
+            </label>
+          </li>
+          <li>
+            <label class="label-checkbox item-content">
+              <input type="checkbox" id="checkboxvalue_8" class="checkboxcheckall" value="1" name="currentmeddos">
+                <div class="item-media">
+                  <i class="icon icon-form-checkbox"></i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title">CURRENT MEDICATIONS AND DOSAGES</div>
+                </div>
+            </label>
+          </li>
+          <li>
+            <label class="label-checkbox item-content">
+              <input type="checkbox" id="checkboxvalue_9" class="checkboxcheckall" value="1" name="previousmeddos">
+                <div class="item-media">
+                  <i class="icon icon-form-checkbox"></i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title">PREVIOUS MEDICATIONS AND DOSAGES</div>
+                </div>
+            </label>
+          </li>
+          <li>
+            <label class="label-checkbox item-content">
+              <input type="checkbox" id="checkboxvalue_10" class="checkboxcheckall" value="1" name="immunization">
+                <div class="item-media">
+                  <i class="icon icon-form-checkbox"></i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title">IMMUNIZATIONS</div>
+                </div>
+            </label>
+          </li>
+          <li>
+            <label class="label-checkbox item-content">
+              <input type="checkbox" id="checkboxvalue_11" class="checkboxcheckall" value="1" name="drugalgsen">
+                <div class="item-media">
+                  <i class="icon icon-form-checkbox"></i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title">DRUG ALLERGIES AND SENSITIVITIES</div>
+                </div>
+            </label>
+          </li>
+          <li>
+            <label class="label-checkbox item-content">
+              <input type="checkbox" id="checkboxvalue_12" class="checkboxcheckall" value="1" name="foodalgsen">
+                <div class="item-media">
+                  <i class="icon icon-form-checkbox"></i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title">FOOD ALLERGIES AND SENSITIVITIES</div>
+                </div>
+            </label>
+          </li>
+          <li>
+            <label class="label-checkbox item-content">
+              <input type="checkbox" id="checkboxvalue_13" class="checkboxcheckall" value="1" name="enviromentalalgsen">
+                <div class="item-media">
+                  <i class="icon icon-form-checkbox"></i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title">ENVIRONMENTAL ALLERGIES AND SENSITIVITIES</div>
+                </div>
+            </label>
+          </li>
+          <li>
+            <label class="label-checkbox item-content">
+              <input type="checkbox" id="checkboxvalue_14"  class="checkboxcheckall" value="1" name="familyhistory">
+                <div class="item-media">
+                  <i class="icon icon-form-checkbox"></i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title">FAMILY HISTORY</div>
+                </div>
+            </label>
+          </li>
+          <li>
+            <label class="label-checkbox item-content">
+              <input type="checkbox" id="checkboxvalue_15"  class="checkboxcheckall" value="1" name="causeofdeath">
+                <div class="item-media">
+                  <i class="icon icon-form-checkbox"></i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title">CAUSES OF DEATH IN YOUR FAMILY</div>
+                </div>
+            </label>
+          </li>
+          <li>
+            <label class="label-checkbox item-content">
+              <input type="checkbox" id="checkboxvalue_16" class="checkboxcheckall"  value="1" name="doctorconsult">
+                <div class="item-media">
+                  <i class="icon icon-form-checkbox"></i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title">DOCTORS CONSULTATIONS</div>
+                </div>
+            </label>
+          </li>
+          <li>
+            <label class="label-checkbox item-content">
+              <input type="checkbox" id="checkboxvalue_17" class="checkboxcheckall"  value="1" name="surgeries">
+                <div class="item-media">
+                  <i class="icon icon-form-checkbox"></i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title">HOSPITALIZATION AND SURGERIES</div>
+                </div>
+            </label>
+          </li>
+          <li>
+            <label class="label-checkbox item-content">
+              <input type="checkbox" id="checkboxvalue_18" class="checkboxcheckall"  value="1" name="hematology">
+                <div class="item-media">
+                  <i class="icon icon-form-checkbox"></i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title">HEMATOLOGY</div>
+                </div>
+            </label>
+          </li>
+          <li>
+            <label class="label-checkbox item-content">
+              <input type="checkbox" id="checkboxvalue_19" class="checkboxcheckall"  value="1" name="implantmeddev">
+                <div class="item-media">
+                  <i class="icon icon-form-checkbox"></i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title">IMPLANTS/MEDICAL DEVICES</div>
+                </div>
+            </label>
+          </li>
+          <li>
+            <label class="label-checkbox item-content">
+              <input type="checkbox" id="checkboxvalue_20" class="checkboxcheckall"  value="1" name="dentalhistory">
+                <div class="item-media">
+                  <i class="icon icon-form-checkbox"></i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title">DENTAL HISTORY</div>
+                </div>
+            </label>
+          </li>
+          <li>
+            <label class="label-checkbox item-content">
+              <input type="checkbox" id="checkboxvalue_21" class="checkboxcheckall"  value="1" name="obstetrichistory">
+                <div class="item-media">
+                  <i class="icon icon-form-checkbox"></i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title">OBSTETRIC HISTORY</div>
+                </div>
+            </label>
+          </li>
+          <li>
+            <label class="label-checkbox item-content">
+              <input type="checkbox" id="checkboxvalue_22" class="checkboxcheckall"  value="1" name="gynohistory">
+                <div class="item-media">
+                  <i class="icon icon-form-checkbox"></i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title">GYNECOLOGIC HISTORY</div>
+                </div>
+            </label>
+          </li>
+          <li>
+            <label class="label-checkbox item-content">
+              <input type="checkbox" id="checkboxvalue_23" class="checkboxcheckall"  value="1" name="genetichistory">
+                <div class="item-media">
+                  <i class="icon icon-form-checkbox"></i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title">GENETIC HISTORY</div>
+                </div>
+            </label>
+          </li>
+          <li>
+            <label class="label-checkbox item-content">
+              <input type="checkbox" id="checkboxvalue_24" class="checkboxcheckall"  value="1" name="pregdating">
+                <div class="item-media">
+                  <i class="icon icon-form-checkbox"></i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title">WOMAN PREGNANCY DATING</div>
+                </div>
+            </label>
+          </li>
+          <li>
+            <label class="label-checkbox item-content">
+              <input type="checkbox" id="checkboxvalue_25" class="checkboxcheckall"  value="1" name="socialhistory">
+                <div class="item-media">
+                  <i class="icon icon-form-checkbox"></i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title">SOCIAL HISTORY</div>
+                </div>
+            </label>
+          </li>
+          <li>
+            <label class="label-checkbox item-content">
+              <input type="checkbox" id="checkboxvalue_26" class="checkboxcheckall"  value="1" name="socialsafetyhistory">
+                <div class="item-media">
+                  <i class="icon icon-form-checkbox"></i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title">SOCIAL/SAFETY DOCUMENTATION</div>
+                </div>
+            </label>
+          </li>
+          <li>
+            <label class="label-checkbox item-content">
+              <input type="checkbox" id="checkboxvalue_27" class="checkboxcheckall"  value="1" name="sexualact">
+                <div class="item-media">
+                  <i class="icon icon-form-checkbox"></i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title">SEXUAL ACTIVITY</div>
+                </div>
+            </label>
+          </li>
+          <li>
+            <label class="label-checkbox item-content">
+              <input type="checkbox" id="checkboxvalue_28" class="checkboxcheckall"  value="1" name="actdailyliving">
+                <div class="item-media">
+                  <i class="icon icon-form-checkbox"></i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title">ACTIVITIES OF DAILY LIVING</div>
+                </div>
+            </label>
+          </li>
+          <li>
+            <label class="label-checkbox item-content">
+              <input type="checkbox" id="checkboxvalue_29" class="checkboxcheckall"  value="1" name="FNH">
+                <div class="item-media">
+                  <i class="icon icon-form-checkbox"></i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title">FOOD AND NUTRITION HISTORY</div>
+                </div>
+            </label>
+          </li>
+          <li>
+            <label class="label-checkbox item-content">
+              <input type="checkbox" id="checkboxvalue_30" class="checkboxcheckall"  value="1" name="BDRS">
+                <div class="item-media">
+                  <i class="icon icon-form-checkbox"></i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title">BIOCHEMICAL DATA AND RISK ASSESSMENT</div>
+                </div>
+            </label>
+          </li>
+          <li>
+            <label class="label-checkbox item-content">
+              <input type="checkbox" id="checkboxvalue_31" class="checkboxcheckall"  value="1" name="PFH">
+                <div class="item-media">
+                  <i class="icon icon-form-checkbox"></i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title">PEDIATRICS FAMILY HISTORY</div>
+                </div>
+            </label>
+          </li>
+          <li>
+            <label class="label-checkbox item-content">
+              <input type="checkbox" id="checkboxvalue_32" class="checkboxcheckall"  value="1" name="PBH">
+                <div class="item-media">
+                  <i class="icon icon-form-checkbox"></i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title">PEDIATRICS BIRTH HISTORY</div>
+                </div>
+            </label>
+          </li>
+          <li>
+            <label class="label-checkbox item-content">
+              <input type="checkbox" id="checkboxvalue_33" class="checkboxcheckall" value="1" name="PDH">
+                <div class="item-media">
+                  <i class="icon icon-form-checkbox"></i>
+                </div>
+                <div class="item-inner">
+                  <div class="item-title">PEDIATRICS DEVELOPMENT HISTORY</div>
+                </div>
+            </label>
+          </li>
+         </ul>
+       </div>
+    </div>
+    <div class="toolbar tabbar" style="position:absolute;background:#0DB7C4; height: 59px;">
+      <div class="toolbar-inner" style="background:#0DB7C4;">
+        <a href="#"  class="link icon-only" style="color:white;border-right:1px white solid " onclick="exporttoPDF();">EXPORT TO PDF</a>
+        <a href="health_summary_detaild.html" onclick="getDetailedSUmmary();" class="link icon-only" style="color:white">PRINT
+        </a>
+      </div>
+    </div>
+  </div>
+</div> 

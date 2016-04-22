@@ -1,0 +1,71 @@
+<div class="navbar">
+   <div class="navbar-inner">
+     <div class="left sliding"><a href="#" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+     <div class="center sliding white" style="margin-right: 160px;">SETTINGS</div>
+    <div class="right theme-white searchicon" >
+        <a href="#" onclick="settingsInfo()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i></a>
+      </div>
+      <div class="right theme-white navicon" >
+        <a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+        </a>
+      </div>
+   </div>
+ </div>
+ 
+  <div class="pages navbar-through" >
+  <div data-page="settings" class="page"> 
+  
+  <div class="content-block-title" style="padding-top: 45px;font-size:20px;">Metrics</div>
+  <div class="list-block" style="padding-top: 0px">
+  <ul>
+    <!-- Single radio input -->
+    <li>
+      <label class="label-radio item-content">
+        <!-- Checked by default -->
+        <input type="radio" name="sett_radio" id="sett_radio1" value="0"  >
+        <div class="item-inner white">
+          <div class="item-title"> Us Metrics</div>
+        </div>
+      </label>
+    </li>
+    <label class="label-radio item-content">
+        <!-- Checked by default -->
+        <input type="radio" name="sett_radio" id="sett_radio2" value="1" >
+        <div class="item-inner white">
+          <div class="item-title">Europe Metrics</div>
+        </div>
+      </label>
+     <li>
+     </li>
+     </ul>
+     </div>
+     <div class="content-block-title" style="padding-top: 45px;font-size:20px;">Home page view</div>
+     <div class="list-block">
+      <ul>
+       <li>
+        <label class="label-radio item-content">
+          <!-- Checked by default -->
+          <input type="radio" name="sett_ShowGrid_radio" id="sett_ShowGrid_radio1" value="0"  >
+          <div class="item-inner white">
+            <div class="item-title" style="word-wrap: break-word;">Show In Grid</div>
+          </div>
+        </label>
+      </li>
+      <label class="label-radio item-content">
+          <!-- Checked by default -->
+          <input type="radio" name="sett_ShowGrid_radio" id="sett_ShowList_radio2" value="1" >
+          <div class="item-inner white">
+            <div class="item-title" style="word-wrap: break-word;">Show In List</div>
+          </div>
+        </label>
+    </ul>
+    </div>
+	
+	<div class="toolbar tabbar" style="position:absolute;background:#0DB7C4; height: 59px;">
+    
+      <a href="#" onclick="metricksUpdate();" class="link icon-only"  style="color:white;border-right:1px white solid ">Update</a>
+  </div>
+    </div>
+  
+  </div>
+ </div> 

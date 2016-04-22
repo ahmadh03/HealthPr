@@ -1,0 +1,346 @@
+
+.navbar {
+    background: none repeat scroll 0 0 #0DB7C4;
+}
+.logo {
+    height: 33px;
+    padding: 0;
+     margin-right: 55px;}
+.splashLogo {
+    padding: 20vw 0 0;
+    width: 88vw;
+}
+.white{
+	color:#ffffff;
+}
+.blue{
+	color:#173a62;
+}
+.content-wrap{
+ background-color:gray;
+}
+.list-block {
+   
+    font-size: 17px;
+    margin: 0;
+    padding: 0px 5px 9px 5px;
+}
+
+.panel{
+	 box-shadow: 7px 0 7px 0 #d9d9d9 inset;
+}
+.content-block-title
+{
+	font-size: 2vw;
+    font-weight: bold;
+    margin: -1px 21px 6px;
+}
+.content-block-inner{
+	border:0;
+}
+.navicon{
+	position:absolute;right:0;top:0;
+}
+.searchicon{
+	position:absolute;right:33px;top:0;
+}
+.media-list{
+	background-color:#d9d9d9;
+	  padding: 10px 0;
+
+}
+.media-list ul {
+    background: none;
+    border-bottom: 1px solid #c8c7cc;
+    border-top: 1px solid #c8c7cc;
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.media-list ul li {
+    background: #ffffff;
+    border-bottom: 1px solid #c8c7cc;
+    border-top: 1px solid #c8c7cc;
+    list-style: outside none none;
+    margin-bottom: 5px;
+    padding: 0;
+    position: relative;
+}
+
+.media-list .item-title {
+    color: #173a62;
+    flex-shrink: 1;
+    font-size: 13px;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+.media-list .item-subtitle {
+    color: #173a62;
+    font-size: 10px;
+    font-style: italic;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.media-list .item-text {
+    color: #8e8e93;
+    font-size: 10px;
+    height: 42px;
+    line-height: 11px;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+}
+.media-list .item-inner{
+    border-bottom:0}
+
+.newsarrow{
+	position:absolute;
+	right:0;
+	font-size: 15px;
+}
+
+.list-block.media-list .item-link .item-title-row, .list-block li.media-item .item-link .item-title-row {
+    background: none;
+    }
+
+.desc{
+	padding:10px;
+}
+.desc img{
+	max-width:90vw;
+}
+
+.desc h1{
+	  color: #173a62;
+    font-size: 6vw;
+}
+
+.desc p{
+	
+}
+.blogger-img{
+	text-align:center
+}
+
+.blogger-img img{
+	width:82vw;
+}
+.blogger-img p{
+	margin:0;
+	text-align:center;
+}
+#pollquestionplacement{
+	color: #173a62;
+	line-height: 20px;
+	 margin-bottom: 10px;
+}
+.polllisting{
+	
+}
+
+.polllisting li{
+	background:#d9d9d9;
+}
+.lenders{
+	color:white;
+}
+.accordion-item-content{
+	background-color: #f2f2f2;
+}
+.top-headers{
+	 border: 1px solid #173a62;
+    color: #173a62;
+    font-size: 5vw;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;}
+    
+  .lender-rows{
+	border: 1px solid #173a62;
+    font-size: 4vw;
+    padding: 5px;
+    vertical-align: top;
+    }
+    
+.myprofileblocks{
+	
+    font-size: 5vw;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+    padding: 11vw 5vw;
+    }
+.list-block .item-inner {
+    align-items: center;
+    
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    min-height: 38px;
+    padding-bottom: 0;
+    padding-right: 15px;
+    padding-top: 0;
+    width: 100%;
+}
+.card {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    font-size: 14px;
+   
+    position: relative;
+}
+.card-header::after {
+    background-color: #e1e1e1;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    right: auto;
+    top: auto;
+    transform-origin: 50% 100% 0;
+    width: 100%;
+    z-index: 15;
+}
+.card-header {
+    border-radius: 2px 2px 0 0;
+    font-size: 17px;
+}
+.card-footer, .card-header {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    min-height: 44px;
+    padding: 16px 8px;
+    position: relative;
+}
+.card {
+    font-size: 14px;
+}
+.card-footer::before {
+    background-color: #e1e1e1;
+    bottom: auto;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    right: auto;
+    top: 0;
+    transform-origin: 50% 0 0;
+    width: 100%;
+    z-index: 15;
+}
+.card-footer {
+    border-radius: 0 0 2px 2px;
+    color: #6d6d72;
+}
+.card-footer, .card-header {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    min-height: 44px;
+    padding: 10px 15px;
+    position: relative;
+}
+.card-content {
+    position: relative;
+}
+.card-content-inner {
+    padding: 15px;
+    position: relative;
+}
+.list-block .item-media + .item-inner {
+    margin-left: 0;
+}
+
+.list-block .item-content {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    min-height: 44px;
+    padding-left: 5px;
+}
+.list-block .item-title.label {
+    flex-shrink: 0;
+    width: 40%;
+}
+.list-block .item-title.label {
+    line-height: 15px;
+    white-space: normal;
+    width: 40%;
+    word-wrap: break-word;
+}
+.list-block ul {
+   background: #0db7c4 none repeat scroll 0 0;
+    border-bottom: 0px solid #c8c7cc;
+    border-top: 0px solid #c8c7cc;
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+    position: relative;}
+    .list-block ul::before {
+  background-color:white;
+    bottom: auto;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    right: auto;
+    top: 0;
+    transform-origin: 50% 0 0;
+    width: 100%;
+    z-index: 15;
+}
+    .list-block ul::after {
+      background-color:white;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    right: auto;
+    top: auto;
+    transform-origin: 50% 100% 0;
+    width: 100%;
+    z-index: 15;
+}
+    
+    .list-block .item-inner::after {
+    background-color: #ffffff;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    right: auto;
+    top: auto;
+    transform-origin: 50% 100% 0;
+    width: 100%;
+    z-index: 15;
+}
+.image-upload > input
+{
+    display: none;
+}
+
+.image-upload img
+{
+    cursor: pointer;
+}

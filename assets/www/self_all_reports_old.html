@@ -1,0 +1,51 @@
+<div class="navbar">
+	<div class="navbar-inner">
+		<div class="left sliding"><a href="loginnormal.html" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+			<div class="center sliding white" style=" margin-right: 80px;">SELF MONITORING CHARTS</div>
+			<div class="right theme-white searchicon" >
+				<a href="#" onclick="MobileAppInfo()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i>
+				</a>
+			</div>
+			<div class="right theme-white navicon" >
+				<a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+				</a>
+			</div>
+	</div>
+</div>
+
+<div class="pages navbar-through">
+	<div data-page="self_all_reports" class="page" >
+		<div style="overflow:scroll; height:inherit;margin-top: 30px;">
+			<div class="charts">
+				<div class="content-block content-block1">
+					<h2 id="smc_height_heading">Height Chart</h2>
+						<canvas id="canvas_height" height="450" width="600" style="border-left: 2px solid;border-right: 2px solid;margin-left: 3px;"></canvas>
+					<h2 id="smc_weight_heading">Weight Chart</h2>
+						<canvas id="canvas_weight" height="450" width="600" style="border-left: 2px solid;border-right: 2px solid;margin-left: 3px;"></canvas>
+					<h2>BMI Chart</h2>
+						<canvas id="canvas_bmi" height="450" width="600" style="border-left: 2px solid;border-right: 2px solid;margin-left: 3px;"></canvas>
+					<h2>Fbs Chart</h2>
+						<canvas id="canvas_fbs" height="450" width="600" style="border-left: 2px solid;border-right: 2px solid;margin-left: 3px;"></canvas>
+					<h2>Heart Rate Chart</h2>
+						<canvas id="canvas_hrate" height="450" width="600" style="border-left: 2px solid;border-right: 2px solid;margin-left: 3px;"></canvas>
+					<h2>Respiratory Rate Chart</h2>
+						<canvas id="canvas_resrate" height="450" width="600" style="border-left: 2px solid;border-right: 2px solid;margin-left: 3px;"></canvas>
+					<h2>Temperature Chart</h2>
+						<canvas id="canvas_temp" height="450" width="600" style="border-left: 2px solid;border-right: 2px solid;margin-left: 3px;"></canvas>
+					<h2>Systolic Blood Pressure Chart</h2>
+						<canvas id="canvas_sysbp" height="450" width="600" style="border-left: 2px solid;border-right: 2px solid;margin-left: 3px;"></canvas>
+					<h2>Diastolic Blood Pressure Chart</h2>
+						<canvas id="canvas_diabp" height="450" width="600" style="border-left: 2px solid;border-right: 2px solid;margin-left: 3px;"></canvas>
+					<h2>Oxygensaturation Chart</h2>
+						<canvas id="canvas_oxysat" height="450" width="600" style="border-left: 2px solid;border-right: 2px solid;margin-left: 3px;"></canvas>
+						<!-- <h2 id="smc_height1_heading">Height Chart</h2> -->
+						<canvas id="canvas_heightcms" height="450" width="600" style="border-left: 2px solid;border-right: 2px solid;margin-left: 3px;"></canvas>
+						<!-- <h2 id="smc_weight1_heading">Weight Chart</h2> -->
+						<canvas id="canvas_weightcms" height="450" width="600" style="border-left: 2px solid;border-right: 2px solid;margin-left: 3px;"></canvas>
+					<div id="smc_others_heading"></div>
+					<!-- <canvas id="canvas_others" height="450" width="600" style="border: 1px solid;"></canvas> -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,77 @@
+ <div class="navbar">
+   <div class="navbar-inner">
+     <div class="left sliding"><a href="loginnormal.html"  class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+     <div class="center sliding white" id="lab_heading" style="margin-right: 150px;"></div>
+     <div class="right theme-white searchicon" >
+        <a href="#" onclick="MobileAppInfo()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i></a>
+      </div>
+     <div class="right theme-white navicon" >
+        <a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+        </a>
+      </div>
+   </div>
+ </div>
+ 
+<div class="pages">
+  <div data-page="labreports" class="page" >
+  	<div style="overflow-y:scroll; height:inherit">
+  		<div class="list-block" style="padding-top:59px;" id="labreports">
+        <ul style="background-color:#FFFFFF;">
+        <input type="hidden" id="rowIdFH4" value="0" />
+          <li>
+            <div class="item-content">
+              <div class="item-media"></div>
+              <div class="item-inner" style="padding-right: 0;">
+                <div class="item-title label" style="font-size: 13px;">Date </div>
+                <div class="item-input" style="width: 47%;">
+                  <input type="text" name="date_LabResult" id="date_LabResult" placeholder="date" readonly style=" width: 67%;font-size: 13px;">
+                </div>
+                <div class="col-25" id="end_date" style="white-space: normal;word-wrap: break-word;font-size: 13px;">N.V
+            </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+          <input type="hidden" name="cat_id" id="cat_id" >
+          <input type="hidden" name="record_ID" id="record_ID" >
+      </div>
+        <!-- <div class="list-block">
+          <div id="dynamicInput" style="clear:both;background-color:white;"> </div>
+        </div> -->
+          <!-- <input type="hidden" name="extrafieldcount1" id="extrafieldcount1" value="0"> -->
+
+        <div class="list-block" style="padding-bottom:27px;margin-top: -80px;">
+          <ul style="background-color:#FFFFFF;margin-bottom: 70px;" id="labre_ap">
+          </ul>
+            <!-- <div id="dynamicInput" style="clear:both;background-color:white;"> </div>
+              <input class="button button-blue" type="button" id="add1" value="+" style="float: right;font-size: 24px;width: 30px;height: 30px;margin: -83px 0 0;padding:0px;" onClick="LabresultsAdd('dynamicInput');"> -->
+              <li id="responce10" style="list-style: none;"></li>
+              <input type="hidden" name="count123" id="count123" value="0" />
+              <button  name="addButton" id='addButton' onClick="addFieldsLabFields()" style="display:none;float:right;border:none;background:none;"><i class="fa fa-plus-circle fa-2x"></i>
+              </button>
+              
+        </div>
+        
+
+
+      <!-- code of single image upload -->
+      <div class="list-block">
+          <ul style="background-color:#FFFFFF;margin-bottom: 70px;" id="labresults_imageupload">
+          </ul>
+        </div>
+        <!-- End of code -->
+
+    </div>
+    <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;" id="labreports_inbtn">
+      <div class="toolbar-inner" style="background:#0DB7C4;" id="labDeleteId">
+      </div>
+    </div>
+
+    <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;" id="labreports_upbtn">
+      <div class="toolbar-inner" style="background:#0DB7C4;" >
+        <a href="#" class="link icon-only" onclick="labReportsDataSubmit();" style="color:white;border-right:1px white solid ">Submit</a>
+        <a href="lab_results_main.html" class="link icon-only" style="color:white">Cancel</a>
+      </div>
+    </div>
+   </div>
+</div>

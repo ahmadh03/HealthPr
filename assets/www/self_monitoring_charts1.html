@@ -1,0 +1,217 @@
+<div class="navbar">
+	<div class="navbar-inner">
+		<div class="left sliding"><a href="loginnormal.html" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+		<div class="center sliding white" style=" margin-right: 80px;">SELF MONITORING CHARTS</div>
+			<div class="right theme-white searchicon" >
+			<a href="#" onclick="MobileAppInfo()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i></a>
+			</div>
+			<div class="right theme-white navicon" >
+			<a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+			</a>
+			</div>
+	</div>
+</div>
+
+<div class="pages navbar-through" >
+	<div data-page="self_monitoring_charts" class="page">
+		<div style="overflow-y:scroll; height:inherit">
+			<div class="content-block-title" style="padding-top: 64px;font-size:18px;">All your self-monitored conditions including, blood pressure, fasting blood sugar level, etc.</div>
+				<div class="list-block" style="margin-bottom: 70px">
+					<ul style="background-color:#FFFFFF;margin-right: 2px;margin-left: 3px;">
+						<li>
+							<div class="item-content">
+								<div class="item-media"></div>
+									<div class="item-inner">
+										<div class="item-title label " id="self_r_list">Date </div>
+											<div class="item-input form_date">
+												<input id="self_date" name="self_date"  type="text" placeholder=" Date" readonly  required>
+											</div>
+									</div>
+							</div>
+						</li>
+						<div id="showU"  style="border-bottom: 2px solid !impotant">
+							<li >
+								<div class="item-content">
+									<div class="item-media"></div>
+										<div class="item-inner">
+											<div class="item-title label " id="self_r_list">Height feet/inches</div>
+												<div class="item-input">
+													<input type="number" name="self_height_f" id="self_height_f" placeholder="Feet" onkeyup="autocalselfBmi_U()" required>
+													<a href="self_height_chart.html"><img src="img/chart.png" class="self_ch_img" onclick="displayChartHeight();"/></a>
+													<input type="hidden" value="height_u" />
+												</div>
+												<div class="item-input">
+													<input type="number" name="self_height_i" id="self_height_i" placeholder="inches" onkeyup="autocalselfBmi_U()" required>
+													<a href="self_height_chart.html"><img src="img/chart.png" class="self_ch_img" onclick="displayChartHeight();"/></a>
+													<input type="hidden" value="height_u" />
+												</div>
+										</div>
+								</div>
+							</li>
+							<li >
+								<div class="item-content">
+									<div class="item-media"></div>
+										<div class="item-inner">
+											<div class="item-title label " id="self_r_list">Weight  in pounds</div>
+												<div class="item-input">
+													<input type="number" name="self_weight" id="self_weight" placeholder="Weight" onkeyup="autocalselfBmi_U()" required>
+													<a href="self_weight_chart.html"><img src="img/chart.png" class="self_ch_img" onclick="displayChartWeight();"/></a>
+													<input type="hidden" value="weight_u" />
+												</div>
+										</div>
+								</div>
+							</li>
+						</div>
+						<div id="showEUROP" style="border-bottom: 2px solid !impotant">
+							<li style="margin-left: 13px;">
+								<div class="item-content item-title_inner">
+									<div class="item-inner">
+										<div class="item-title label " id="self_r_list">Height in cms :  </div>
+											<div class="item-input">
+												<input type="number" name="self_height_cm" id="self_height_cm"  onkeyup="autocalselfBMI_E()" required>
+												<a href="self_heightcms_chart.html"><img src="img/chart.png" class="self_ch_img"  onclick="displayHeightcmsChart();"/></a>
+												<input type="hidden" value="height_e" />
+											</div>
+									</div>
+								</div>
+							</li>
+							<li style="margin-left: 13px;">
+								<div class="item-content item-title_inner">
+									<div class="item-inner">
+										<div class="item-title label " id="self_r_list">Weight in KG  </div>
+											<div class="item-input">
+												<input type="number" name="self_weight_kg" id="self_weight_kg"  onkeyup="autocalselfBmi_E()" required>
+												<a href="self_weightcms_chart.html"><img src="img/chart.png" class="self_ch_img" onclick="displayweightcmschart();"/></a>
+												<input type="hidden" value="weight_e" />
+											</div>
+									</div>
+								</div>
+							</li>
+						</div>
+						<li>
+							<div class="item-content">
+								<div class="item-media"></div>
+									<div class="item-inner">
+										<div class="item-title label " id="self_r_list">BMI  </div>
+											<div class="item-input">
+												<input type="number" name="self_bmi" id="self_bmi" readonly>
+												<a href="self_bmi_charts.html"><img src="img/chart.png" class="self_ch_img" onclick="displayChartBmi();"/></a>
+												<input type="hidden" value="bmi_u" />
+											</div>
+									</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-media"></div>
+									<div class="item-inner">
+										<div class="item-title label " id="self_r_list">FBS in mg/dL:</div>
+											<div class="item-input">
+												<input type="number" name="self_fbs" id="self_fbs" >
+												<a href="self_fbs_charts.html"><img src="img/chart.png" class="self_ch_img" onclick="displayChartFbs();"/></a>
+												<input type="hidden" value="fbs_u" />
+											</div>
+									</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-media"></div>
+									<div class="item-inner">
+										<div class="item-title label " id="self_r_list">Heart Rate in bpm :  </div>
+											<div class="item-input">
+												<input type="number" name="self_heart_rate" id="self_heart_rate" >
+												<a href="self_heart_chart.html"><img src="img/chart.png" class="self_ch_img" onclick="displayChartHeartRate()"/></a>
+												<input type="hidden" value="heartRate_u" />
+											</div>
+									</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-media"></div>
+									<div class="item-inner">
+										<div class="item-title label " id="self_r_list">Respiratory Rate in breaths/minute :  </div>
+											<div class="item-input">
+												<input type="number" name="self_respi" id="self_respi" >
+												<a href="self_respiratoratory_chart.html"><img src="img/chart.png" class="self_ch_img" onclick="displayChartRespirate();"/></a>
+												<input type="hidden" value="respiratory_u" />
+											</div>
+									</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-media"></div>
+									<div class="item-inner">
+										<div class="item-title label " id="self_r_list">Temperature in Fahrenheit :  </div>
+											<div class="item-input">
+												<input type="number" name="self_temp" id="self_temp" >
+												<a href="self_temp_chart.html"><img src="img/chart.png" class="self_ch_img" onclick="displayChartTemperature();"/></a>
+												<input type="hidden" value="temp_u" />
+											</div>
+									</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-media"></div>
+									<div class="item-inner">
+										<div class="item-title label " id="self_r_list">Systolic Blood Pressure (in mmHg) :   </div>
+											<div class="item-input">
+												<input type="number" name="self_bp" id="self_bp">
+												<a href="self_sysbp_chart.html"><img src="img/chart.png" class="self_ch_img" onclick="displayChartSysBp();"/></a>
+												<input type="hidden" value="sysbp_u" />
+											</div>
+									</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-media"></div>
+									<div class="item-inner">
+										<div class="item-title label " id="self_r_list">Diastolic Blood Pressure (in mmHg) :   </div>
+											<div class="item-input">
+												<input type="number" name="self_dbp" id="self_dbp" >
+												<a href="self_diabp_chart.html"><img src="img/chart.png" class="self_ch_img" onclick="displayChartDiasBp();"/></a>
+												<input type="hidden" value="siabp_u" />
+											</div>
+									</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-media"></div>
+									<div class="item-inner">
+										<div class="item-title label " id="self_r_list">Oxygen Saturation:</div>
+											<div class="item-input">
+												<input type="number" name="self_oxy" id="self_oxy" >
+												<a href="self_oxy_chart.html"><img src="img/chart.png" class="self_ch_img" onclick="displayOxySatChart();"/></a>
+												<input type="hidden" value="oxysat_u" />
+											</div>
+									</div>
+							</div>
+						</li>
+						<div id="self_ap"></div>
+						<input type="text" name="extrafieldcount_id" id="extrafieldcount_id"> 
+						<input class="button button-blue" type="button" id="add" value="+" style="float: right;font-size: 24px;width: 30px;height: 30px;margin:0px;padding:0px;" onClick="mySelfAdd('dynamicInput');">
+					</ul>
+						<div id="dynamicInput" style="clear:both;background-color:white;"> </div>
+						<input type="hidden" name="extrafieldcount" id="extrafieldcount" value="0">
+						<input type="hidden" name="update_id" id="update_id" >
+				</div>
+		</div>
+		<div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;" id="changeonInsert_self">
+			<div class="toolbar-inner" style="background:#0DB7C4;" >
+				<a href="#" class="link icon-only" onclick="selfmonitoringSubmit();" style="color:white;border-right:1px white solid ">Submit</a>
+				<a href="loginnormal.html" class="link icon-only" style="color:white">Cancel</a>
+			</div>
+		</div>
+		<div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;" id="changeonUpdate_self">
+			<div class="toolbar-inner" style="background:#0DB7C4;" >
+				<a href="#" class="link icon-only" onclick="selfmonitoringSubmit();" style="color:white;border-right:1px white solid ">Update</a>
+				<a href="#" onclick="deleteselfItem();" class="link icon-only" style="color:white">Delete</a>
+			</div>
+		</div>
+	</div>
+</div>

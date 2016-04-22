@@ -1,0 +1,908 @@
+<div class="navbar">
+   <div class="navbar-inner">
+    <div class="left sliding"><a href="loginnormal.html" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+     <div class="center sliding white" style="margin-right:160px;">Dental History</div>
+     <div class="right theme-white searchicon" >
+        <a href="#" onclick="MobileAppInfo()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i></a>
+      </div>
+      <div class="right theme-white navicon" >
+        <a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+        </a>
+      </div>
+   </div>
+ </div>
+ 
+<div class="pages navbar-through" >
+  	<div data-page="dental_history_form" class="page" > 
+  		<div style="overflow-y:scroll; height:inherit">
+    		<div class="content-block-title" style="padding-top: 48px;font-size:18px;">Dental Information</div>
+    			<div class="list-block" style="margin-bottom:70px;margin-left: 0;">
+    				<ul style="background-color:#FFFFFF">
+    					<li>
+					      <div class="item-content " >
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-title label" style="width:100%;">How would you describe your current dental problem</div>
+					         
+					        </div>
+					      </div>
+			    		</li>
+              <li>
+                <div class="item-content " >
+                  <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-input">
+                      <input type="text" name="dental_his_howddenprob" id="dental_his_howddenprob" placeholder="How would you describe your current dental problem">
+                    </div>
+                  </div>
+                </div>
+              </li>
+			    		<li>
+                <div class="item-content " >
+                  <div class="item-media"></div>
+                  <div class="item-inner" >
+                    <div class="item-title label" style="width:100%;">Date of last dental exam:</div>
+                   
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content " >
+                  <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-input">
+                      <input type="text" name="dental_his_daofladeex" id="dental_his_daofladeex" placeholder="Date of last dental exam: " readonly>
+                    </div>
+                  </div>
+                </div>
+              </li>
+			    		<li>
+                <div class="item-content " >
+                  <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-title label" style="width:100%;">Date /Type of Last Dental X-rays</div>
+                   
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content " >
+                  <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-input">
+                      <input type="text" name="dental_his_lastdenxrays" id="dental_his_lastdenxrays" placeholder="Date /Type of Last Dental X-rays ">
+                    </div>
+                  </div>
+                </div>
+              </li>
+			    		<li>
+                <div class="item-content " >
+                  <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-title label" style="width:100%;">Dentist</div>
+                   
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content " >
+                  <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-input">
+                     <input type="text" name="dental_his_dentst" id="dental_his_dentst" placeholder="Dentist">
+                    </div>
+                  </div>
+                </div>
+              </li>
+			    		
+              <li>
+                <div class="item-content " >
+                  <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-title label" style="width:100%;">Dentist Phone</div>
+                   
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content " >
+                  <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-input">
+                     <input type="text" name="dental_his_denphne" id="dental_his_denphne" placeholder="Dentist Phone">
+                    </div>
+                  </div>
+                </div>
+              </li>
+			    		<li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;">
+                          <div class="item-title label" style="width:100%;">Do Your Guma Bleed when you brush?</div>
+                          
+                          </div>
+                        </div>
+                         
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio" id="dental_his_dugblwyb" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;margin-left: 15px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio" id="dental_his_dugblwyb1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="margin-left: 15px;">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                         
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;">
+                          <div class="item-title label" style="width:100%;">Are your teeth sensitive?</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio1" id="dental_his_aytsen" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;margin-left: 15px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio1" id="dental_his_aytsen1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="margin-left: 15px;">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                            
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;">
+                          <div class="item-title label" style="width:100%;">Are your Gums Shrinking away from </br> your theeth?</div>
+                           
+                          </div>
+                        </div>
+                        
+                              <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio2" id="dental_his_aygsafyt" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;margin-left: 15px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                                <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio2" id="dental_his_aygsafyt1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="margin-left: 15px;">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;">
+                          <div class="item-title label" style="width:100%;">Do you wear removable dental appliances?</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio3" id="dental_his_dywrdap" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;margin-left: 15px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio3" id="dental_his_dywrdap1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="margin-left: 15px;">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;">
+                          <div class="item-title label" style="width:100%;">Have you had a serious /difficult problem </br> associated with any </br> previous dental treatment?</div>
+                           
+                          </div>
+                        </div>
+                        
+                                <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio4" id="dental_his_hyhas" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;margin-left: 15px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio4" id="dental_his_hyhas1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="margin-left: 15px;">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                            
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;">
+                          <div class="item-title label" style="width:100%;">Have you had side effect associated with Dental injections ? </div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio5" id="dental_his_ayhseawdi" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;margin-left: 15px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio5" id="dental_his_ayhseawdi1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="margin-left: 15px;">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;">
+                          <div class="item-title label" style="width:100%;">Are your jaws tired at the end of day?</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio6" id="dental_his_ayjtateod" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;margin-left: 15px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio6" id="dental_his_ayjtateod1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="margin-left: 15px;">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                            
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;">
+                          <div class="item-title label" style="width:100%;">Do you grind/clinch your teeth? </div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio7" id="dental_his_dygyt" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;margin-left: 15px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio7" id="dental_his_dygyt1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="margin-left: 15px;">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;">
+                          <div class="item-title label" style="width:100%;">Do you get "cold sores"?  </div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio8" id="dental_his_dygc" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;margin-left: 15px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio8" id="dental_his_dygc1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="margin-left: 15px;">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;">
+                          <div class="item-title label" style="width:100%;">Has a dentist or physician recommended that you take antibiotics prior to dental treatment? Yes</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio9" id="dental_his_adrtyta" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;margin-left: 15px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio9" id="dental_his_adrtyta1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="margin-left: 15px;">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+					      <div class="item-content " >
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-title label" style="width:100%;">If yes, what antibiotic and dose?</div>
+					         
+					        </div>
+					      </div>
+			    		</li>
+              <li>
+                <div class="item-content " >
+                  <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-input">
+                      <input type="text" name="dental_his_antibdo" id="dental_his_antibdo" >
+                    </div>
+                  </div>
+                </div>
+              </li>
+			    		<li>Have you ever had any of the following</li>
+			    		<li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;">
+                          <div class="item-title label" style="width:100%;">Orthodontics?</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio10" id="dental_his_ortho" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;margin-left: 15px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio10" id="dental_his_ortho1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="margin-left: 15px;">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                            
+                      </li>
+                      <li>
+					      <div class="item-content " >
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-title label" style="width:100%;">If yes</div>
+					          
+					        </div>
+					      </div>
+			    		</li>
+              <li>
+                <div class="item-content " >
+                  <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-input">
+                      <input type="text" name="dental_his_orthoy" id="dental_his_orthoy" >
+                    </div>
+                  </div>
+                </div>
+              </li>
+			    		<li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;">
+                          <div class="item-title label" style="width:100%;">Tmj therapy?</div>
+                          
+                          </div>
+                        </div>
+                         
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio11" id="dental_his_tmj" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;margin-left: 15px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio11" id="dental_his_tmj1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="margin-left: 15px;">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                         
+                      </li>
+                      <li>
+					      <div class="item-content " >
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-title label" style="width:100%;">If yes</div>
+					          
+					        </div>
+					      </div>
+			    		</li>
+              <li>
+                <div class="item-content " >
+                  <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-input">
+                      <input type="text" name="dental_his_tmjyes" id="dental_his_tmjyes" >
+                    </div>
+                  </div>
+                </div>
+              </li>
+			    		<li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;">
+                          <div class="item-title label" style="width:100%;">Extractions?</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio12" id="dental_his_extra" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;margin-left: 15px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio12" id="dental_his_extra1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="margin-left: 15px;">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+      					      <div class="item-content " >
+      					        <div class="item-media"></div>
+      					        <div class="item-inner">
+      					          <div class="item-title label" style="width:100%;">If yes</div>
+      					          
+      					        </div>
+      					      </div>
+      			    		</li>
+                    <li>
+                      <div class="item-content " >
+                        <div class="item-media"></div>
+                        <div class="item-inner">
+                          <div class="item-input">
+                            <input type="text" name="dental_his_extra" id="dental_his_extra" >
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+			    		<li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;">
+                          <div class="item-title label" style="width:100%;">Periodontal therapy?</div>
+                          
+                          </div>
+                        </div>
+                         
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio13" id="dental_his_periothe" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;margin-left: 15px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio13" id="dental_his_periothe1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="margin-left: 15px;">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                         
+                      </li>
+                      <li>
+      					      <div class="item-content " >
+      					        <div class="item-media"></div>
+      					        <div class="item-inner">
+      					          <div class="item-title label" style="width:100%;">If yes</div>
+      					          
+      					        </div>
+      					      </div>
+      			    		</li>
+                     <li>
+                      <div class="item-content " >
+                        <div class="item-media"></div>
+                        <div class="item-inner">
+                          <div class="item-input">
+                            <input type="text" name="dental_his_periyes" id="dental_his_periyes" >
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+			    		<li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;">
+                          <div class="item-title label" style="width:100%;">Endodontics?</div>
+                           
+                          </div>
+                        </div>
+                        
+                              <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio14" id="dental_his_endodonatics" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;margin-left: 15px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio14" id="dental_his_endodonatics1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="margin-left: 15px;">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+      					      <div class="item-content " >
+      					        <div class="item-media"></div>
+      					        <div class="item-inner">
+      					          <div class="item-title label" style="width:100%;">If yes</div>
+      					         
+      					        </div>
+      					      </div>
+      			    		</li>
+                    <li>
+                      <div class="item-content " >
+                        <div class="item-media"></div>
+                        <div class="item-inner">
+                          <div class="item-input">
+                            <input type="text" name="dental_his_endodoyes" id="dental_his_endodoyes" >
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+			    		<li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;">
+                          <div class="item-title label" style="width:100%;">Oral surgery?</div>
+                          
+                          </div>
+                        </div>
+                         
+                              <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio15" id="dental_his_oralsur" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;margin-left: 15px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio15" id="dental_his_oralsur1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="margin-left: 15px;">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                         
+                      </li>
+                      <li>
+      					      <div class="item-content " >
+      					        <div class="item-media"></div>
+      					        <div class="item-inner">
+      					          <div class="item-title label" style="width:100%;">If yes</div>
+      					          
+      					        </div>
+      					      </div>
+      			    		</li>
+                    <li>
+                      <div class="item-content " >
+                        <div class="item-media"></div>
+                        <div class="item-inner">
+                          <div class="item-input">
+                            <input type="text" name="dental_his_oralsuryes" id="dental_his_oralsuryes" >
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+			    		<li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;">
+                          <div class="item-title label" style="width:100%;">Oral cancer?</div>
+                           
+                          </div>
+                        </div>
+                        
+                                <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio16" id="dental_his_oralcan" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;margin-left: 15px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio16" id="dental_his_oralcan1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="margin-left: 15px;">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+      					      <div class="item-content " >
+      					        <div class="item-media"></div>
+      					        <div class="item-inner">
+      					          <div class="item-title label" style="width:100%;">If yes</div>
+      					          
+      					        </div>
+      					      </div>
+      			    		</li>
+                    <li>
+                      <div class="item-content " >
+                        <div class="item-media"></div>
+                        <div class="item-inner">
+                          <div class="item-input">
+                            <input type="text" name="dental_his_oralcanyes" id="dental_his_oralcanyes" >
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+			    		<li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;">
+                          <div class="item-title label" style="width:100%;">Dental implants?</div>
+                          
+                          </div>
+                        </div>
+                         
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio17" id="dental_his_denimp" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;margin-left: 15px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio17" id="dental_his_denimp1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="margin-left: 15px;">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                         
+                      </li>
+                      <li>
+      					      <div class="item-content " >
+      					        <div class="item-media"></div>
+      					        <div class="item-inner">
+      					          <div class="item-title label" style="width:100%;">If yes</div>
+      					          
+      					        </div>
+      					      </div>
+      			    		</li>
+                     <li>
+                      <div class="item-content " >
+                        <div class="item-media"></div>
+                        <div class="item-inner">
+                          <div class="item-input">
+                            <input type="text" name="dental_his_denimpyes" id="dental_his_denimpyes" >
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+    				</ul>
+    				
+    				 <input type="hidden" name="dental_his_update" id="dental_his_update" >
+				</div>
+		</div>
+		<!-- <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;">
+    <div class="toolbar-inner" style="background:#0DB7C4">
+      <a href="#" onclick="dentalHisformSubmit();" class="link icon-only" style="color:white;border-right:1px white solid ">Submit</a>
+      <a href="loginnormal.html" class="link icon-only" style="color:white">Cancel</a>
+    </div>
+  </div> --> 
+  <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;" id="dentalhis_inbtn">
+      <div class="toolbar-inner" style="background:#0DB7C4;" >
+        <a href="#" class="link icon-only" onclick="dentalHisformSubmit();" style="color:white;border-right:1px white solid ">Update</a>
+        <a href="#" onclick="deletedentalHis();" class="link icon-only" style="color:white">Delete</a>
+      </div>
+    </div>  
+    <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;" id="dentalhis_upbtn">
+      <div class="toolbar-inner" style="background:#0DB7C4;" >
+        <a href="#" class="link icon-only" onclick="dentalHisformSubmit();" style="color:white;border-right:1px white solid ">Submit</a>
+        <a href="loginnormal.html" class="link icon-only" style="color:white">Cancel</a>
+      </div>
+    </div>
+	</div>
+</div>
+    				

@@ -1,0 +1,37 @@
+<div class="navbar">
+   <div class="navbar-inner">
+     <div class="left sliding"><a href="#" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+     <div class="center sliding white" style=" margin-right: 80px;">Lab Results And Radiology</div>
+     <div class="right theme-white searchicon" >
+       <a href="#" onclick="labresultsListInfo()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i></a>
+       </div>
+     <div class="right theme-white navicon" >
+        <a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+        </a>
+      </div>
+     
+   </div>
+ </div>
+
+ <div class="pages">
+  <div data-page="lab_results_main" class="page" >
+  	<div class="page-content" style="background-color:#ffffff;margin-top: 10px;">
+     <div class="list-block"  id="labresults">
+
+     </div>
+     <div class="list-block">
+      <ul>
+        <li>
+          <a class='item-link' onclick='OpenLabResultsPDF();' href='#'>
+            <div class='item-content white'>
+              <div class='item-inner'>
+                <div class='item-title'>Normal Values</div>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+ </div>

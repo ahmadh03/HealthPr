@@ -1,0 +1,3350 @@
+@charset "utf-8";
+/* CSS Document */
+.body{
+
+}
+
+#nav{
+     width: 100%;
+      float: left;
+      margin: -7px 0px 1em;
+      padding: 0;
+      margin-top: -8px;
+      list-style: none;
+      background-color: #66FFFF;
+      border-bottom: 1px solid #ccc; 
+      border-top: 1px solid #ccc; }
+      #nav ul{
+       list-style:none;
+      }
+      
+      #nav li{
+       list-style:none;
+       margin-top: 18px;
+      }
+
+#nav li img {
+      display: block;
+      padding: 8px 15px;
+      color: #069;
+      float:left;
+      list-style-type: none;
+      
+       }
+    #nav li a{
+      display: block;
+      
+      color: #069;
+      float:right;
+      
+    }  
+   #nav li a:hover {
+      color: #c00;
+      background-color: #fff; }
+      #submenu1 > ul {
+    padding: 0;
+}
+    .sub1 li{
+        list-style:none;
+         margin-top: 5px;
+         border:1px solid #64D1D8;
+         background-color: #64D1D8;
+       }
+      .sub1 li img{
+      
+      margin-right:10px;}
+    .sub1 li span{
+  color: white;
+  vertical-align:middle;
+  display:inline-block;
+  font: 15px bold arial, sans-serif;
+}
+.submenu1{
+background-color:#ffffff;
+margin-top: -47px;
+padding: 0px;
+}
+#clear{
+clear:both;
+}
+#submenu{
+padding: 21px;
+margin-top: 9px;
+}
+.homeimg{
+    display: inline-block;
+    height: 38px;
+    margin-left: -7px;
+    text-align: center;
+    width: 40px;
+}
+
+#sub1 a {
+    display: block;
+    height:50px;
+    width: 100%;
+}
+.homeimg1{
+display: inline-block;
+    height: 38px;
+    margin-left: -7px;
+    text-align: center;
+    width: 40px;
+    float:left;
+    
+}
+.l
+    {float:left;
+    width:50%}
+.r
+    {float:left;
+    width:50%;}
+.t
+    {
+    padding:10px;
+    background:#eee;}
+
+/*.swipeout-content.item-content.white > span {
+    width: 50%;
+}   */
+
+textarea#Family_his_title_text {
+    width: 100%;
+    height: 120px;
+    /*border: 3px solid #cccccc;*/
+    padding: 5px;
+    font-family: Tahoma, sans-serif;
+    /*background-image: url(bg.gif);*/
+    /*background-position: bottom right;*/
+    /*background-repeat: no-repeat;*/
+}
+
+.Cambutton
+{
+    /*background: url(../img/camera.png) no-repeat;*/
+    background-size: cover;
+    cursor:pointer;
+    border: none;
+    height: 70px;
+    width: 70px;
+    float: left;
+        -moz-appearance: none;
+    -moz-binding: none;
+    background-color: transparent;
+    border: medium none;
+    color: inherit;
+    cursor: default;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0;
+    white-space: nowrap;
+    position: absolute;
+    top: 0;
+    left: 0px;
+}
+
+.kapil{
+    width:26%;
+}
+.kapil2{
+    width:60%;
+}
+.date2{
+    /*width:35%;*/
+}
+.weight2{
+    /*width:65%;*/
+}
+p {
+    margin: 0 0;
+}
+.self_ch_img{
+    position: absolute;
+    right: -50px; 
+    top: 0;
+    margin-top: 10px;
+}
+.lab_ch_img{
+    position: static;
+    right: -50px; 
+    top: 0;
+    margin-top: 10px;
+}
+#self_r_list{
+    width:175px;
+    
+}
+.lab_r_list{
+    width:120px;
+    
+}
+
+.self_ch_img12 {
+    margin-top: 10px;
+    position: absolute;
+    right: 1px;
+    top: 0;
+}
+.content-block1 {
+    background: #fff none repeat scroll 0 0;
+    box-sizing: border-box;
+    color: #6d6d72;
+    margin: 35px;
+    padding: 15px;
+}
+.popup1 {
+    background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+    }
+.popup-self {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 6px;
+    margin: 10% auto auto;
+    padding: 20px 10px;
+    width: 85%;
+    position: relative;
+}
+.item-inner1 {
+    margin-bottom: 20px;
+    padding-bottom: 20px !important;
+    padding-right: 0 !important;
+    width: 95% !important;
+}
+
+#content {
+  padding: 0;
+  margin: 0;
+}
+
+#flexBox {
+  background-color: #77f;
+  position: relative;
+  top: 2px;
+  left: 2px;
+}
+
+#Cambutton_button input[type="button"] {
+    -moz-appearance: none;
+    -moz-binding: none;
+    background-color: transparent;
+    border: medium none;
+    color: inherit;
+    cursor: default;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0;
+    white-space: nowrap;
+}
+    /* 
+    Generic Styling, for Desktops/Laptops 
+    */
+    .selfdata1 table { 
+        width: 100%; 
+        border-collapse: collapse; 
+    }
+    /* Zebra striping */
+    .selfdata1 tr:nth-of-type(odd) { 
+        background: #eee;
+        padding-bottom: 78px;
+        margin-left: 9px;
+    margin-right: -16px;
+    font-size: 10px;
+    }
+    .selfdata1 th { 
+        background: #333; 
+        color: white; 
+        font-weight: bold; 
+    }
+    .selfdata1 td, .selfdata1 th { 
+        padding: 6px; 
+        border: 1px solid #ccc; 
+        text-align: left;
+        font-size: 14px;
+    }
+  #self_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+#self_img{
+  margin: 10px !important;
+}
+#self_img > form {
+    margin: 10px 0;
+}
+#self_img > form li{
+    margin: 10px 0;
+}
+#self_img > li {
+    float: left;
+    height: 60px;
+    list-style: outside none none;
+    margin: 1% 1% 74px;
+    position: relative;
+    width: 90px;
+}#self_img > li > img {
+    height: 200%;
+    width:97%;
+    box-shadow: 2px 2px 2px #666;
+}
+#self_img > li > video {
+    height: 200%;
+    width:97%;
+    /*box-shadow: 2px 2px 2px #666;*/
+}
+#self_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#self_img > li > a .fa{
+  font-size: 25px;
+}
+
+ #emergency_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_emer_img{
+  margin: 10px !important;
+}
+#display_emer_img > form {
+    margin: 10px 0;
+}
+#display_emer_img > form li{
+    margin: 10px 0;
+}
+#display_emer_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 23%;
+    position: relative;
+}
+#display_emer_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_emer_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_emer_img > li > a .fa{
+  font-size: 25px;
+}
+/* Grid View for all sections */
+#sections_displayGridView > div{
+     margin-bottom: 15px;
+    padding: 15px 5px;
+     box-shadow: 2px 2px 2px #999;
+}
+
+ #healthprovider_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_healthprovider_img{
+  margin: 10px !important;
+}
+#display_healthprovider_img > form {
+    margin: 10px 0;
+}
+#display_healthprovider_img > form li{
+    margin: 10px 0;
+}
+#display_healthprovider_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 23%;
+    position: relative;
+}
+#display_healthprovider_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_healthprovider_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_healthprovider_img > li > a .fa{
+  font-size: 25px;
+}
+
+#insurance_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #healthinsu_image_dislay{
+  margin: 10px !important;
+}
+#healthinsu_image_dislay > form {
+    margin: 10px 0;
+}
+#healthinsu_image_dislay > form li{
+    margin: 10px 0;
+}
+#healthinsu_image_dislay > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 23%;
+    position: relative;
+}
+#healthinsu_image_dislay > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#healthinsu_image_dislay > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#healthinsu_image_dislay > li > a .fa{
+  font-size: 25px;
+}
+
+#doctors_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_doctorsreports_img{
+  margin: 10px !important;
+}
+#display_doctorsreports_img > form {
+    margin: 10px 0;
+}
+#display_doctorsreports_img > form li{
+    margin: 10px 0;
+}
+#display_doctorsreports_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 23%;
+    position: relative;
+}
+#display_doctorsreports_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_doctorsreports_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_doctorsreports_img > li > a .fa{
+  font-size: 25px;
+}
+
+#doc_con_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_doctor_counsal_img{
+  margin: 10px !important;
+}
+#display_doctor_counsal_img > form {
+    margin: 10px 0;
+}
+#display_doctor_counsal_img > form li{
+    margin: 10px 0;
+}
+#display_doctor_counsal_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 23%;
+    position: relative;
+}
+#display_doctor_counsal_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_doctor_counsal_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_doctor_counsal_img > li > a .fa{
+  font-size: 25px;
+}
+
+#medication_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_medicaltio_img{
+  margin: 10px !important;
+}
+#display_medicaltio_img > form {
+    margin: 10px 0;
+}
+#display_medicaltio_img > form li{
+    margin: 10px 0;
+}
+#display_medicaltio_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 23%;
+    position: relative;
+}
+#display_medicaltio_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_medicaltio_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_medicaltio_img > li > a .fa{
+  font-size: 25px;
+}
+
+#medihistory_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_medihistory_img{
+  margin: 10px !important;
+}
+#display_medihistory_img > form {
+    margin: 10px 0;
+}
+#display_medihistory_img > form li{
+    margin: 10px 0;
+}
+#display_medihistory_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 23%;
+    position: relative;
+}
+#display_medihistory_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_medihistory_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_medihistory_img > li > a .fa{
+  font-size: 25px;
+}
+
+#allergies_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_allergies_img{
+  margin: 10px !important;
+}
+#display_allergies_img > form {
+    margin: 10px 0;
+}
+#display_allergies_img > form li{
+    margin: 10px 0;
+}
+#display_allergies_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 23%;
+    position: relative;
+}
+#display_allergies_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_allergies_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_allergies_img > li > a .fa{
+  font-size: 25px;
+}
+
+#familyhis_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_famailyhis_img{
+  margin: 10px !important;
+}
+#display_famailyhis_img > form {
+    margin: 10px 0;
+}
+#display_famailyhis_img > form li{
+    margin: 10px 0;
+}
+#display_famailyhis_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 23%;
+    position: relative;
+}
+#display_famailyhis_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_famailyhis_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_famailyhis_img > li > a .fa{
+  font-size: 25px;
+}
+
+#physicalex_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_physical_img{
+  margin: 10px !important;
+}
+#display_physical_img > form {
+    margin: 10px 0;
+}
+#display_physical_img > form li{
+    margin: 10px 0;
+}
+#display_physical_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 23%;
+    position: relative;
+}
+#display_physical_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_physical_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_physical_img > li > a .fa{
+  font-size: 25px;
+}
+
+#urinalasys_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_urine_img{
+  margin: 10px !important;
+}
+#display_urine_img > form {
+    margin: 10px 0;
+}
+#display_urine_img > form li{
+    margin: 10px 0;
+}
+#display_urine_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 23%;
+    position: relative;
+}
+#display_urine_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_urine_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_urine_img > li > a .fa{
+  font-size: 25px;
+}
+
+#Hematology_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_hemato_img{
+  margin: 10px !important;
+}
+#display_hemato_img > form {
+    margin: 10px 0;
+}
+#display_hemato_img > form li{
+    margin: 10px 0;
+}
+#display_hemato_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 23%;
+    position: relative;
+}
+#display_hemato_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_hemato_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_hemato_img > li > a .fa{
+  font-size: 25px;
+}
+
+#Pathalogy_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_pathalogy_img{
+  margin: 10px !important;
+}
+#display_pathalogy_img > form {
+    margin: 10px 0;
+}
+#display_pathalogy_img > form li{
+    margin: 10px 0;
+}
+#display_pathalogy_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 23%;
+    position: relative;
+}
+#display_pathalogy_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_pathalogy_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_pathalogy_img > li > a .fa{
+  font-size: 25px;
+}
+
+#BloodChe_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_bloodche_img{
+  margin: 10px !important;
+}
+#display_bloodche_img > form {
+    margin: 10px 0;
+}
+#display_bloodche_img > form li{
+    margin: 10px 0;
+}
+#display_bloodche_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 23%;
+    position: relative;
+}
+#display_bloodche_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_bloodche_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_bloodche_img > li > a .fa{
+  font-size: 25px;
+}
+
+#Radiology_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_radiology_img{
+  margin: 10px !important;
+}
+#display_radiology_img > form {
+    margin: 10px 0;
+}
+#display_radiology_img > form li{
+    margin: 10px 0;
+}
+#display_radiology_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 23%;
+    position: relative;
+}
+#display_radiology_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_radiology_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_radiology_img > li > a .fa{
+  font-size: 25px;
+}
+
+#obestric_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_obestric_img{
+  margin: 10px !important;
+}
+#display_obestric_img > form {
+    margin: 10px 0;
+}
+#display_obestric_img > form li{
+    margin: 10px 0;
+}
+#display_obestric_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 23%;
+    position: relative;
+}
+#display_obestric_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_obestric_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_obestric_img > li > a .fa{
+  font-size: 25px;
+}
+
+#pastmedhis_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_pastmedihis_img{
+  margin: 10px !important;
+}
+#display_pastmedihis_img > form {
+    margin: 10px 0;
+}
+#display_pastmedihis_img > form li{
+    margin: 10px 0;
+}
+#display_pastmedihis_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 23%;
+    position: relative;
+}
+#display_pastmedihis_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_pastmedihis_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_pastmedihis_img > li > a .fa{
+  font-size: 25px;
+}
+
+#birthped_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_birthped_img{
+  margin: 10px !important;
+}
+#display_birthped_img > form {
+    margin: 10px 0;
+}
+#display_birthped_img > form li{
+    margin: 10px 0;
+}
+#display_birthped_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 23%;
+    position: relative;
+}
+#display_birthped_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_birthped_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_birthped_img > li > a .fa{
+  font-size: 25px;
+}
+
+#devepmtped_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_devpped_img{
+  margin: 10px !important;
+}
+#display_devpped_img > form {
+    margin: 10px 0;
+}
+#display_devpped_img > form li{
+    margin: 10px 0;
+}
+#display_devpped_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 23%;
+    position: relative;
+}
+#display_devpped_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_devpped_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_devpped_img > li > a .fa{
+  font-size: 25px;
+}
+
+#familyped_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_famlyped_img{
+  margin: 10px !important;
+}
+#display_famlyped_img > form {
+    margin: 10px 0;
+}
+#display_famlyped_img > form li{
+    margin: 10px 0;
+}
+#display_famlyped_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 23%;
+    position: relative;
+}
+#display_famlyped_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_famlyped_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_famlyped_img > li > a .fa{
+  font-size: 25px;
+}
+
+#dentalhis_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_dentalhis_img{
+  margin: 10px !important;
+}
+#display_dentalhis_img > form {
+    margin: 10px 0;
+}
+#display_dentalhis_img > form li{
+    margin: 10px 0;
+}
+#display_dentalhis_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 23%;
+    position: relative;
+}
+#display_dentalhis_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_dentalhis_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_dentalhis_img > li > a .fa{
+  font-size: 25px;
+}
+
+#eye_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #eye_imge_display{
+  margin: 10px !important;
+}
+#eye_imge_display > form {
+    margin: 10px 0;
+}
+#eye_imge_display > form li{
+    margin: 10px 0;
+}
+#eye_imge_display > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 23%;
+    position: relative;
+}
+#eye_imge_display > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#eye_imge_display > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#eye_imge_display > li > a .fa{
+  font-size: 25px;
+}
+
+#food_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_food_img{
+  margin: 10px !important;
+}
+#display_food_img > form {
+    margin: 10px 0;
+}
+#display_food_img > form li{
+    margin: 10px 0;
+}
+#display_food_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 23%;
+    position: relative;
+}
+#display_food_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_food_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_food_img > li > a .fa{
+  font-size: 25px;
+}
+
+#bioche_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_bioche_img{
+  margin: 10px !important;
+}
+#display_bioche_img > form {
+    margin: 10px 0;
+}
+#display_bioche_img > form li{
+    margin: 10px 0;
+}
+#display_bioche_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 23%;
+    position: relative;
+}
+#display_bioche_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_bioche_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_bioche_img > li > a .fa{
+  font-size: 25px;
+}
+
+#monitoring_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_monitoring_img{
+  margin: 10px !important;
+}
+#display_monitoring_img > form {
+    margin: 10px 0;
+}
+#display_monitoring_img > form li{
+    margin: 10px 0;
+}
+#display_monitoring_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 23%;
+    position: relative;
+}
+#display_monitoring_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_monitoring_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_monitoring_img > li > a .fa{
+  font-size: 25px;
+}
+
+#implants_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_implants_img{
+  margin: 10px !important;
+}
+#display_implants_img > form {
+    margin: 10px 0;
+}
+#display_implants_img > form li{
+    margin: 10px 0;
+}
+#display_implants_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 23%;
+    position: relative;
+}
+#display_implants_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_implants_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_implants_img > li > a .fa{
+  font-size: 25px;
+}
+
+#medidirec_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_medidire_img{
+  margin: 10px !important;
+}
+#display_medidire_img > form {
+    margin: 10px 0;
+}
+#display_medidire_img > form li{
+    margin: 10px 0;
+}
+#display_medidire_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 23%;
+    position: relative;
+}
+#display_medidire_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_medidire_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_medidire_img > li > a .fa{
+  font-size: 25px;
+}
+
+#organ_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_organ_img{
+  margin: 10px !important;
+}
+#display_organ_img > form {
+    margin: 10px 0;
+}
+#display_organ_img > form li{
+    margin: 10px 0;
+}
+#display_organ_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 23%;
+    position: relative;
+}
+#display_organ_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_organ_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_organ_img > li > a .fa{
+  font-size: 25px;
+}
+
+#docpre_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_docpre_img{
+  margin: 10px !important;
+}
+#display_docpre_img > form {
+    margin: 10px 0;
+}
+#display_docpre_img > form li{
+    margin: 10px 0;
+}
+#display_docpre_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 23%;
+    position: relative;
+}
+#display_docpre_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_docpre_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_docpre_img > li > a .fa{
+  font-size: 25px;
+}
+
+#surgeries_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_surgeries_img{
+  margin: 10px !important;
+}
+#display_surgeries_img > form {
+    margin: 10px 0;
+}
+#display_surgeries_img > form li{
+    margin: 10px 0;
+}
+#display_surgeries_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 23%;
+    position: relative;
+}
+#display_surgeries_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_surgeries_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_surgeries_img > li > a .fa{
+  font-size: 25px;
+}
+
+
+#healthdiaries_canvas_display_albm > div{
+    
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    
+  }
+  #display_canvas_img{
+  margin: 10px !important;
+}
+#display_canvas_img > form {
+    margin: 10px 0;
+}
+#display_canvas_img > form li{
+    margin: 10px 0;
+}
+#display_canvas_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 23%;
+    position: relative;
+}
+#display_canvas_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_canvas_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_canvas_img > li > a .fa{
+  font-size: 25px;
+}
+
+
+#healthdiaries_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_healthdiaries_img{
+  margin: 10px !important;
+}
+#display_healthdiaries_img > form {
+    margin: 10px 0;
+}
+#display_healthdiaries_img > form li{
+    margin: 10px 0;
+}
+#display_healthdiaries_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 23%;
+    position: relative;
+}
+#display_healthdiaries_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_healthdiaries_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_healthdiaries_img > li > a .fa{
+  font-size: 25px;
+}
+
+table {
+        font-family: "Lato","sans-serif";   }       /* added custom font-family  */
+
+    table caption {
+        padding-bottom: 1em;        }
+
+    
+table.two {                                  
+    margin-bottom: 3em; 
+    border-collapse:collapse;
+    display: inline-block;
+    margin-right: 3em;      }   
+
+    
+    table.two td {                              
+    text-align: center;     
+    width: 10em;
+    border: 0.1em #c2c2c2 solid;                    
+    padding: 1em;       }       
+
+
+    table.two th {                              
+    text-align: center;                 
+    padding: 1em;
+    background-color: black;            
+    color: white;       }                 
+
+    table.two tr {  
+    height: 1em;    }
+
+    #healthdiries_canvas{
+        margin: 10px auto 0px auto;
+        width:100%;
+        height:100%;
+    }
+    .image-upload > input
+{
+    display: none;
+}
+
+.image-upload img
+{
+    width: 80px;
+    cursor: pointer;
+}
+.albumIconDis{
+    bottom: 63px;
+    position: fixed;
+    right: 16px;
+    margin-bottom: -53px;
+    }
+    .popUpDisplayOptions{
+        height:40%;
+        margin-top:0px;
+        top: auto;
+        bottom: 0px;
+    }
+.imageIconDis{
+    bottom: 63px;
+    position: fixed;
+    right: 16px;
+    margin-bottom: -53px;
+    }
+    #display_all_images_allsec > li {
+    float: left;
+    height: 60px;
+    list-style: outside none none;
+    margin: 1% 1% 74px;
+    position: relative;
+    width: 90px;
+}
+#display_all_images_allsec > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_all_images_allsec > li > img {
+    height: 200%;
+    width:97%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_all_images_allsec > li > video {
+    height: 200%;
+    width:97%;
+    /*box-shadow: 2px 2px 2px #666;*/
+}
+     @media only screen  and (min-device-width : 320px) and (max-device-width : 1024px) {
+   .popUpDisplayOptions{
+         height:40%;
+        margin-top:0px;
+        top: auto;
+        bottom: 0px;
+    }
+}
+ @media only screen  and (min-device-width : 320px) and (max-device-width : 1024px) {
+   .albumIconDis{
+    bottom: 63px;
+    position: fixed;
+    right: 16px;
+    margin-bottom: -53px;
+    }
+    .imageIconDis{
+    bottom: 63px;
+    position: fixed;
+    right: 16px;
+    margin-bottom: -53px;
+    }
+}
+  /* Smartphones (portrait and landscape) ----------- */
+  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .selfdata1 { 
+      padding: 0; 
+      margin: 0; 
+      width: 320px; 
+}
+    
+    }
+  @media only screen and (min-device-width : 320px) and (max-device-width : 624px) {
+.time, .mins, .meridian {
+    color: #2d2e2e;
+    float: left;
+    font-family: arial;
+    font-size: 10px !important;
+    font-weight: 700;
+    margin: 0 2px !important;
+    width: 30px !important;
+}
+.prev{
+    background-position: 50% -36% !important;
+}
+
+.next{
+    background-position: 50% 120% !important;
+}
+.prev, .next {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: auto;
+    padding: 10px !important;
+    width: 10% !important;
+    background-size: 60% !important;
+}
+
+  }
+     @media only screen  and (min-device-width : 320px) and (max-device-width : 1024px) {
+    #healthdiries_canvas{
+        margin: 0px auto 0px auto;
+        width:100%;
+        height:100%;
+    }
+}
+  
+  /* iPads (portrait and landscape) ----------- */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .selfdata1{
+      /*width: 495px;*/
+    }
+    textarea#Family_his_title_text {
+    width: 100%;
+    height: 120px;
+    /*border: 1px solid #cccccc;*/
+    padding: 5px;
+    font-family: Tahoma, sans-serif;
+    /*background-image: url(bg.gif);*/
+    /*background-position: bottom right;*/
+    /*background-repeat: no-repeat;*/
+}
+  } 
+@media (min-width:320px) and (max-width:768px){
+#sections_displayGridView div {
+    height: 160px;
+}
+.kapil{
+    width:20%;
+}
+.kapil2{
+    width:80%;
+}
+.date2{
+    /*width:70%;*/
+    
+}
+.weight2{
+    /*width:30%;*/
+}
+.popupImage {
+
+background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+   border-radius: 6px;
+   margin: 10% auto auto;
+    padding: 20px 10px;
+}
+.popupImage img{
+height: 278px;
+width: 100%;
+min-width:100%;
+}
+}
+ @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    #self_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+#self_img{
+  margin: 10px !important;
+}
+#self_img > form {
+    margin: 10px 0;
+}
+#self_img > form li{
+    margin: 10px 0;
+}
+#self_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 46%;
+    position: relative;
+}
+#self_img > li > img {
+    height: 200%;
+    width:97%;
+    box-shadow: 2px 2px 2px #666;
+}
+#self_img > li > video {
+    height: 200%;
+    width:97%;
+    /*box-shadow: 2px 2px 2px #666;*/
+}
+#self_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#self_img > li > a .fa{
+  font-size: 25px;
+}
+  }
+  #display_all_images_allsec > li {
+    float: left;
+    height: 60px;
+    list-style: outside none none;
+    margin: 1% 1% 74px;
+    position: relative;
+    width: 90px;
+}
+#display_all_images_allsec > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_all_images_allsec > li > img {
+    height: 200%;
+    width:97%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_all_images_allsec > li > video {
+    height: 200%;
+    width:97%;
+    /*box-shadow: 2px 2px 2px #666;*/
+}
+
+ @media only screen and (min-device-width : 320px) and (max-device-width : 480px) { 
+#emergency_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_emer_img{
+  margin: 10px !important;
+}
+#display_emer_img > form {
+    margin: 10px 0;
+}
+#display_emer_img > form li{
+    margin: 10px 0;
+}
+#display_emer_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 46%;
+    position: relative;
+}
+#display_emer_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_emer_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_emer_img > li > a .fa{
+  font-size: 25px;
+}
+ #healthprovider_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_healthprovider_img{
+  margin: 10px !important;
+}
+#display_healthprovider_img > form {
+    margin: 10px 0;
+}
+#display_healthprovider_img > form li{
+    margin: 10px 0;
+}
+#display_healthprovider_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 46%;
+    position: relative;
+}
+#display_healthprovider_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_healthprovider_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_healthprovider_img > li > a .fa{
+  font-size: 25px;
+}
+
+#insurance_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #healthinsu_image_dislay{
+  margin: 10px !important;
+}
+#healthinsu_image_dislay > form {
+    margin: 10px 0;
+}
+#healthinsu_image_dislay > form li{
+    margin: 10px 0;
+}
+#healthinsu_image_dislay > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 46%;
+    position: relative;
+}
+#healthinsu_image_dislay > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#healthinsu_image_dislay > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#healthinsu_image_dislay > li > a .fa{
+  font-size: 25px;
+}
+
+#doctors_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_doctorsreports_img{
+  margin: 10px !important;
+}
+#display_doctorsreports_img > form {
+    margin: 10px 0;
+}
+#display_doctorsreports_img > form li{
+    margin: 10px 0;
+}
+#display_doctorsreports_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 46%;
+    position: relative;
+}
+#display_doctorsreports_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_doctorsreports_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_doctorsreports_img > li > a .fa{
+  font-size: 25px;
+}
+
+#doc_con_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_doctor_counsal_img{
+  margin: 10px !important;
+}
+#display_doctor_counsal_img > form {
+    margin: 10px 0;
+}
+#display_doctor_counsal_img > form li{
+    margin: 10px 0;
+}
+#display_doctor_counsal_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 46%;
+    position: relative;
+}
+#display_doctor_counsal_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_doctor_counsal_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_doctor_counsal_img > li > a .fa{
+  font-size: 25px;
+}
+
+#medication_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_medicaltio_img{
+  margin: 10px !important;
+}
+#display_medicaltio_img > form {
+    margin: 10px 0;
+}
+#display_medicaltio_img > form li{
+    margin: 10px 0;
+}
+#display_medicaltio_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 46%;
+    position: relative;
+}
+#display_medicaltio_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_medicaltio_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_medicaltio_img > li > a .fa{
+  font-size: 25px;
+}
+
+#medihistory_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_medihistory_img{
+  margin: 10px !important;
+}
+#display_medihistory_img > form {
+    margin: 10px 0;
+}
+#display_medihistory_img > form li{
+    margin: 10px 0;
+}
+#display_medihistory_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 46%;
+    position: relative;
+}
+#display_medihistory_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_medihistory_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_medihistory_img > li > a .fa{
+  font-size: 25px;
+}
+
+#allergies_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_allergies_img{
+  margin: 10px !important;
+}
+#display_allergies_img > form {
+    margin: 10px 0;
+}
+#display_allergies_img > form li{
+    margin: 10px 0;
+}
+#display_allergies_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 46%;
+    position: relative;
+}
+#display_allergies_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_allergies_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_allergies_img > li > a .fa{
+  font-size: 25px;
+}
+
+#familyhis_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_famailyhis_img{
+  margin: 10px !important;
+}
+#display_famailyhis_img > form {
+    margin: 10px 0;
+}
+#display_famailyhis_img > form li{
+    margin: 10px 0;
+}
+#display_famailyhis_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 46%;
+    position: relative;
+}
+#display_famailyhis_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_famailyhis_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_famailyhis_img > li > a .fa{
+  font-size: 25px;
+}
+
+#physicalex_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_physical_img{
+  margin: 10px !important;
+}
+#display_physical_img > form {
+    margin: 10px 0;
+}
+#display_physical_img > form li{
+    margin: 10px 0;
+}
+#display_physical_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 46%;
+    position: relative;
+}
+#display_physical_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_physical_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_physical_img > li > a .fa{
+  font-size: 25px;
+}
+
+#urinalasys_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_urine_img{
+  margin: 10px !important;
+}
+#display_urine_img > form {
+    margin: 10px 0;
+}
+#display_urine_img > form li{
+    margin: 10px 0;
+}
+#display_urine_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 46%;
+    position: relative;
+}
+#display_urine_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_urine_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_urine_img > li > a .fa{
+  font-size: 25px;
+}
+
+#Hematology_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_hemato_img{
+  margin: 10px !important;
+}
+#display_hemato_img > form {
+    margin: 10px 0;
+}
+#display_hemato_img > form li{
+    margin: 10px 0;
+}
+#display_hemato_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 46%;
+    position: relative;
+}
+#display_hemato_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_hemato_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_hemato_img > li > a .fa{
+  font-size: 25px;
+}
+
+#Pathalogy_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_pathalogy_img{
+  margin: 10px !important;
+}
+#display_pathalogy_img > form {
+    margin: 10px 0;
+}
+#display_pathalogy_img > form li{
+    margin: 10px 0;
+}
+#display_pathalogy_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 46%;
+    position: relative;
+}
+#display_pathalogy_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_pathalogy_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_pathalogy_img > li > a .fa{
+  font-size: 25px;
+}
+
+#BloodChe_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_bloodche_img{
+  margin: 10px !important;
+}
+#display_bloodche_img > form {
+    margin: 10px 0;
+}
+#display_bloodche_img > form li{
+    margin: 10px 0;
+}
+#display_bloodche_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 46%;
+    position: relative;
+}
+#display_bloodche_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_bloodche_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_bloodche_img > li > a .fa{
+  font-size: 25px;
+}
+
+#Radiology_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_radiology_img{
+  margin: 10px !important;
+}
+#display_radiology_img > form {
+    margin: 10px 0;
+}
+#display_radiology_img > form li{
+    margin: 10px 0;
+}
+#display_radiology_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 46%;
+    position: relative;
+}
+#display_radiology_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_radiology_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_radiology_img > li > a .fa{
+  font-size: 25px;
+}
+
+#obestric_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_obestric_img{
+  margin: 10px !important;
+}
+#display_obestric_img > form {
+    margin: 10px 0;
+}
+#display_obestric_img > form li{
+    margin: 10px 0;
+}
+#display_obestric_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 46%;
+    position: relative;
+}
+#display_obestric_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_obestric_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_obestric_img > li > a .fa{
+  font-size: 25px;
+}
+
+#pastmedhis_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_pastmedihis_img{
+  margin: 10px !important;
+}
+#display_pastmedihis_img > form {
+    margin: 10px 0;
+}
+#display_pastmedihis_img > form li{
+    margin: 10px 0;
+}
+#display_pastmedihis_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 46%;
+    position: relative;
+}
+#display_pastmedihis_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_pastmedihis_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_pastmedihis_img > li > a .fa{
+  font-size: 25px;
+}
+
+#birthped_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_birthped_img{
+  margin: 10px !important;
+}
+#display_birthped_img > form {
+    margin: 10px 0;
+}
+#display_birthped_img > form li{
+    margin: 10px 0;
+}
+#display_birthped_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 46%;
+    position: relative;
+}
+#display_birthped_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_birthped_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_birthped_img > li > a .fa{
+  font-size: 25px;
+}
+
+#devepmtped_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_devpped_img{
+  margin: 10px !important;
+}
+#display_devpped_img > form {
+    margin: 10px 0;
+}
+#display_devpped_img > form li{
+    margin: 10px 0;
+}
+#display_devpped_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 46%;
+    position: relative;
+}
+#display_devpped_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_devpped_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_devpped_img > li > a .fa{
+  font-size: 25px;
+}
+
+#familyped_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_famlyped_img{
+  margin: 10px !important;
+}
+#display_famlyped_img > form {
+    margin: 10px 0;
+}
+#display_famlyped_img > form li{
+    margin: 10px 0;
+}
+#display_famlyped_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 46%;
+    position: relative;
+}
+#display_famlyped_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_famlyped_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_famlyped_img > li > a .fa{
+  font-size: 25px;
+}
+
+#dentalhis_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_dentalhis_img{
+  margin: 10px !important;
+}
+#display_dentalhis_img > form {
+    margin: 10px 0;
+}
+#display_dentalhis_img > form li{
+    margin: 10px 0;
+}
+#display_dentalhis_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 46%;
+    position: relative;
+}
+#display_dentalhis_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_dentalhis_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_dentalhis_img > li > a .fa{
+  font-size: 25px;
+}
+
+#eye_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #eye_imge_display{
+  margin: 10px !important;
+}
+#eye_imge_display > form {
+    margin: 10px 0;
+}
+#eye_imge_display > form li{
+    margin: 10px 0;
+}
+#eye_imge_display > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 46%;
+    position: relative;
+}
+#eye_imge_display > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#eye_imge_display > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#eye_imge_display > li > a .fa{
+  font-size: 25px;
+}
+
+#food_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_food_img{
+  margin: 10px !important;
+}
+#display_food_img > form {
+    margin: 10px 0;
+}
+#display_food_img > form li{
+    margin: 10px 0;
+}
+#display_food_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 46%;
+    position: relative;
+}
+#display_food_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_food_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_food_img > li > a .fa{
+  font-size: 25px;
+}
+
+#bioche_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_bioche_img{
+  margin: 10px !important;
+}
+#display_bioche_img > form {
+    margin: 10px 0;
+}
+#display_bioche_img > form li{
+    margin: 10px 0;
+}
+#display_bioche_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 46%;
+    position: relative;
+}
+#display_bioche_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_bioche_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_bioche_img > li > a .fa{
+  font-size: 25px;
+}
+
+#monitoring_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_monitoring_img{
+  margin: 10px !important;
+}
+#display_monitoring_img > form {
+    margin: 10px 0;
+}
+#display_monitoring_img > form li{
+    margin: 10px 0;
+}
+#display_monitoring_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 46%;
+    position: relative;
+}
+#display_monitoring_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_monitoring_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_monitoring_img > li > a .fa{
+  font-size: 25px;
+}
+
+#implants_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_implants_img{
+  margin: 10px !important;
+}
+#display_implants_img > form {
+    margin: 10px 0;
+}
+#display_implants_img > form li{
+    margin: 10px 0;
+}
+#display_implants_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 46%;
+    position: relative;
+}
+#display_implants_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_implants_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_implants_img > li > a .fa{
+  font-size: 25px;
+}
+
+#medidirec_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_medidire_img{
+  margin: 10px !important;
+}
+#display_medidire_img > form {
+    margin: 10px 0;
+}
+#display_medidire_img > form li{
+    margin: 10px 0;
+}
+#display_medidire_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 46%;
+    position: relative;
+}
+#display_medidire_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_medidire_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_medidire_img > li > a .fa{
+  font-size: 25px;
+}
+
+#organ_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_organ_img{
+  margin: 10px !important;
+}
+#display_organ_img > form {
+    margin: 10px 0;
+}
+#display_organ_img > form li{
+    margin: 10px 0;
+}
+#display_organ_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 46%;
+    position: relative;
+}
+#display_organ_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_organ_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_organ_img > li > a .fa{
+  font-size: 25px;
+}
+
+#docpre_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_docpre_img{
+  margin: 10px !important;
+}
+#display_docpre_img > form {
+    margin: 10px 0;
+}
+#display_docpre_img > form li{
+    margin: 10px 0;
+}
+#display_docpre_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 46%;
+    position: relative;
+}
+#display_docpre_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_docpre_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_docpre_img > li > a .fa{
+  font-size: 25px;
+}
+
+#surgeries_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_surgeries_img{
+  margin: 10px !important;
+}
+#display_surgeries_img > form {
+    margin: 10px 0;
+}
+#display_surgeries_img > form li{
+    margin: 10px 0;
+}
+#display_surgeries_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 46%;
+    position: relative;
+}
+#display_surgeries_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_surgeries_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_surgeries_img > li > a .fa{
+  font-size: 25px;
+}
+
+#healthdiaries_display_albm > div{
+    background: #51b8bd none repeat scroll 0 0;
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 2px 2px 3px #666;
+  }
+  #display_healthdiaries_img{
+  margin: 10px !important;
+}
+#display_healthdiaries_img > form {
+    margin: 10px 0;
+}
+#display_healthdiaries_img > form li{
+    margin: 10px 0;
+}
+#display_healthdiaries_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 46%;
+    position: relative;
+}
+#display_healthdiaries_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_healthdiaries_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_healthdiaries_img > li > a .fa{
+  font-size: 25px;
+}
+
+#healthdiaries_canvas_display_albm > div{
+   
+    display: inline-block;
+    margin: 10px !important;
+    padding: 5px 0;
+    text-align: center;
+    vertical-align: top;
+   
+  }
+  #display_canvas_img{
+  margin: 10px !important;
+}
+#display_canvas_img > form {
+    margin: 10px 0;
+}
+#display_canvas_img > form li{
+    margin: 10px 0;
+}
+#display_canvas_img > li {
+    float: left;
+    list-style: outside none none;
+    margin: 2%;
+    width: 46%;
+    position: relative;
+}
+#display_canvas_img > li > img {
+    height: auto;
+    width:100%;
+    box-shadow: 2px 2px 2px #666;
+}
+#display_canvas_img > li > a{
+ font-size: 19px;
+    margin-right: -13px;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: #0db7c4;
+}
+#display_canvas_img > li > a .fa{
+  font-size: 25px;
+}
+}

@@ -1,0 +1,235 @@
+<div class="navbar">
+   <div class="navbar-inner">
+     <div class="left sliding"><a href="loginnormal.html" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+     <div class="center sliding white" style="margin-right:80px;">ORGAN DONATIONS</div>
+     <div class="right theme-white searchicon" >
+        <a href="#" onclick="organdonationinfo()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i></a>
+      </div>
+      <div class="right theme-white navicon" >
+        <a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+        </a>
+      </div>
+   </div>
+ </div>
+
+ <div class="pages navbar-through">
+  <div data-page="organ_donation" class="page">
+    <div style="overflow-y:scroll; height:inherit"> 
+      <div class="content-block-title" style="padding-top: 45px;font-size:20px;"></div>
+        <div class="list-block">
+          <ul>
+            <li>
+              <div class="item-content">
+                <div class="item-media"></div>
+                <div class="item-inner">
+                  <div class="item-title label white">Have you ever donated an organ?</div>
+                  <div class="item-input">
+                    <label class="label-switch">
+                      <input type="checkbox" name="c1" onclick="showMe('div1')">
+                      <div class="checkbox"></div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <div class="list-block text" id="div1" style="display:none;background-color: white;" >
+              <ul style="background-color:#FFFFFF">
+                <li>
+                 <div class="item-content">
+                   <div class="item-media"></div>
+                    <div class="item-inner">
+                      <div class="item-title label">Which organ : </div>
+                        <div class="item-input">
+                          <input type="text" name="which_organ" id="which_organ" placeholder="Which organ" />
+                        </div>
+                     </div>
+                  </div>
+               </li>
+               <li>
+               <div class="item-content">
+                 <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-title label">Name of organ recipient : </div>
+                      <div class="item-input">
+                        <input type="text" name="organ_name_recipient" id="organ_name_recipient" placeholder="State Where Registered " />
+                      </div>
+                   </div>
+                </div>
+               </li>
+               <li>
+                 <div class="item-content">
+                   <div class="item-media"></div>
+                    <div class="item-inner">
+                      <div class="item-title label">City where the organ transfer occurred : </div>
+                        <div class="item-input">
+                          <input type="text" name="organ_city_organ_trans" id="organ_city_organ_trans" placeholder="City where the organ transfer occurred" />
+                        </div>
+                     </div>
+                  </div>
+               </li>
+               <li>
+                 <div class="item-content">
+                   <div class="item-media"></div>
+                    <div class="item-inner">
+                      <div class="item-title label">Hospital where the organ transfer occurred : </div>
+                        <div class="item-input">
+                          <input type="text" name="organ_whe_trans_occ" id="organ_whe_trans_occ" placeholder="Hospital where the organ transfer occurred" />
+                        </div>
+                     </div>
+                  </div>
+               </li>
+               <li>
+                 <div class="item-content">
+                   <div class="item-media"></div>
+                    <div class="item-inner">
+                      <div class="item-title label">Name of the doctor who operated the organ transplant:  </div>
+                        <div class="item-input" id="orgphysicianprovider">
+                         <input type="text" name="organ_name_doc" id="organ_name_doc" placeholder="Name of Doctor" onclick="organphysicianProvider();">
+                          <input type="hidden" id="organ_name_doc_id"/>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+              </ul>
+            </div>
+            <li>
+              <div class="item-content">
+                <div class="item-media"></div>
+                <div class="item-inner">
+                  <div class="item-title label white">Have you ever received an organ?</div>
+                  <div class="item-input">
+                    <label class="label-switch">
+                      <input type="checkbox" name="c2" onclick="showMe1('div2')">
+                      <div class="checkbox"></div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <div class="list-block " id="div2" style="display:none;background-color: white;" >
+              <ul style="background-color:#FFFFFF">
+                <li>
+                 <div class="item-content">
+                   <div class="item-media"></div>
+                    <div class="item-inner">
+                      <div class="item-title label">Which organ : </div>
+                        <div class="item-input">
+                          <input type="text" name="organ_which" id="organ_which" placeholder="Which organ" />
+                        </div>
+                     </div>
+                  </div>
+               </li>
+               <li>
+                 <div class="item-content">
+                   <div class="item-media"></div>
+                      <div class="item-inner">
+                        <div class="item-title label">Name of organ recipient : </div>
+                          <div class="item-input">
+                            <input type="text" name="organ_name_of_recei" id="organ_name_of_recei" placeholder="Name of organ recipient " />
+                          </div>
+                     </div>
+                  </div>
+               </li>
+               <li>
+                 <div class="item-content">
+                   <div class="item-media"></div>
+                    <div class="item-inner">
+                        <div class="item-title label">City where the organ transfer occurred : </div>
+                          <div class="item-input">
+                            <input type="text" name="organ_transfer_city" id="organ_transfer_city" placeholder="City where the organ transfer occurred" />
+                          </div>
+                     </div>
+                  </div>
+               </li>
+               <li>
+                 <div class="item-content">
+                   <div class="item-media"></div>
+                    <div class="item-inner">
+                      <div class="item-title label">Hospital where the organ transfer occurred : </div>
+                        <div class="item-input">
+                          <input type="text" name="organ_hospi_ortrans" id="organ_hospi_ortrans" placeholder="Hospital where the organ transfer occurred" />
+                        </div>
+                     </div>
+                  </div>
+               </li>
+                 <li>
+                   <div class="item-content">
+                     <div class="item-media"></div>
+                      <div class="item-inner">
+                          <div class="item-title label">Name of the doctor who operated the organ transplant:  </div>
+                            <div class="item-input" id="orgphysicianprovi">
+                               <input type="text" name="organ_name_doc1" id="organ_name_doc1" placeholder = "Name of the Doctor" onclick="organphysiciProvider();">
+                               <input type="hidden" id="organ_name_doc1_id"/>
+                            </div>
+                       </div>
+                  </div>
+               </li>
+              </ul>
+            </div>
+            <li>
+              <div class="item-content">
+                <div class="item-media"></div>
+                <div class="item-inner">
+                  <div class="item-title label white">Do you wish to donate your organs after your death?</div>
+                  <div class="item-input">
+                    <label class="label-switch">
+                      <input type="checkbox" name="c3" onclick="showMe2('div3')">
+                      <div class="checkbox"></div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <div class="list-block " id="div3" style="display:none;background-color: white;" >
+              <ul style="background-color:#FFFFFF">
+                <li>
+                   <div class="item-content">
+                     <div class="item-media"></div>
+                      <div class="item-inner">
+                        <div class="item-title label">Which organ : </div>
+                          <div class="item-input">
+                            <input type="text" name="organ_which1" id="organ_which1" placeholder="Which organ" />
+                          </div>
+                     </div>
+                  </div>
+               </li>
+               <li>
+                <div data-role="content">
+                   <form method="post" onsubmit="return uploadOrgandonationPic()" id="file-attachment-form9"  enctype="multipart/form-data">
+                     <div data-role="fieldcontain" class="field">
+                        <div class="fileupload fileupload-new" data-provides="fileupload" style="overflow:hidden">
+                            <div class="fileupload-preview fileupload-exists thumbnail" id="organdonation_img_display" style="max-width: 200px; max-height: 200px;  line-height: 20px;"></div>
+                            <div >
+                              <span class="btn btn-file">
+                                <span class="fileupload-new"></span>
+                                <span class="fileupload-exists"></span>
+                                  <div class="image-upload">
+                                    <label for="organ_don_image">
+                                      <i class="fa fa-upload fa-2x" style=" color: #000;font-size: 40px;height:50px;"></i>
+                                        <span align="center" style="color:#000;font-size:13px;display:block;">Upload Image</span>
+                                    </label>
+                                    <input type="file" name="organ_don_image" id="organ_don_image" />
+                                  </div>
+                              </span> 
+                              <a href="#" style=" margin-top: 10px;width: 200px;" class="button button-round" onclick="removeOrganImage();">Remove</a>
+                            </div>
+                        </div>
+                        <input type="hidden" name="organ_don_image_id" id="organ_don_image_id"/>
+                    </div>
+                 </form>
+                </div>
+              </li>
+              </ul>
+            </div>
+            <input type="hidden" name="organ_id" id="organ_id" >
+          </ul>
+        </div>
+    </div>
+      <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;">
+        <div class="toolbar-inner" style="background:#0DB7C4;">
+          <a href="#" onclick="organDoSubmit();" class="link icon-only"  style="color:white;border-right:1px white solid ">Submit</a>
+          <a href="manage_albums.html"  class="link icon-only" style="color:white" onclick="manage_albums(42,'Organ Donation');"><i class="fa fa-file-image-o"></i>Manage Images</a>
+        </div>
+     </div>
+  </div>
+</div>

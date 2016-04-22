@@ -1,0 +1,141 @@
+<div class="navbar">
+   <div class="navbar-inner">
+     <div class="left sliding"><a href="loginnormal.html" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+     <div class="center sliding white" style="margin-right: 150px;">Gynecologic History </div>
+     <div class="right theme-white searchicon" >
+        <a href="#" onclick="MobileAppInfo()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i></a>
+      </div>
+      
+      <div class="right theme-white navicon" >
+        <a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+        </a>
+      </div>
+   </div>
+ </div>
+ 
+<div class="pages navbar-through" >
+  	<div data-page="gynecologic_history_form" class="page" > 
+  		<div style="overflow-y:scroll; height:inherit">
+    			<div class="list-block" style="padding-top: 43px;margin-bottom: 70px;">
+    				<ul style="background-color:#FFFFFF">
+    					<li>
+					      <div class="item-content text7" >
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-title label">Age of First Period : </div>
+					          <div class="item-input">
+					            <input type="text" name="gyne_his_afp" id="gyne_his_afp" placeholder="Age of First Period ">
+					          </div>
+					        </div>
+					      </div>
+			    		</li>
+			    		<li>
+					      <div class="item-content text7">
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-title label">Date of Last Pap Smear :</div>
+					          <div class="item-input">
+					            <input type="text" name="gyne_his_dolps" id="gyne_his_dolps" placeholder="Date of Last Pap Smear "  readonly>
+					          </div>
+					        </div>
+					      </div>
+			    		</li>
+			    		<li>
+					      <div class="item-content text7" >
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-title label">Result </div>
+					          <div class="item-input">
+					            <input type="text" name="gyne_his_result" id="gyne_his_result" placeholder="Result ">
+					          </div>
+					        </div>
+					      </div>
+			    		</li>
+			    		<li>
+		                   <div class="item-content">
+		                      <div class="item-input">
+	                             <label class="label-checkbox item-content">
+	                                <input type="checkbox" name="gyne_his_have_abpap" id="gyne_his_have_abpap" value="1" onclick="ShowHideDiv(this)">
+	                              		<div class="item-media">
+	                              			<i class="icon icon-form-checkbox"></i>
+	                               		</div>
+	                               	<div class="item-inner">
+	                                	<div class="item-title">Have you ever had an abnormal pap smear ? </div>
+	                               </div>
+	                             </label>
+	                          </div>
+                           </div>
+               			</li>
+               			<li>
+					      <div class="item-content " id="dvPassport" style="display: none" >
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-title label">If yes, In which year(s) ?  </div>
+					          <div class="item-input">
+					            <input type="text" name="gyne_his_wyear" id="gyne_his_wyear" placeholder="year ">
+					          </div>
+					        </div>
+					      </div>
+			    		</li>
+			    		<li>
+					      <div class="item-content " id="dvPassport1" style="display: none">
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-title label">What kind of treatment did you have for each abnormal Pap smear - please list date and tratment (Colposcopy, Cryotherapy, LEEP, repeat Pap Smear,etc) ?  </div>
+					          <div class="item-input">
+					            <input type="text" name="gyne_his_wk" id="gyne_his_wk" placeholder="Treatments ">
+					          </div>
+					        </div>
+					      </div>
+			    		</li> 
+			    		<li>
+		                   <div class="item-content">
+		                      <div class="item-input">
+	                             <label class="label-checkbox item-content">
+	                                <input type="checkbox" name="gyne_his_have_sex_trinf" id="gyne_his_have_sex_trinf" value="1" onclick="ShowHideDiv1(this)">
+	                              		<div class="item-media">
+	                              			<i class="icon icon-form-checkbox"></i>
+	                               		</div>
+	                               	<div class="item-inner">
+	                                	<div class="item-title">History of Sexually Transmitted Infections ?</div>
+	                               </div>
+	                             </label>
+	                          </div>
+                           </div>
+               			</li>
+               			<li>
+					      <div class="item-content " id="dvPassport3" style="display: none" >
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-title label">If yes, What are the Type(s) ? </div>
+					          <div class="item-input">
+					            <input type="text" name="gyne_his_wtypes" id="gyne_his_wtypes" placeholder="Type ">
+					          </div>
+					        </div>
+					      </div>
+			    		</li> 
+					</ul>
+					 <input type="hidden" name="gyne_his_update" id="gyne_his_update" placeholder="id ">
+				</div>
+		</div>
+	<!-- 	<div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;">
+    <div class="toolbar-inner" style="background:#0DB7C4;">
+      <a href="#" onclick="gynecologicformSubmit();" class="link icon-only" style="color:white;border-right:1px white solid ">Submit</a>
+      <a href="loginnormal.html"  class="link icon-only" style="color:white">Cancel</a>
+    </div>
+  </div> -->  
+  <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;" id="gynacologies_inbtn">
+      <div class="toolbar-inner" style="background:#0DB7C4;" >
+        <a href="#" class="link icon-only" onclick="gynecologicformSubmit();" style="color:white;border-right:1px white solid ">Update</a>
+        <a href="#" onclick="deletegynecologicHis();" class="link icon-only" style="color:white">Delete</a>
+      </div>
+    </div>  
+    <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;" id="gynacologies_upbtn">
+      <div class="toolbar-inner" style="background:#0DB7C4;" >
+        <a href="#" class="link icon-only" onclick="gynecologicformSubmit();" style="color:white;border-right:1px white solid ">Submit</a>
+        <a href="loginnormal.html" class="link icon-only" style="color:white">Cancel</a>
+      </div>
+    </div>
+	</div>
+</div>
+    					

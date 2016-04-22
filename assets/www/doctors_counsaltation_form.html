@@ -1,0 +1,103 @@
+<div class="navbar">
+	<div class="navbar-inner">
+     <div class="left sliding"><a href="index.html" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+     <div class="center sliding white" style="margin-right:80px;">Doctors Consultation</div>
+     <div class="right theme-white searchicon" >
+        <a href="#" onclick="doctorsconsultationformInfo()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i></a>
+      </div>
+      <div class="right theme-white navicon" >
+        <a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+        </a>
+      </div>
+   </div>
+ </div>
+ 
+<div class="pages navbar-through" >
+  	<div data-page="doctors_counsaltation_form" class="page" > 
+  		<div style="overflow-y:scroll; height:inherit">
+    		<div class="content-block-title" style="padding-top: 48px;font-size:18px;"></div>
+    			<div class="list-block" style="margin-bottom:70px;">
+    				<ul style="background-color:#FFFFFF">
+    					<li>
+					      <div class="item-content " >
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-title label">Date</div>
+					          <div class="item-input">
+					            <input type="text"  name="doc_cn1_dt" id="doc_cn1_dt"  placeholder=" Date" readonly>
+					          </div>
+					        </div>
+					      </div>
+			    		</li>
+    					<li>
+					      <div class="item-content " >
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-title label">Name of Physician</div>
+					          <div class="item-input">
+					            <input type="text" name="doc_cn1_np" id="doc_cn1_np" placeholder="Name of Physician" required>
+					          </div>
+					        </div>
+					      </div>
+			    		</li>
+			    		
+			    		<li>
+					      <div class="item-content " >
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-title label">Reason</div>
+					          <div class="item-input">
+					            <input type="text" name="doc_cn1_reason" id="doc_cn1_reason" placeholder="Reason" required>
+					          </div>
+					        </div>
+					      </div>
+			    		</li>
+			    		
+			    		<li>
+					      <div class="item-content " >
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-title label">Diagnosis</div>
+					          <div class="item-input">
+					            <input type="text" name="doc_cn1_diag" id="doc_cn1_diag" placeholder="Diagnosis">
+					          </div>
+					        </div>
+					      </div>
+			    		</li>
+			    		<li>
+					      <div class="item-content " >
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-title label">Treatment</div>
+					          <div class="item-input">
+					            <!-- <input type="text" name="doc_cn1_trt" id="doc_cn1_trt" placeholder="Treatment"> -->
+					            <textarea style="height:144px" id="doc_cn1_trt" name="doc_cn1_trt"></textarea>
+					          </div>
+					        </div>
+					      </div>
+			    		</li>
+			    	</ul>
+					<input type="hidden" name="doc_cn1_update" id="doc_cn1_update" placeholder="Date">
+				</div>
+		</div>
+		
+	<!-- 	<div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;">
+    <div class="toolbar-inner" style="background:#0DB7C4">
+      <a href="#" onclick="doccounformSubmit();" class="link icon-only" style="color:white;border-right:1px white solid ">Submit</a>
+      <a href="loginnormal.html" class="link icon-only" style="color:white">Cancel</a>
+    </div>
+  </div> -->
+  <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;" id="doccounsaltation_inbtn">
+      <div class="toolbar-inner" style="background:#0DB7C4;" >
+        <a href="#" class="link icon-only" onclick="doccounformSubmit();" style="color:white;border-right:1px white solid ">Update</a>
+        <a href="#" onclick="deleteDocCon();" class="link icon-only" style="color:white">Delete</a>
+      </div>
+    </div>  
+    <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;" id="doccounsaltation_upbtn">
+      <div class="toolbar-inner" style="background:#0DB7C4;" >
+        <a href="#" class="link icon-only" onclick="doccounformSubmit();" style="color:white;border-right:1px white solid ">Submit</a>
+        <a href="doctors_counsaltation_listing.html" class="link icon-only" style="color:white">Cancel</a>
+      </div>
+    </div>
+	</div>
+</div>

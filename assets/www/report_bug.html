@@ -1,0 +1,85 @@
+<div class="navbar">
+	<div class="navbar-inner">
+		<div class="left sliding"><a href="#" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+			<div class="center sliding white" style="margin-right: 143px;">Report A Bug</div>
+				<div class="right theme-white searchicon" >
+					<a href="#" onclick="reportBuginfo()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i></a>
+				</div>
+				<div class="right theme-white navicon" >
+					<a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+					</a>
+				</div>
+	</div>
+</div>
+
+<div class="pages navbar-through" >
+	<div data-page="report_bug" class="page">
+		<div style="overflow-y:scroll; height:inherit"> 
+			<div class="content-block-title" style="padding-top: 64px;font-size:18px;"></div>
+				<div class="list-block" style="margin-bottom: 70px;">
+					<ul style="background-color:white;">
+						<li>
+							<div class="item-content " >
+								<div class="item-media"></div>
+									<div class="item-inner">
+										<div class="item-title label" style="width:100%;">Section</div>
+									</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content " >
+								<div class="item-media"></div>
+									<div class="item-inner">
+										<div class="item-input">
+											<input type="text" name="report_title_text" id="report_title_text" placeholder="Section Name">
+										</div>
+									</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content " >
+								<div class="item-media"></div>
+									<div class="item-inner">
+										<div class="item-title label" style="width:100%;">Bug</div>
+									</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content " >
+								<div class="item-media"></div>
+									<div class="item-inner">
+										<div class="item-input">
+											<input type="text" name="report_bug" id="report_bug" placeholder="Bug">
+										</div>
+									</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content " >
+								<div class="item-media"></div>
+									<div class="item-inner">
+										<div class="item-title label" style="width:100%;">Description</div>
+									</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content " >
+								<div class="item-media"></div>
+									<div class="item-inner">
+										<div class="item-input">
+											<textarea id="report_desc" class="" name="report_desc" placeholder="Description"></textarea>
+										</div>
+									</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+		</div>
+		<div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;">
+			<div class="toolbar-inner" style="background:#0DB7C4;" >
+				<a href="#" class="link icon-only" onclick="ReportOfBugs()" style="color:white;border-right:1px white solid ">Submit</a>
+				<a href="#"  class="link icon-only" style="color:white">Cancel</a>
+			</div>
+		</div>
+	</div>
+</div>

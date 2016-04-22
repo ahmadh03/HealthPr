@@ -1,0 +1,48 @@
+<div class="navbar">
+   <div class="navbar-inner">
+     <div class="left sliding"><a href="loginnormal.html" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+     <div class="center sliding white" style=" margin-right: 80px;">SELF MONITORING CHARTS</div>
+     <div class="right theme-white searchicon" >
+        <a href="#" onclick="MobileAppInfo()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i></a>
+      </div>
+      <div class="right theme-white navicon" >
+        <a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+        </a>
+      </div>
+   </div>
+ </div>
+
+ <div class="pages navbar-through">
+	<div data-page="self_respiratoratory_charts" class="page" >
+	  <div style="overflow-y:scroll; height:inherit">
+	  	<div class="charts">
+			<div class="content-block content-block1">
+				<div style="width: 100%;">
+					<div id="test">
+						<canvas id="canvas_resrate" height="450" width="600" style="border: 1px solid;"></canvas>
+					</div>
+				</div>
+				<p>Respiratory Rate Chart</p>
+				<!-- <p>
+					<a href="#" style="color:black;float:right;margin-right: -13px; margin-top: -23px;" class="close-popup">
+						<i class="fa fa-times-circle fa-2x" ></i>
+					</a>
+				</p> -->
+			</div>
+		</div>
+		<div>
+			<table style="width:100%;">
+				<thead>
+					<tr>
+						<th>Date</th>
+						<th>Respiratory Rate</th>
+					</tr>	
+				</thead>
+				<tbody id="table_resrate">
+					
+				</tbody>				
+			</table>
+		</div>
+	  </div>
+  </div>
+</div>

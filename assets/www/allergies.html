@@ -1,0 +1,125 @@
+ <div class="navbar">
+   <div class="navbar-inner">
+      <div class="left sliding"><a href="index.html" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+     <div class="center sliding white" style="margin-right: 160px;">ALLERGIES</div>
+    <div class="right theme-white searchicon" >
+        <a href="#" onclick="AllergicformInfo()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i></a>
+      </div>
+      <div class="right theme-white navicon" >
+        <a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+        </a>
+      </div>
+   </div>
+ </div>
+ 
+ <div class="pages navbar-through">
+  <div data-page="allergies" class="page" >
+  <div style="overflow-y:scroll; height:inherit"> 
+   <div class="content-block-title" style="padding-top: 64px;font-size:18px;">List of all previous and current medications</div>
+   <div class="list-block" style="margin-bottom: 80px;">
+   <ul style="background-color:#FFFFFF">
+   <li>
+     <div class="item-content">
+         <div class="item-media"></div>
+        <div class="item-inner">
+                          <div class="item-title label">Select Type</div>
+                            <div class="item-input">
+                            <i class="fa fa-sort-desc" style="float:right;font-size: 30px;position: absolute;right: 6px;"></i>
+                              <select name="allergies_select" id="allergies_select">
+                              <option value="0">Select Type</option>
+                              <option  value="1" >DRUG</option>
+                              <option  value="2" >FOOD</option>
+                              <option value="3">ENVIRONMENTAL</option>
+                              </select>
+                              </div>
+                       </div>
+                  </div>
+                </li>
+               <li>
+             <div class="item-content">
+               <div class="item-media"></div>
+                <div class="item-inner">
+                          <div class="item-title label">Allergic To </div>
+                            <div class="item-input">
+                              <input type="text" name="allergies_alrto" id="allergies_alrto"/>
+                            </div>
+                           </div>
+                    </div>   
+               </li>
+                <li>
+             <div class="item-content">
+               <div class="item-media"></div>
+                <div class="item-inner">
+                          <div class="item-title label">Reaction</div>
+                            <div class="item-input">
+                              <!-- <input type="text" name="allergies_react" id="allergies_react" placeholder="Reaction"  style="height: 144px;"/> -->
+                              <textarea id="allergies_react" style="height: 144px;" name="allergies_react"></textarea>
+                            </div>
+                           </div>
+                    </div>   
+               </li>
+                <li>
+             <div class="item-content">
+               <div class="item-media"></div>
+                <div class="item-inner">
+                          <div class="item-title label">Treatment</div>
+                            <div class="item-input">
+                              <!-- <input type="text" name="allergies_treat" id="allergies_treat" placeholder="Treatment" /> -->
+                              <textarea id="allergies_treat" style="height: 144px;" name="allergies_treat"></textarea>
+                            </div>
+                           </div>
+                    </div>   
+               </li>
+                <li>
+                  <div data-role="content">
+                     <form method="post" onsubmit="return uploadAllergiesPic()" id="file-attachment-form10"  enctype="multipart/form-data">
+                       <div data-role="fieldcontain" class="field">
+                          <div class="fileupload fileupload-new" data-provides="fileupload" style="overflow:hidden">
+                              <div class="fileupload-preview fileupload-exists thumbnail" id="allergies_img_display" style="max-width: 200px; max-height: 200px;  line-height: 20px;"></div>
+                              <div >
+                                <span class="btn btn-file">
+                                  <span class="fileupload-new">Image</span>
+                                  <span class="fileupload-exists"></span>
+                                  <div class="image-upload">
+                                    <label for="allergies_con_image">
+                                      <i class="fa fa-upload fa-2x" style=" color: #000;font-size: 40px;height:50px;"></i>
+                                        <!-- <span align="center" style="color:#000;font-size:13px;display:block;">Upload Image</span> -->
+                                    </label>
+                                    <input type="file" name="allergies_con_image" id="allergies_con_image" />
+                                  </div>
+                                
+                                </span> 
+                                <a href="#" style=" margin-top: 10px;width: 200px;" class="button button-round" id="allergiesremovehide" onclick="removeAllergiesImage();">Remove</a>
+                              </div>
+                          </div>
+                          <input type="hidden" name="allergies_con_image_id" id="allergies_con_image_id"/>
+                      </div>
+                  </form>
+              </div>
+            </li>
+   </ul>
+    <input type="hidden" name="allergies_id" id="allergies_id" >
+   </div>
+    <!-- <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;">
+    <div class="toolbar-inner" style="background:#0DB7C4;">
+      <a href="#" onclick="allergiesSubmit();" class="link icon-only" style="color:white;border-right:1px white solid ">
+Submit</a>
+      <a href="loginnormal.html" class="link icon-only" style="color:white">
+Cancel</a>
+    </div>
+  </div> -->  
+  <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;" id="allergies_inbtn">
+      <div class="toolbar-inner" style="background:#0DB7C4;" >
+        <a href="#" class="link icon-only" onclick="allergiesSubmit();" style="color:white;border-right:1px white solid ">Update</a>
+        <a href="#" onclick="deleteAllergies();" class="link icon-only" style="color:white">Delete</a>
+      </div>
+    </div>  
+    <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;" id="allergies_upbtn">
+      <div class="toolbar-inner" style="background:#0DB7C4;" >
+        <a href="#" class="link icon-only" onclick="allergiesSubmit();" style="color:white;border-right:1px white solid ">Submit</a>
+        <a href="allergies_listing.html" class="link icon-only" style="color:white">Cancel</a>
+      </div>
+      </div>
+      </div>
+   </div>
+  </div> 

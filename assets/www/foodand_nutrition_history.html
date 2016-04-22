@@ -1,0 +1,532 @@
+<div class="navbar">
+   <div class="navbar-inner">
+     <div class="left sliding"><a href="loginnormal.html" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+     <div class="center sliding white" style="margin-right:80px;">Food and Nutrition History</div>
+     <div class="right theme-white searchicon" >
+        <a href="#" onclick="foodandDietInfo()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i></a>
+      </div>
+      <div class="right theme-white navicon" >
+        <a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+        </a>
+      </div>
+   </div>
+ </div>
+ 
+<div class="pages navbar-through">
+  	<div data-page="foodand_nutrition_history" class="page" >
+  		<div style="overflow-y:scroll; height:inherit">
+  			<div class="content-block-title" style="padding-top: 64px;font-size:18px;"></div>
+				<div class="list-block" style="margin-bottom: 70px;margin-left: 0;">
+			  		<ul style="background-color:#FFFFFF">
+			  			<li>
+					      <div class="item-content">
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-title label" style="width:100%;">Calories Intake  </div>
+					          
+					        </div>
+					      </div>
+					    </li>
+					    <li>
+					      <div class="item-content">
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-input">
+					            <input type="text" name="food_nut_his_cal" id="food_nut_his_cal" placeholder="Calories Intake(%)   ">
+					          </div>
+					        </div>
+					      </div>
+					    </li>
+					    <li>
+					      <div class="item-content">
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-title label" style="width:100%;">Estimated calories intake </div>
+					          
+					        </div>
+					      </div>
+					    </li>
+					    <li>
+					      <div class="item-content">
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-input">
+					            <input type="text" name="food_nut_his_ecin" id="food_nut_his_ecin" placeholder="Estimated calories intake(%)  ">
+					          </div>
+					        </div>
+					      </div>
+					    </li>
+					    <li>
+					      <div class="item-content">
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-title label" style="width:100%;">calories from fat  </div>
+					         
+					        </div>
+					      </div>
+					    </li>
+					    <li>
+					      <div class="item-content">
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-input">
+					            <input type="text" name="food_nut_his_cff" id="food_nut_his_cff" placeholder="calories from fat (%)  ">
+					          </div>
+					        </div>
+					      </div>
+					    </li>
+					    <li>
+					      <div class="item-content">
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-title label" style="width:100%;">calories from Carbohydrate  </div>
+					         
+					        </div>
+					      </div>
+					    </li>
+					    <li>
+					      <div class="item-content">
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-input">
+					            <input type="text" name="food_nut_his_calfcar" id="food_nut_his_calfcar" placeholder="calories from Carbohydrate(%)   ">
+					          </div>
+					        </div>
+					      </div>
+					    </li>
+					    <li>
+	                    <div class="item-content">
+	                       <div class="item-media"></div>
+	                       <div class="item-inner">
+	                          <div class="item-title label" style="width:100%;">Consumes dairy foods</div>
+	                           
+	                         </div>
+	                      </div>
+	                      
+	                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+	                                    <!-- Checked by default -->
+	                                    <input type="radio" name="my-radio" id="food_con_yes" value="1" >
+	                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+	                                    <div class="item-inner" >
+	                                      <div class="item-title"> Yes </div>
+	                                    </div>
+	                                  </label>
+	                               <label class="label-checkbox item-content">
+	                                    <!-- Checked by default -->
+	                                    <input type="radio" name="my-radio" id="food_con_no" value="0" >
+	                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+	                                    <div class="item-inner" >
+	                                      <div class="item-title"> No </div>
+	                                    </div>
+	                               </label>
+	                      
+	                      </li>
+	                      <li>
+					      <div class="item-content">
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-title label" style="width:100%;">Servings/day</div>
+					         
+					        </div>
+					      </div>
+					    </li>
+					    <li>
+					      <div class="item-content">
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-input">
+					            <input type="text" name="food_nut_his_servday" id="food_nut_his_servday" placeholder="Servings/day">
+					          </div>
+					        </div>
+					      </div>
+					    </li>
+					    <li>
+	                    <div class="item-content" >
+	                       <div class="item-media"></div>
+	                       <div class="item-inner">
+	                          <div class="item-title label" style="width:100%;">Dines away from home</div>
+	                           
+	                         </div>
+	                      </div>
+	                      
+	                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+	                                    <!-- Checked by default -->
+	                                    <input type="radio" name="my-radio1" id="food_dines_yes" value="1" >
+	                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+	                                    <div class="item-inner">
+	                                      <div class="item-title"> Yes </div>
+	                                    </div>
+	                                  </label>
+	                               <label class="label-checkbox item-content">
+	                                    <!-- Checked by default -->
+	                                    <input type="radio" name="my-radio1" id="food_dines_no" value="0" >
+	                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+	                                    <div class="item-inner">
+	                                      <div class="item-title"> No </div>
+	                                    </div>
+	                               </label>
+	                      
+	                      </li>
+	                      <li>
+					      <div class="item-content">
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-title label" style="width:100%;">Times per week </div>
+					          
+					        </div>
+					      </div>
+					    </li>
+					     <li>
+					      <div class="item-content">
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-input">
+					            <input type="text" name="food_nut_his_tpw" id="food_nut_his_tpw" placeholder="Times per week ">
+					          </div>
+					        </div>
+					      </div>
+					    </li>
+					    <li>
+					      <div class="item-content">
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-title label" style="width:100%;">Location(s) </div>
+					         
+					        </div>
+					      </div>
+					    </li>
+					    <li>
+					      <div class="item-content">
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-input">
+					            <input type="text" name="food_nut_his_loc" id="food_nut_his_loc" placeholder="Location(s) ">
+					          </div>
+					        </div>
+					      </div>
+					    </li>
+					    <li>
+					      <div class="item-content">
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-title label" style="width:100%;">Restaurants (4-5x)</div>
+					         
+					        </div>
+					      </div>
+					    </li>
+					    <li>
+					      <div class="item-content">
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-input">
+					            <input type="text" name="food_nut_his_res" id="food_nut_his_res" placeholder="Restaurants">
+					          </div>
+					        </div>
+					      </div>
+					    </li>
+					    <li>
+					      <div class="item-content">
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-title label" style="width:100%;">Fast food (2-3x)</div>
+					          
+					        </div>
+					      </div>
+					    </li>
+					     <li>
+					      <div class="item-content">
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-input">
+					            <input type="text" name="food_nut_his_ff" id="food_nut_his_ff" placeholder="Fast food">
+					          </div>
+					        </div>
+					      </div>
+					    </li>
+					    <li>
+	                    <div class="item-content">
+	                       <div class="item-media"></div>
+	                       <div class="item-inner">
+	                          <div class="item-title label" style="width:100%;">Reads food labels and uses labels to make appropriate food selections </div>
+	                           
+	                         </div>
+	                      </div>
+	                      
+	                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+	                                    <!-- Checked by default -->
+	                                    <input type="radio" name="my-radio2" id="food_reads_yes" value="1" >
+											<div class="item-media">
+												<i class="icon icon-form-checkbox">
+												</i>
+											</div>
+	                                    <div class="item-inner">
+	                                      <div class="item-title"> Yes </div>
+	                                    </div>
+	                                  </label>
+	                               <label class="label-checkbox item-content">
+	                                    <!-- Checked by default -->
+	                                    <input type="radio" name="my-radio2" id="food_reads_no" value="0" >
+	                                    	<div class="item-media">
+												<i class="icon icon-form-checkbox">
+												</i>
+											</div>
+	                                    <div class="item-inner">
+	                                      <div class="item-title"> No </div>
+	                                    </div>
+	                               </label>
+	                      
+	                      </li>
+	                      <li>
+	                    <div class="item-content">
+	                       <div class="item-media"></div>
+	                       <div class="item-inner">
+	                          <div class="item-title label" style="width:100%;">Modifies food preparation and recipes to reduce calories </div>
+	                           
+	                         </div>
+	                      </div>
+	                      
+	                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+	                                    <!-- Checked by default -->
+	                                    <input type="radio" name="my-radio3" id="food_modifies_yes" value="1" >
+	                                    	<div class="item-media">
+												<i class="icon icon-form-checkbox">
+												</i>
+											</div>
+	                                    <div class="item-inner">
+	                                      <div class="item-title"> Yes </div>
+	                                    </div>
+	                                  </label>
+	                               <label class="label-checkbox item-content">
+	                                    <!-- Checked by default -->
+	                                    <input type="radio" name="my-radio3" id="food_modifies_no" value="0" >
+	                                    	<div class="item-media">
+												<i class="icon icon-form-checkbox">
+												</i>
+											</div>
+	                                    <div class="item-inner">
+	                                      <div class="item-title"> No </div>
+	                                    </div>
+	                               </label>
+	                      
+	                      </li>
+	                      <li>
+	                    <div class="item-content">
+	                       <div class="item-media"></div>
+	                       <div class="item-inner">
+	                          <div class="item-title label" style="width:100%;">Limits portion sizes</div>
+	                           
+	                         </div>
+	                      </div>
+	                      
+	                              <label class="label-checkbox item-content" style="float:left;width: 50%;">
+	                                    <!-- Checked by default -->
+	                                    <input type="radio" name="my-radio4" id="food_limitp_yes" value="1" >
+	                                    	<div class="item-media">
+												<i class="icon icon-form-checkbox">
+												</i>
+											</div>
+	                                    <div class="item-inner">
+	                                      <div class="item-title"> Yes </div>
+	                                    </div>
+	                                  </label>
+	                               <label class="label-checkbox item-content">
+	                                    <!-- Checked by default -->
+	                                    <input type="radio" name="my-radio4" id="food_limitp_no" value="0" >
+	                                    	<div class="item-media">
+												<i class="icon icon-form-checkbox">
+												</i>
+											</div>
+	                                    <div class="item-inner">
+	                                      <div class="item-title"> No </div>
+	                                    </div>
+	                               </label>
+	                      
+	                      </li>
+	                      <li>
+	                    <div class="item-content">
+	                       <div class="item-media"></div>
+	                       <div class="item-inner">
+	                          <div class="item-title label" style="width:100%;">Maintains vitamins/minerals adequacy</div>
+	                           
+	                         </div>
+	                      </div>
+	                      
+	                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+	                                    <!-- Checked by default -->
+	                                    <input type="radio" name="my-radio5" id="food_maintain_yes" value="1" >
+	                                    <div class="item-media">
+												<i class="icon icon-form-checkbox">
+												</i>
+											</div>
+	                                    <div class="item-inner">
+	                                      <div class="item-title"> Yes </div>
+	                                    </div>
+	                                  </label>
+	                               <label class="label-checkbox item-content">
+	                                    <!-- Checked by default -->
+	                                    <input type="radio" name="my-radio5" id="food_maintain_no" value="0" >
+	                                    <div class="item-media">
+												<i class="icon icon-form-checkbox">
+												</i>
+											</div>
+	                                    <div class="item-inner">
+	                                      <div class="item-title"> No </div>
+	                                    </div>
+	                               </label>
+	                      
+	                      </li>
+	                      <li>
+	                    <div class="item-content">
+	                       <div class="item-media"></div>
+	                       <div class="item-inner">
+	                          <div class="item-title label" style="width:100%;">Physical Activity Level</div>
+	                           
+	                         </div>
+	                      </div>
+	                      
+	                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+	                                    <!-- Checked by default -->
+	                                    <input type="radio" name="my-radio6" id="food_phya_sed" value="1" >
+	                                    <div class="item-media">
+	                                      <i class="icon icon-form-checkbox">
+	                                      </i>
+	                                    </div>
+	                                    <div class="item-inner">
+	                                      <div class="item-title">  Sedentary  </div>
+	                                    </div>
+	                                  </label>
+	                               <label class="label-checkbox item-content">
+	                                    <!-- Checked by default -->
+	                                    <input type="radio" name="my-radio6" id="food_phya_low" value="2" >
+	                                    <div class="item-media">
+	                                      <i class="icon icon-form-checkbox">
+	                                      </i>
+	                                    </div>
+	                                    <div class="item-inner">
+	                                      <div class="item-title"> Low Active </div>
+	                                    </div>
+	                               </label>
+	                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+	                                    <!-- Checked by default -->
+	                                    <input type="radio" name="my-radio6" id="food_phya_act" value="3" >
+	                                    <div class="item-media">
+	                                      <i class="icon icon-form-checkbox">
+	                                      </i>
+	                                    </div>
+	                                    <div class="item-inner">
+	                                      <div class="item-title">  Active  </div>
+	                                    </div>
+	                                  </label>
+	                               <label class="label-checkbox item-content">
+	                                    <!-- Checked by default -->
+	                                    <input type="radio" name="my-radio6" id="food_phya_vact" value="4" >
+	                                    <div class="item-media">
+	                                      <i class="icon icon-form-checkbox">
+	                                      </i>
+	                                    </div>
+	                                    <div class="item-inner">
+	                                      <div class="item-title"> Very Active  </div>
+	                                    </div>
+	                               </label>
+	                      
+	                      </li>
+	                       <li>
+					      <div class="item-content">
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-title label" style="width:100%;">specify</div>
+					          
+					        </div>
+					      </div>
+					    </li>
+					    <li>
+					      <div class="item-content">
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-input">
+					            <input type="text" name="food_nut_his_spe" id="food_nut_his_spe" placeholder="specify ">
+					          </div>
+					        </div>
+					      </div>
+					    </li>
+					    <li>
+					      <div class="item-content">
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-title label" style="width:100%;">Moderate </div>
+					          
+					        </div>
+					      </div>
+					    </li>
+					    <li>
+					      <div class="item-content">
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-input">
+					            <input type="text" name="food_nut_his_mod" id="food_nut_his_mod" placeholder="Moderate ">
+					          </div>
+					        </div>
+					      </div>
+					    </li>
+					    <li>
+					      <div class="item-content">
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-title label" style="width:100%;">Vigorous</div>
+					         
+					        </div>
+					      </div>
+					    </li>
+					    <li>
+					      <div class="item-content">
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-input">
+					            <input type="text" name="food_nut_his_vig" id="food_nut_his_vig" placeholder="Vigorous">
+					          </div>
+					        </div>
+					      </div>
+					    </li>
+					    <li>
+					      <div class="item-content">
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-title label" style="width:100%;">Sedentary Time</div>
+					          
+					        </div>
+					      </div>
+					    </li>
+					    <li>
+					      <div class="item-content">
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-input">
+					            <input type="text" name="food_nut_his_set" id="food_nut_his_set" placeholder="Sedentary Time">
+					          </div>
+					        </div>
+					      </div>
+					    </li>
+			  		</ul>
+			  		 <input type="hidden" name="update_food" id="update_food" placeholder="id">
+			  	</div>
+		</div>
+	   		<div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;">
+	    		<div class="toolbar-inner" style="background:#0DB7C4;">
+			      <a href="#" onclick="foodAndNutSubmit();" class="link icon-only" style="color:white;border-right:1px white solid ">Submit</a>
+			      <a href="manage_albums.html"  class="link icon-only" style="color:white" onclick="manage_albums(33,'Food And Nutrition History');"><i class="fa fa-file-image-o"></i>Manage Images</a>
+	   			 </div>
+	  		</div>
+  		</div>
+	</div>

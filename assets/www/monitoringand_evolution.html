@@ -1,0 +1,33 @@
+ <div class="navbar">
+   <div class="navbar-inner">
+     <div class="left sliding"><a href="loginnormal.html" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+     <div class="center sliding white" style="margin-right:80px;">Monitoring and Evaluation</div>
+     <div class="right theme-white searchicon" >
+        <a href="#" onclick="moniteringandEvaluation()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i></a>
+      </div>
+      <div class="right theme-white navicon" >
+        <a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+        </a>
+      </div>
+   </div>
+ </div>
+ 
+<div class="pages">
+  <div data-page="monitoringand_evolution" class="page" >
+  	<div style="overflow-y:scroll; height:inherit">
+     <div class="list-block" style="padding-top: 36px;margin: 49px 4px;" id="monitoring"> 
+    
+     	
+       <input type="hidden" name="intakeId" id="intakeId" >
+     </div>
+
+    </div>
+    <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;">
+      <div class="toolbar-inner" style="background:#0DB7C4;">
+        <a href="#" onclick="monitoringAndEvoDataSubmit();" class="link icon-only" style="color:white;border-right:1px white solid ">
+        Submit</a>
+       <a href="manage_albums.html"  class="link icon-only" style="color:white" onclick="manage_albums(35,'Monitoring And Evolution');"><i class="fa fa-file-image-o"></i>Manage Images</a>
+      </div>
+    </div>
+  </div>
+</div>

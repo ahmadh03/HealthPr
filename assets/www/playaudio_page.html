@@ -1,0 +1,29 @@
+<div class="navbar">
+	<div class="navbar-inner">
+		<div class="left sliding"><a href="loginnormal.html" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+		<div class="center sliding white" style=" margin-right: 150px;">Siren</div>
+			<div class="right theme-white searchicon" >
+				<a href="#" onclick="MobileAppInfo()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i>
+				</a>
+			</div>
+		<div class="right theme-white navicon" >
+			<a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+			</a>
+		</div>
+	</div>
+</div>
+
+<div class="pages navbar-through">
+	<div data-page="playaudio_page" class="page" >
+		<div class="content-block-title" style="padding-top: 64px;font-size:18px;"></div>
+		<div style = "text-align:center;height:100%" id="start_audio">
+		<i class="fa fa-bell-o" style="font-size:125px;margin-top:50%;color:#0DB7C4" onclick="playAudioSong('/android_asset/www/audio/emergency_alarm.mp3')"></i>
+		</div>
+		<div style = "text-align:center;height:100% ;display:none;" id="stop_audio">
+		<i class="fa fa-bell-slash-o" style="font-size:125px;margin-top:50%;color:#0DB7C4" onclick="stopAudioSong()"></i>
+		</div>
+
+		<!-- <button type="button" id="button_start" onclick="playAudioSong('/android_asset/www/audio/emergency_alarm.mp3');">Start</button>
+		 <button type="button" id="button_stop" onclick="stopAudioSong();">Stop</button>  -->
+	</div>
+</div>

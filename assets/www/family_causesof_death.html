@@ -1,0 +1,114 @@
+<div class="navbar">
+   <div class="navbar-inner">
+     <div class="left sliding"><a href="loginnormal.html" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+     <div class="center sliding white" style="margin-right: 137px;">Family History</div>
+     <div class="right theme-white searchicon" >
+        <a href="#" onclick="MobileAppInfo()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i></a>
+      </div>
+      <div class="right theme-white navicon" >
+        <a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+        </a>
+      </div>
+   </div>
+ </div>
+ 
+ <div class="pages navbar-through">
+  <div data-page="family_causesof_death" class="page" >
+     <div style="overflow-y:scroll; height:inherit">
+     <div class="content-block-title" style="padding-top: 64px;font-size:18px;">Family Medical Conditions </div>
+            <div class="list-block" style="margin-bottom: 70px;">
+            <div id="familycauseofdeath_hide">
+                <ul style="background-color:#FFFFFF">
+                 <input type="hidden" id="rowIdFH2" value="0" />
+                 <!-- <li>
+                     <div class="item-content item-title_inner">
+                       <div class="item-inner">
+                        <div class="item-title label">Select Name</div>
+                           <div class="item-input">
+                          
+                              <select name="family_his_causeofDe_0" id="family_his_causeofDe_0">
+                               <option value="0">Select Name</option>
+                               <option value="1">Maternal Grandmother</option>
+                                <option value="2">Maternal Grandfather</option>
+                                <option value="3">Paternal Grandmother</option>
+                                <option value="4">Paternal Grandfather </option>
+                                <option value="5">Mother</option>
+                                <option value="6">Father</option>
+                                <option value="7">Sibling 1</option>
+                                <option value="8">Sibling 2</option>
+                                <option value="9">Sibling 3</option>
+                              </select>
+                           </div>
+                        
+                       </div>
+                     </div>
+                 </li> -->
+
+                 <li>
+                     <div class="item-content">
+                      <div class="item-media"></div>
+                        <div class="item-inner">
+                          <div class="item-title label" style="width: 55%;">Select Name</div>
+                            <div class="item-input" id="displayFamilyCausD_0">
+                             <input type="text" name="family_his_causeofDe" id="family_his_causeofDe_0" placeholder="select">
+                              <input type="hidden" name="family_his_causeofDe_id" id="family_his_causeofDe_id_0" placeholder="Date of Appointment" />
+                            </div>
+                         </div>
+                     </div>
+                   </li>
+                    <li id="family_cuses_of_de_li_0" style="display:none;">
+                     <div class="item-content">
+                      <div class="item-media"></div>
+                        <div class="item-inner">
+                          <div class="item-title label" style="width: 55%;">Others</div>
+                            <div class="item-input">
+                             <input type="text" name="family_his_causeofDe_others" id="family_his_causeofDe_others_0" placeholder="Specify">
+                              <input type="hidden" name="family_his_causeofDe_id" id="family_his_causeofDe_id_0" placeholder="Date of Appointment"/>
+                            </div>
+                         </div>
+                     </div>
+                   </li>
+
+                 <li>
+               <div class="item-content">
+               <div class="item-media"></div>
+                <div class="item-inner">
+                 <div class="item-title label">Cause of Death</div>
+                 <div class="item-input">
+                  
+                  <!-- <input type="text" name="family_caus_death_0" id="family_caus_death_0" placeholder="Causes of Death"> -->
+                  <textarea style="height:144px;" id="family_caus_death_0" name="family_caus_death_0"></textarea>
+                 </div>
+                </div>
+             </div>
+             
+           </li>
+           </div>
+           <input type="hidden" name="update_familycause_id" id="update_familycause_id" >
+           <span id="responce7"></span>
+            <button name="addButton" id='addButton' onClick="addFamilyCausesofde()" style="float:right;border:none;background:none;"><i class="fa fa-plus-circle fa-2x"></i>
+</button>
+                </ul>
+                 
+            </div>
+     </div>
+      <!-- <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;" id="family_his1_inbtn">
+      <div class="toolbar-inner" style="background:#0DB7C4;" >
+        <a href="#" class="link icon-only" onclick="FamilyCausesOfDSubmit();" style="color:white;border-right:1px white solid ">Submit</a>
+        <a href="#"  class="link icon-only" style="color:white">Cancel</a>
+      </div>
+    </div>  --> 
+      <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;" id="family_causeofd_inbtn">
+      <div class="toolbar-inner" style="background:#0DB7C4;" >
+        <a href="#" class="link icon-only" onclick="FamilyCausesOfDSubmit();" style="color:white;border-right:1px white solid ">Update</a>
+        <a href="#" onclick="deleteFamilyCauseDContact();" class="link icon-only" style="color:white">Delete</a>
+      </div>
+    </div>  
+    <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;" id="family_causeofd_upbtn">
+      <div class="toolbar-inner" style="background:#0DB7C4;" >
+        <a href="#" class="link icon-only" onclick="FamilyCausesOfDSubmit();" style="color:white;border-right:1px white solid ">Submit</a>
+        <a href="family_history_listing.html" class="link icon-only" style="color:white">Cancel</a>
+      </div>
+    </div>
+  </div>
+  </div>

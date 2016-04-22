@@ -1,0 +1,183 @@
+.Login{
+background:#66FFFF;
+
+
+}
+body{
+background-color:#0DB7C4;
+
+}
+
+element.style {
+    background-color: #0DB7C4;
+}
+#user_email{
+color:#0DB7C4;
+padding:inherit;
+margin-top:10px;
+-moz-border-radius: 15px;
+border-radius: 15px;
+border:#6FF;
+padding:5px;
+padding:5px;
+text-align:initial;
+display: block;
+ width: 190px;
+}
+#user_password{
+color:#0DB7C4;
+padding:inherit;
+margin-top:10px;
+-moz-border-radius: 15px;
+border-radius: 15px;
+border:#6FF;
+padding:5px;
+padding:5px;
+text-align:initial;
+ width: 190px;
+}
+.myButton {
+	margin:auto;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:0px solid;
+	display:inline-block;
+	cursor:pointer;
+	color: #ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:4px 31px;
+	 background-color: #000000;
+	margin-top:12px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #000000;
+	display: block;
+	width: 100px;
+}
+
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+.signup{
+padding-bottom:100px;
+}
+.signup a {
+    display: block;
+}
+a{
+color:#FFFFFF;
+
+padding: -1px 61px 6px 6px;
+font-size:19px;
+}
+
+<!--navbar css-->
+#nav {
+      width: 100%;
+      float: left;
+      margin: 0 0 3em 0;
+      padding: 0;
+	  
+      list-style: none;
+      background-color: #f2f2f2;
+      border-bottom: 1px solid #ccc; 
+      border-top: 1px solid #ccc; }
+	  #nav ul{
+	   list-style:none;
+	  }
+	  
+	  #nav li{
+	   list-style:none;
+	   margin-top: 18px;
+	  }
+   
+   #nav li img {
+      display: block;
+      padding: 8px 15px;
+      color: #069;
+	  float:left;
+	  list-style-type: none;
+	  
+       }
+	#nav li a{
+	  display: block;
+      
+      color: #069;
+	  float:right;
+      
+	}  
+   #nav li a:hover {
+      color: #c00;
+      background-color: #fff; }
+.name h3{
+ text-align:left;
+ color:#FFFFFF;
+ padding-top: 106px;
+ padding-left: 57px;  
+}
+
+<!--registration-->
+
+.regis{
+background:#FFFFFF;
+}
+#register{
+background:#FFFFFF;
+padding:1px 20px;
+}
+#register label{
+	width:200px;
+	display:inline-block;
+}
+#sub{
+margin-left: 143px;
+
+}
+.img-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex; /* add */
+    justify-content: center; /* add to align horizontal */
+    align-items: center; /* add to align vertical */
+}
+
+.img-container:before {
+  content: ' ';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.img-container img {
+  vertical-align: middle;
+  display: inline-block;
+
+}
+.field {
+    
+    padding: 10px 0;
+}
+/*#changeonInsert_self {
+    display: flex !important;
+}*/
+
+
+@media (min-width:420px) and (max-width:768px){
+.signup a {
+    display: inline-block;
+}
+#logo{
+	padding-top:40px !important;
+}
+#user_email{
+	display: inline-block;
+}
+.Login{
+	padding:0px !important;
+}
+}

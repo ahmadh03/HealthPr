@@ -1,0 +1,55 @@
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="left sliding"><a href="loginnormal.html" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+      <div class="center sliding white" style="margin-right: 130px;">GRANT ACCESS</div>
+        <div class="right theme-white searchicon" >
+          <a href="#" onclick="grantaccesInfo()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i></a>
+        </div>
+        <div class="right theme-white navicon" >
+          <a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+          </a>
+        </div>
+  </div>
+</div>
+
+<div class="pages navbar-through" >
+  <div data-page="grant_access" class="page">
+    <div class="content-block-title" style="padding-top: 64px;font-size:20px;">Invite new user</div>
+      <div class="list-block" >
+        <ul style="background-color:#FFFFFF">
+          <li>
+            <div class="item-content">
+              <div class="item-media"></div>
+                <div class="item-inner">
+                  <div class="item-title label">Enter Email</div>
+                    <div class="item-input">
+                      <input type="text" name="Email_gacess" id="Email_gacess" placeholder="Type a E-mail" />
+                    </div>
+                </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content">
+              <div class="item-media"></div>
+                <div class="item-inner">
+                  <div class="item-title label">Select Type</div>
+                    <div class="item-input">
+                      <select name="gac_role_select" id="gac_role_select">
+                        <option value="Admin">Admin</option>
+                        <option value="Data Entry">Data Entry</option>
+                        <option value="Read Only">Read Only</option>
+                      </select>
+                    </div>
+                </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;">
+        <div class="toolbar-inner" style="background:#0DB7C4;">
+          <a href="#" class="link icon-only" onclick="GrandAccessSubmit();" style="color:white;">
+        SAVE</a>
+        </div>
+      </div>
+  </div>
+</div>

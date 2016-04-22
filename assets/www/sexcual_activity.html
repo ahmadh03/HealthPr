@@ -1,0 +1,128 @@
+<div class="navbar">
+   <div class="navbar-inner">
+     <div class="left sliding"><a href="loginnormal.html" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+     <div class="center sliding white white" style="margin-right: 160px;">Sexual Activity</div>
+     <div class="right theme-white searchicon" >
+        <a href="#" onclick="SexualActivityInfo()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i></a>
+      </div>
+      <div class="right theme-white navicon" >
+        <a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+        </a>
+      </div>
+   </div>
+ </div>
+ 
+<div class="pages navbar-through" >
+  	<div data-page="sexual_activity" class="page" > 
+  		<div style="overflow-y:scroll; height:inherit">
+    		<div class="content-block-title" style="padding-top: 34px;font-size:18px;"></div>
+    			<div class="list-block" style="margin-bottom:70px;">
+    				<ul style="background-color:#FFFFFF">
+    					<li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Currently Sexually Active ?</div>
+                           
+                          </div>
+                        </div>
+                        <div class="item-input">
+                               <label class="label-radio item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio1" id="sexual_his_cur" value="1" >
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-radio item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio1" id="sexual_his_cur1" value="0" >
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                            </div>
+                      </li>
+            					<li>
+        					      <div class="item-content " >
+        					        <div class="item-media"></div>
+        					        <div class="item-inner" style="margin-left:0px;">
+        					          <div class="item-title label" style="width:100%;">If yes, Partner's Name ? </div>
+        					          
+        					        </div>
+        					      </div>
+        			    		</li>
+                      <li>
+                        <div class="item-content " >
+                          <div class="item-media"></div>
+                          <div class="item-inner">
+                            <div class="item-input">
+                              <input type="text" name="sexual_his_partner" id="sexual_his_partner" placeholder="Partner's Name  ">
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+		    		       <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Sexual Partner(s) is/are/have been ?</div>
+                           
+                          </div>
+                        </div>
+                        <div class="item-input">
+                               <label class="label-radio item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio" id="sexual_his_havbeen" value="0" >
+                                    <div class="item-inner">
+                                      <div class="item-title">   Male   </div>
+                                    </div>
+                                  </label>
+                               <label class="label-radio item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio" id="sexual_his_havbeen1" value="1" >
+                                    <div class="item-inner">
+                                      <div class="item-title">  Female  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-radio item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio" id="sexual_his_havbeen2" value="2" >
+                                    <div class="item-inner">
+                                      <div class="item-title">  Both </div>
+                                    </div>
+                                  </label>
+                            </div>
+                      </li>
+                      <li>
+                        <div class="item-content " >
+                          <div class="item-media"></div>
+                          <div class="item-inner" style="margin-left:0px;">
+                            <div class="item-title label" style="width:100%;">Preferred Birth Control Method ? </div>
+                            
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content " >
+                          <div class="item-media"></div>
+                          <div class="item-inner">
+                            <div class="item-input">
+                             <input type="text" name="sexual_his_bc" id="sexual_his_bc" placeholder="Control Method">
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+					</ul>
+					<input type="hidden" name="sexual_his_update" id="sexual_his_update" placeholder="Control Method">
+				</div>
+		</div>
+		<div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;">
+    <div class="toolbar-inner" style="background:#0DB7C4">
+      <a href="#" onclick="sexualHisformSubmit();" class="link icon-only" style="color:white;border-right:1px white solid ">Submit</a>
+      <a href="loginnormal.html" class="link icon-only" style="color:white">Cancel</a>
+    </div>
+  </div> 
+	</div>
+</div>
+    					

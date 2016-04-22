@@ -1,0 +1,61 @@
+<div class="navbar">
+   <div class="navbar-inner">
+    <div class="left sliding"><a href="loginnormal.html" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+     <div class="center sliding white" style="margin-right:80px;">HEALTH DIARIES</div>
+     <div class="right theme-white searchicon" >
+        <a href="#" onclick="managedairiesinfo()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i></a>
+      </div>
+      <div class="right theme-white navicon" >
+        <a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+        </a>
+      </div>
+   </div>
+ </div>
+ 
+<div class="pages navbar-through">
+	<div data-page="health_diaries_tabs_display" class="page" >
+    <div style="overflow-y:scroll; height:inherit">
+      <div class="page-content">
+        <div class="content-block">
+          <div class="buttons-row">
+            <a href="#tab_diaries" class="tab-link button active" id="text_diries">Text Diaries</a>
+            <!-- <a href="#tab_diaries1"  class="tab-link button">Drawings</a> -->
+        </div>
+      </div>
+        <div class="tabs">
+          <div id="tab_diaries" class="tab active" >
+            <div class="list-block" style="margin-bottom:130px;">
+               <ul style="background-color: white;" id="hd_textcontain1">
+             <!--   <li >
+                  <div class="item-content">
+                    <div class="item-media"></div>
+                      <div class="item-inner">
+                        <div class="item-title label"></div>
+                          <div class="item-input">
+                             <input type="text" name="hd_textcontain1" id="hd_textcontain" placeholder="Name" required/>
+                
+                          </div>
+                      </div>
+                    </div>
+                </li>-->
+                <input type="hidden" id="hd_textcontain1_id">
+              </ul> 
+            </div>
+          </div>
+          <div id="tab_diaries1" class="tab" >
+            <div class="content-block">
+              <div class="list-block">
+                <div id="display_canvas_img" style="padding-top: 64px;margin-left: 72px;height: 350px;overflow-y: scroll;">
+
+                </div>
+                <div id="healthdiries_img" >
+
+                </div>
+             </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

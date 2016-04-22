@@ -1,0 +1,36 @@
+<div class="navbar">
+   <div class="navbar-inner">
+     <div class="left sliding"><a href="index.html" class="back link"><i class="icon icon-back"></i><i class="icon icon-back"></i><span>Back</span></a></div>
+     <div class="center sliding white">Doctors Consultation</div>
+     <div class="right theme-white searchicon" >
+        <a href="#" class="link icon-only" onclick="openSearchPopUp()"> <i class="fa fa-search" style="font-size:20px"></i>
+        </a>
+      <div class="theme-white" >
+        <a href="#" onclick="MobileAppInfo()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i></a>
+      </div>
+      
+      </div>
+      <div class="right theme-white navicon" >
+        <a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+        </a>
+      </div>
+   </div>
+ </div>
+
+ <div class="pages navbar-through">
+  <div data-page="doctors_counsaltation_listing" class="page" >
+  	<div id="display_doctor_counsal_img" style="padding-top: 64px;margin-left: 72px;height: 550px;overflow-y: scroll;">
+  	<form id="updatealbum_form" onsubmit="AlbumUpdateImage(); return false;">
+     <li>  
+            Upload File: <input type="file" name="myfile[]" id="file" multiple="true" accepts="image/*" required/>
+            </li>
+            <div class="row" >
+              <input type="hidden" name="albumid_up" id="albumid_up" value=""/>
+              <input type="hidden" name="uid_up" id="uid_up" value="" />
+              <div class="col-50"><input type="reset" value="Cancel" class="button button-big button-fill" style="background-color:#0DB7C4;width: 100%;"/></div>
+                <div class="col-50"><input type="submit" name="" value="Submit" class="button button-big button-fill" style="background-color:#0DB7C4;"/></div>
+            </div>
+            </form>
+  </div>
+  </div>
+</div>

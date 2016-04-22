@@ -1,0 +1,59 @@
+<div class="navbar">
+   <div class="navbar-inner">
+     <div class="left sliding"><a href="loginnormal.html" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+     <div class="center sliding white" style="margin-right:80px;">HEALTH DIARIES</div>
+     <div class="right theme-white searchicon" >
+        <a href="#" onclick="MobileAppInfo()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i></a>
+      </div>
+      <div class="right theme-white navicon" >
+        <a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+        </a>
+      </div>
+   </div>
+ </div>
+ 
+<div class="pages navbar-through">
+	<div data-page="health_diries" class="page" >
+  <div style="overflow-y:scroll; height:inherit">
+    <div class="content-block-title" style="padding-top: 64px;font-size:16px;">Add New Album <br><hr></div>
+      <div class="list-block">
+        <form id="canvas_test_Form" action="#" method="post" enctype="multipart/form-data">
+          <!-- <textarea  class="" id="hd_textcontain" name="hd_textcontain" ></textarea> -->
+          <ul style="background-color:#FFFFFF;">
+          <li>
+              <div class="item-content">
+                <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-title label">Name : </div>
+                      <div class="item-input">
+                         <input type="text" name="hd_textcontain" id="hd_textcontain" placeholder="Name" required/>
+                      </div>
+                  </div>
+                </div>   
+            </li>
+          </ul>
+            <div id="healthdiries_can" style=" border: 1px solid #000;margin-top: 20px;width: 100%;height: 300px;">
+            
+
+
+        <canvas id="healthdiries_canvas"  style="margin: 10px auto 0px auto;width=100%;height=100%" width="400" height="300"></canvas>
+        <!-- <button id="clear">clear</button><br> -->
+        <input type="button" id="clear" value="Clear" style="height: 12%;width: 40%;">
+        </div>
+      </form>    
+    </div>
+    <div class="content-block-title" style="font-size:16px;margin-top: 17px;"> <br><hr></div>
+   <div id="healthdiaries_canvas_display_albm" style=" padding-left: 10px;text-align: center;height: 190px;overflow-y: scroll;">
+          
+      </div>
+</div>
+    <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;">
+
+            <div class="toolbar-inner" style="background:#0DB7C4;">
+                <a href="#" class="link icon-only" onclick="HealthdiariesInsertImage();" style="color:white;border-right:1px white solid ">Insert</a>
+                <a href="health_diaries_Albumcanvas_display.html" onclick="HealthdiriesCanvasImgdisplay();" class="link icon-only" style="color:white"><i class="fa fa-file-image-o"></i>Manage Images</a>
+            </div>
+            
+          </div>
+    </div>
+    </div>

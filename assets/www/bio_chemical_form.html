@@ -1,0 +1,278 @@
+<div class="navbar">
+   <div class="navbar-inner">
+     <div class="left sliding"><a href="loginnormal.html" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+     <div class="center sliding white" style="margin-right:80px;">Biochemical Data and Risk Assessment</div>
+     <div class="right theme-white searchicon" >
+        <a href="#" onclick="biochemicalFormInfo()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i></a>
+      </div>
+      <div class="right theme-white navicon" >
+        <a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+        </a>
+      </div>
+   </div>
+ </div>
+ 
+<div class="pages navbar-through">
+  	<div data-page="bio_chemical_form" class="page" >
+         <div style="overflow-y:scroll; height:inherit">
+  			<div class="content-block-title" style="padding-top: 64px;font-size:18px;">List of all implants and medical devices.</div>
+  		
+			<div class="list-block" style="margin-bottom: 70px;margin-left: 0;">
+			  <ul style="background-color:#FFFFFF">
+			  <div id="showUr" style="border-bottom: 2px solid !impotant">
+			    <li>
+			      <div class="item-content">
+			        <div class="item-media"></div>
+			        <div class="item-inner">
+			          <div class="item-title label" style="width:100%;">Heigth (Feet) </div>
+			        </div>
+			      </div>
+			    </li>
+			    <li>
+			      <div class="item-content">
+			        <div class="item-media"></div>
+			        <div class="item-inner">
+			          <div class="item-input">
+			            <input type="text" name="bio_che_height" id="bio_che_height" placeholder="Heigth" onkeyup="autocalbioBmi_U()">
+			          </div>
+			        </div>
+			      </div>
+			    </li>
+			    <li>
+			      <div class="item-content">
+			        <div class="item-media"></div>
+			        <div class="item-inner">
+			          <div class="item-title label" style="width:100%;">Height (inches) </div>
+			          
+			        </div>
+			      </div>
+			    </li>
+			    <li>
+			      <div class="item-content">
+			        <div class="item-media"></div>
+			        <div class="item-inner">
+			          <div class="item-input">
+			            <input type="text" name="bio_che_height_i" id="bio_che_height_i" placeholder="Heigth" onkeyup="autocalbioBmi_U()">
+			          </div>
+			        </div>
+			      </div>
+			    </li>
+			    <li>
+			      <div class="item-content">
+			        <div class="item-media"></div>
+			        <div class="item-inner">
+			          <div class="item-title label" style="width:100%;">Weight (Pounds) </div>
+			         
+			        </div>
+			      </div>
+			    </li>
+			    <li>
+			      <div class="item-content">
+			        <div class="item-media"></div>
+			        <div class="item-inner">
+			          <div class="item-input">
+			            <input type="text" name="bio_che_Weight_p" id="bio_che_Weight_p" placeholder="Weight " onkeyup="autocalbioBmi_U()">
+			          </div>
+			        </div>
+			      </div>
+			    </li>
+			    </div>
+			    <div id="showEUROP12" style="border-bottom: 2px solid !impotant">
+			    <li>
+			      <div class="item-content">
+			        <div class="item-media"></div>
+			        <div class="item-inner">
+			          <div class="item-title label" style="width:100%;">Heigth (cms) </div>
+			          
+			        </div>
+			      </div>
+			    </li>
+			    <li>
+			      <div class="item-content">
+			        <div class="item-media"></div>
+			        <div class="item-inner">
+			          <div class="item-input">
+			            <input type="text" name="bio_che_height_cm" id="bio_che_height_cm" placeholder="Heigth" onkeyup="autocalbioBMI_E()">
+			          </div>
+			        </div>
+			      </div>
+			    </li>
+			    <li>
+			      <div class="item-content">
+			        <div class="item-media"></div>
+			        <div class="item-inner">
+			          <div class="item-title label" style="width:100%;">Weight (Kg) </div>
+			          
+			        </div>
+			      </div>
+			    </li>
+			    <li>
+			      <div class="item-content">
+			        <div class="item-media"></div>
+			        <div class="item-inner">
+			          <div class="item-input">
+			            <input type="text" name="bio_che_Weight_kg" id="bio_che_Weight_kg" placeholder="Weight " onkeyup="autocalbioBMI_E()">
+			          </div>
+			        </div>
+			      </div>
+			    </li>
+			    </div>
+			    <li>
+			      <div class="item-content">
+			        <div class="item-media"></div>
+			        <div class="item-inner">
+			          <div class="item-title label" style="width:100%;">Body Mass Index (BMI) </div>
+			          
+			        </div>
+			      </div>
+			    </li>
+			    <li>
+			      <div class="item-content">
+			        <div class="item-media"></div>
+			        <div class="item-inner">
+			          <div class="item-input">
+			            <input type="text" name="bio_che_BMI" id="bio_che_BMI" placeholder="bmi " readonly>
+			          </div>
+			        </div>
+			      </div>
+			    </li>
+			    <li>
+			      <div class="item-content">
+			        <div class="item-media"></div>
+			        <div class="item-inner">
+			          <div class="item-title label" style="width:100%;">Waist Circumference </div>
+			          
+			        </div>
+			      </div>
+			    </li>
+			    <li>
+			      <div class="item-content">
+			        <div class="item-media"></div>
+			        <div class="item-inner">
+			          <div class="item-input">
+			            <input type="text" name="bio_che_wc" id="bio_che_wc" placeholder="wc  ">
+			          </div>
+			        </div>
+			      </div>
+			    </li>
+			    <li>
+			      <div class="item-content">
+			        <div class="item-media"></div>
+			        <div class="item-inner">
+			          <div class="item-title label" style="width:100%;">Systolic Blood Pressure</div>
+			          
+			        </div>
+			      </div>
+			    </li>
+			    <li>
+			      <div class="item-content">
+			        <div class="item-media"></div>
+			        <div class="item-inner">
+			          <div class="item-input">
+			            <input type="text" name="bio_che_bp" id="bio_che_bp" placeholder="sbp">
+			          </div>
+			        </div>
+			      </div>
+			    </li>
+			    <li>
+			      <div class="item-content">
+			        <div class="item-media"></div>
+			        <div class="item-inner">
+			          <div class="item-title label" style="width:100%;">Diastolic Blood Pressure </div>
+			          
+			        </div>
+			      </div>
+			    </li>
+			    <li>
+			      <div class="item-content">
+			        <div class="item-media"></div>
+			        <div class="item-inner">
+			          <div class="item-input">
+			            <input type="text" name="bio_che_Pulse" id="bio_che_Pulse" placeholder="Pulse  ">
+			          </div>
+			        </div>
+			      </div>
+			    </li>
+			    <li>
+			      <div class="item-content">
+			        <div class="item-media"></div>
+			        <div class="item-inner">
+			          <div class="item-title label" style="width:100%;">Resting Metabolic Rate (RMR) </div>
+			          
+			        </div>
+			      </div>
+			    </li>
+			    <li>
+			      <div class="item-content">
+			        <div class="item-media"></div>
+			        <div class="item-inner">
+			          <div class="item-input">
+			            <input type="text" name="bio_che_rmr" id="bio_che_rmr" placeholder="rmr  ">
+			          </div>
+			        </div>
+			      </div>
+			    </li>
+			    <li>
+			      <div class="item-content">
+			        <div class="item-media"></div>
+			        <div class="item-inner">
+			          <div class="item-title label" style="width:100%;">Calorimetry Predictive Equation </div>
+			         
+			        </div>
+			      </div>
+			    </li>
+			    <li>
+			      <div class="item-content">
+			        <div class="item-media"></div>
+			        <div class="item-inner">
+			          <div class="item-input">
+			            <input type="text" name="bio_che_cpe" id="bio_che_cpe" placeholder="Calorimetry Prodictive Equation  ">
+			          </div>
+			        </div>
+			      </div>
+			    </li>
+			    <li>
+			      <div class="item-content">
+			        <div class="item-media"></div>
+			        <div class="item-inner">
+			          <div class="item-title label" style="width:100%;">Total Energy Expenditure(TEE) </div>
+			          
+			        </div>
+			      </div>
+			    </li>
+			    <li>
+			      <div class="item-content">
+			        <div class="item-media"></div>
+			        <div class="item-inner">
+			          <div class="item-input">
+			            <input type="text" name="bio_che_TEE" id="bio_che_TEE" placeholder="Total Energy Expenditure(TEE)  ">
+			          </div>
+			        </div>
+			      </div>
+			    </li>
+			  </ul>
+			   <input type="hidden" name="bio_update" id="bio_update" placeholder="id ">
+			  </div>
+			</div>
+			<!-- <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;">
+    		<div class="toolbar-inner" style="background:#0DB7C4;">
+		      <a href="#" onclick="biochemicalDataSubmit();" class="link icon-only" style="color:white;border-right:1px white solid ">Submit</a>
+		      <a href="loginnormal.html"  class="link icon-only" style="color:white">Cancel</a>
+   			 </div>
+  		</div>  	 -->
+  		<div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;" id="biochemical_inbtn">
+      <div class="toolbar-inner" style="background:#0DB7C4;" >
+        <a href="#" class="link icon-only" onclick="biochemicalDataSubmit();" style="color:white;border-right:1px white solid ">Update</a>
+        <a href="#" onclick="deleteBioChemical();" class="link icon-only" style="color:white">Delete</a>
+      </div>
+    </div>  
+    <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;" id="biochemical_upbtn">
+      <div class="toolbar-inner" style="background:#0DB7C4;" >
+        <a href="#" class="link icon-only" onclick="biochemicalDataSubmit();" style="color:white;border-right:1px white solid ">Submit</a>
+        <a href="loginnormal.html" class="link icon-only" style="color:white">Cancel</a>
+      </div>
+    </div>
+		</div>
+	</div>
+			  
+			  

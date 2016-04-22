@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+.item-title_inner{
+background-color:#FFFFFF;
+}
+.item-title > span {
+    display: inline-block;
+    margin: 13px;
+    
+    vertical-align: middle;
+}
+.item-title > img {
+    float: left;
+}
+

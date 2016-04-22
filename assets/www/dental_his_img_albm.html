@@ -1,0 +1,63 @@
+<div class="navbar">
+   <div class="navbar-inner">
+     <div class="left sliding"><a href="loginnormal.html" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+     <div class="center sliding white">Dental History</div>
+     <div class="right theme-white searchicon" >
+        <a href="#" class="link icon-only" onclick="openSearchPopUp()"> <i class="fa fa-search" style="font-size:20px"></i>
+        </a>
+      <div class="theme-white" >
+        <a href="#" onclick="MobileAppInfo()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i></a>
+      </div>
+      
+      </div>
+      <div class="right theme-white navicon" >
+        <a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+        </a>
+      </div>
+   </div>
+ </div>
+
+  <div class="pages navbar-through">
+  <div data-page="dental_his_img_albm" class="page" >  
+   	<div class="content-block-title" style="padding-top: 64px;font-size:18px;">Create Album</div>
+   	<div class="list-block">
+   		<form id="createalbum_form" onsubmit="allergiesAlbum(); return false;">
+	   		<ul style="background-color:#FFFFFF">
+			 	<li>
+	         		<div class="item-content">
+	               		<div class="item-media"></div>
+                		<div class="item-inner">
+                          <div class="item-title label">Album Name : </div>
+                            <div class="item-input">
+                              <input type="text" name="title" id="title" placeholder="Name" required/>
+                            </div>
+                       </div>
+                	</div>   
+	           	</li>
+                 <div style="clear:both;padding:1%;"></div>
+              <li>  
+                Upload File: <input type="file" name="myfile[]" id="file" multiple="true" accepts="image/*" required/>
+                    
+                <div style="clear:both;padding:1%;"></div>
+                <div id="addrow"></div>
+
+                <input type="button" value="+" class="button button-blue pull-right" onclick="AddMoreRow();" style="font-size: 24px;width: 30px;height: 30px;margin:0px;padding:0px;" />
+          
+                <div style="clear:both;padding:1%;"></div>
+            </li>
+   			</ul>
+   			<div class="row">
+	   			<input type="hidden" name="catid" id="catid" value="18" />
+	   			<input type="hidden" name="albumid" id="albumid" value="100" />
+          <input type="hidden" name="uid" id="uid" value="" />
+          <input type="hidden" name="submit" id="submit" value="Insert" />
+          <div class="col-50"><input type="reset" value="Cancel" class="button button-big button-fill" style="background-color:#0DB7C4;width: 100%;"/></div>
+          <div class="col-50"><input type="submit" name="" value="Submit" class="button button-big button-fill" style="background-color:#0DB7C4;"/></div>
+   			</div>
+   			
+   		</form>
+   </div>
+    <div id="dentalhis_display_albm" style="height: 193px;overflow-y: scroll;">
+   </div>
+</div>
+</div>

@@ -1,0 +1,38 @@
+<div class="navbar">
+   <div class="navbar-inner">
+     <div class="left sliding"><a href="loginnormal.html" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+     <div class="center sliding white" style="margin-right:80px;">HEALTH DIARIES</div>
+     <div class="right theme-white searchicon" >
+        <a href="#" onclick="MobileAppInfo()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i></a>
+      </div>
+      <div class="right theme-white navicon" >
+        <a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+        </a>
+      </div>
+   </div>
+ </div>
+ 
+<div class="pages navbar-through">
+  <div data-page="HealthdiriesTextEdit_page" class="page">
+    <div class="list-block" style="padding-top: 40px;">
+       <ul style="background-color: white;" id="hd_textcontain_edit">
+        <li >
+          <div class="item-content">
+            <div class="item-media"></div>
+              <div class="item-inner">
+                <div class="item-title label"></div>
+                  <div class="item-input">
+                     <input type="text" name="hd_textcontain2" id="hd_textcontain2" placeholder="Name"/>
+        
+                  </div>
+              </div>
+            </div>
+        </li>
+        <input type="hidden" id="update_healthdiries_text">
+      </ul> 
+    </div>
+    <div class="toolbar tabbar" style="position:absolute;background:#0DB7C4; height: 59px;">    
+      <a href="#" onclick="HealthDirisTextUpdate();" class="link icon-only"  style="color:white;border-right:1px white solid ">Update</a>
+  </div>
+  </div>
+</div>

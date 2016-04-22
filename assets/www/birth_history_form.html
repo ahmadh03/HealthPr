@@ -1,0 +1,475 @@
+<div class="navbar">
+   <div class="navbar-inner">
+     <div class="left sliding"><a href="loginnormal.html" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+     <div class="center sliding white" style="margin-right: 160px;">Birth History</div>
+     <div class="right theme-white searchicon" >
+        <a href="#" onclick="MobileAppInfo()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i></a>
+      </div>
+      <div class="right theme-white navicon" >
+        <a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+        </a>
+      </div>
+   </div>
+ </div>
+ 
+<div class="pages navbar-through" >
+  	<div data-page="birth_history_form" class="page" > 
+  		<div style="overflow-y:scroll; height:inherit">
+    		<div class="content-block-title" style="padding-top: 48px;font-size:18px;"></div>
+    			<div class="list-block" style="margin-bottom:70px;">
+    				<ul style="background-color:#FFFFFF">
+    					<li>
+					      <div class="item-content " >
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-title label">Child Name </div>
+                    <!-- <i class="fa fa-sort-desc" style="float:right;font-size: 30px;position: absolute;right: 6px;margin-top: -22px;"></i> -->
+					          <div class="item-input" id="birth_his_chaildname">
+					            <input type="text" name="birth_his_cname" id="birth_his_cname" placeholder="Child Name ">
+					            <input type="hidden" name="birth_his_cname_id" id="birth_his_cname_id" >
+					          </div>
+					        </div>
+					      </div>
+			    		</li>
+    					<li>
+					      <div class="item-content " >
+					        <div class="item-media"></div>
+					        <div class="item-inner" style="margin-left:0px;">
+					          <div class="item-title label" style="width:100%;">Place of Birth of your Child ?</div>
+					          
+					        </div>
+					      </div>
+			    		</li>
+              <li>
+                <div class="item-content " >
+                  <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-input" style="margin-left:0px;">
+                      <input type="text" name="birth_his_pb" id="birth_his_pb" placeholder="Place of Birth">
+                    </div>
+                  </div>
+                </div>
+              </li>
+			    		<li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Any Induced Labor?</div>
+                           
+                          </div>
+                        </div>
+                        
+                              <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio1" id="birth_his_ail" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio1" id="birth_his_ail1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+					         <li>
+                  <div class="item-content " >
+                    <div class="item-media"></div>
+                    <div class="item-inner" style="margin-left:0px;">
+                      <div class="item-title label" style="width:100%;">Duration of Labor</div>
+                      
+                    </div>
+                  </div>
+                </li>
+              <li>
+                <div class="item-content " >
+                  <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-input" style="margin-left:0px;">
+                      <input type="text" name="birth_his_dol" id="birth_his_dol" placeholder="Duration of Labor">
+                    </div>
+                  </div>
+                </div>
+              </li>
+			    		<li>
+                  <div class="item-content " >
+                    <div class="item-media"></div>
+                    <div class="item-inner" style="margin-left:0px;">
+                      <div class="item-title label" style="width:100%;">Gestation period of pregnancy</div>
+                      
+                    </div>
+                  </div>
+                </li>
+              <li>
+                <div class="item-content " >
+                  <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-input" style="margin-left:0px;">
+                      <input type="text" name="birth_his_pop" id="birth_his_pop" placeholder="period of pregnancy">
+                    </div>
+                  </div>
+                </div>
+              </li>
+			    		<li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Method of Delivery</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio2" id="birth_his_mod" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">   Breech   </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio2" id="birth_his_mod1" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title">  Caesarean  </div>
+                                    </div>
+                                  </label>
+                                  <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio2" id="birth_his_mod2" value="2" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">   Forceps   </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio2" id="birth_his_mod3" value="3" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> Spontaneous Vaginal  </div>
+                                    </div>
+                                  </label>
+                            
+                      </li>
+                      <li>
+                  <div class="item-content " >
+                    <div class="item-media"></div>
+                    <div class="item-inner" style="margin-left:0px;">
+                      <div class="item-title label" style="width:100%;">Child's birth weight</div>
+                      
+                    </div>
+                  </div>
+                </li>
+              <li>
+                <div class="item-content " >
+                  <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-input" style="margin-left:0px;">
+                      <input type="text" name="birth_his_bw" id="birth_his_bw" placeholder="birth weight">
+                    </div>
+                  </div>
+                </div>
+              </li>
+			    		
+              <li>
+                  <div class="item-content " >
+                    <div class="item-media"></div>
+                    <div class="item-inner" style="margin-left:0px;">
+                      <div class="item-title label" style="width:100%;">Apgar Score (if Known)</div>
+                      
+                    </div>
+                  </div>
+                </li>
+              <li>
+                <div class="item-content " >
+                  <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-input" style="margin-left:0px;">
+                      <input type="text" name="birth_his_aps" id="birth_his_aps" placeholder="Apgar Score (if Known)">
+                    </div>
+                  </div>
+                </div>
+              </li>
+			    		<li>During the hospital stay, did your child have any of the following ?</li>
+			    		<li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Anti biotic treatment</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio3" id="birth_his_abiot" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio3" id="birth_his_abiot1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Blue spells</div>
+                           
+                          </div>
+                        </div>
+                        
+                              <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio4" id="birth_his_blsp" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio4" id="birth_his_blsp1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Convulsions</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio5" id="birth_his_co" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                                <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio5" id="birth_his_co1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">jaundice</div>
+                           
+                          </div>
+                        </div>
+                        
+                                <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio6" id="birth_his_jaun" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio6" id="birth_his_jaun1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Skin rash</div>
+                           
+                          </div>
+                        </div>
+                        
+                                <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio7" id="birth_his_skinr" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                                <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio7" id="birth_his_skinr1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Did child remain in hospital longer</br> than mother?</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio8" id="birth_his_dcrihltm" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                                <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio8" id="birth_his_dcrihltm1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">How was/is baby fed?</div>
+                           
+                          </div>
+                        </div>
+                        
+                              <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio9" id="birth_his_hwbf" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                                <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio9" id="birth_his_hwbf1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                            
+                      </li>
+					</ul>
+					<input type="hidden" name="birth_his_update" id="birth_his_update" >
+				</div>
+		</div>
+	<!-- 	<div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;">
+    <div class="toolbar-inner" style="background:#0DB7C4">
+      <a href="#" onclick="birthformSubmit();" class="link icon-only" style="color:white;border-right:1px white solid ">Submit</a>
+      <a href="loginnormal.html" class="link icon-only" style="color:white">Cancel</a>
+    </div>
+  </div> --> 
+  <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;" id="birthhis_inbtn">
+      <div class="toolbar-inner" style="background:#0DB7C4;" >
+        <a href="#" class="link icon-only" onclick="birthformSubmit();" style="color:white;border-right:1px white solid ">Update</a>
+        <a href="#" onclick="deletebirthPedHis();" class="link icon-only" style="color:white">Delete</a>
+      </div>
+    </div>  
+    <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;" id="birthhis_upbtn">
+      <div class="toolbar-inner" style="background:#0DB7C4;" >
+        <a href="#" class="link icon-only" onclick="birthformSubmit();" style="color:white;border-right:1px white solid ">Submit</a>
+        <a href="loginnormal.html" class="link icon-only" style="color:white">Cancel</a>
+      </div>
+    </div>
+	</div>
+</div>
+    					

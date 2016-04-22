@@ -1,0 +1,188 @@
+<div class="navbar">
+	<div class="navbar-inner">
+		<div class="left sliding"><a href="loginnormal.html" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a>
+		</div>
+			<div class="center sliding white" style="  margin-right: 80px;">SELF MONITORING CHARTS</div>
+			<div class="right theme-white searchicon" >
+				<a href="#" onclick="MobileAppInfo()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i>
+				</a>
+			</div>
+			<div class="right theme-white navicon" >
+				<a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+				</a>
+			</div>
+	</div>
+</div>
+
+<div class="pages navbar-through">
+	<div data-page="self_moni_listing_new" class="page" >
+		<div style="overflow-y:scroll; height:inherit">
+			<div class="page-content">
+				<div class="content-block">
+					<div class="buttons-row">
+						<a href="#tab1" class="tab-link active button" >By Test</a>
+						<a href="#tab2"  class="tab-link button" onclick="getSelfData();">By Date</a>
+					</div>
+				</div>
+				<div class="tabs">
+					<div id="tab1" class="tab active" >
+						<div class="list-block" style="margin-bottom:130px;">
+							<ul >
+								<div id="showU1">
+									<li>
+										<a href="self_height_chart.html" class="close-panel item-link" onclick="displayChartHeight();">
+											<div class="item-content white">
+												<div class="item-inner">
+													<div class="item-title"><span>Height </span> </div>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<!-- Additional "smart-select" class -->
+										<a href="self_weight_chart.html" class="close-panel item-link" onclick="displayChartWeight();">
+											<div class="item-content white">
+												<div class="item-inner">
+												<!-- Select label -->
+													<div class="item-title"><span>Weight</span> </div>
+												</div>
+											</div>
+										</a>
+									</li>
+								</div>
+								<div id="showEUROP1">
+								<li>
+									<!-- Additional "smart-select" class -->
+									<a href="self_heightcms_chart.html" class="close-panel item-link" onclick="displayHeightcmsChart();">
+										<div class="item-content white">
+											<div class="item-inner">
+											<!-- Select label -->
+												<div class="item-title"><span>Height in cms </span> </div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<!-- Additional "smart-select" class -->
+									<a href="self_weightcms_chart.html" class="close-panel item-link" onclick="displayweightcmschart();">
+										<div class="item-content white">
+											<div class="item-inner">
+											<!-- Select label -->
+												<div class="item-title"><span>Weight in KG  </span> </div>
+											</div>
+										</div>
+									</a>
+								</li>
+								</div>
+								<li>
+									<!-- Additional "smart-select" class -->
+									<a href="self_bmi_charts.html" class="close-panel item-link" onclick="displayChartBmi();">
+										<div class="item-content white">
+											<div class="item-inner">
+											<!-- Select label -->
+												<div class="item-title"><span>BMI </span> </div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<!-- Additional "smart-select" class -->
+									<a href="self_fbs_charts.html" class="close-panel item-link" onclick="displayChartFbs();">
+										<div class="item-content white">
+											<div class="item-inner">
+											<!-- Select label -->
+												<div class="item-title"><span>FBS in mg/dL </span> </div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<!-- Additional "smart-select" class -->
+									<a href="self_heart_chart.html" class="close-panel item-link" onclick="displayChartHeartRate()">
+										<div class="item-content white">
+											<div class="item-inner">
+											<!-- Select label -->
+												<div class="item-title"><span>Heart Rate in bpm  </span> </div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<!-- Additional "smart-select" class -->
+									<a href="self_respiratoratory_chart.html" class="close-panel item-link" onclick="displayChartRespirate();">
+										<div class="item-content white">
+											<div class="item-inner">
+											<!-- Select label -->
+												<div class="item-title"><span>Respiratory Rate in breaths/minute </span> </div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<!-- Additional "smart-select" class -->
+									<a href="self_temp_chart.html" class="close-panel item-link" onclick="displayChartTemperature();">
+										<div class="item-content white">
+											<div class="item-inner">
+											<!-- Select label -->
+												<div class="item-title"><span>Temperature in Fahrenheit </span> </div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<!-- Additional "smart-select" class -->
+									<a href="self_sysbp_chart.html" class="close-panel item-link" onclick="displayChartSysBp();">
+										<div class="item-content white">
+											<div class="item-inner">
+											<!-- Select label -->
+												<div class="item-title"><span>Systolic Blood Pressure (in mmHg)</span> </div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<!-- Additional "smart-select" class -->
+									<a href="self_diabp_chart.html" class="close-panel item-link" onclick="displayChartDiasBp();">
+										<div class="item-content white">
+											<div class="item-inner">
+											<!-- Select label -->
+												<div class="item-title"><span>Diastolic Blood Pressure (in mmHg) </span> </div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<!-- Additional "smart-select" class -->
+									<a href="self_oxy_chart.html" class="close-panel item-link" onclick="displayOxySatChart();">
+										<div class="item-content white">
+											<div class="item-inner">
+											<!-- Select label -->
+												<div class="item-title"><span>Oxygen Saturation </span> </div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<div id="self_others"> </div>
+							</ul>
+						</div>
+					</div>
+					<!-- Tab 2 -->
+					<div id="tab2" class="tab" >
+						<div class="content-block">
+							<div class="list-block"  id="getallselfmonitoringchart"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="toolbar tabbar" style="position:absolute;background:#0DB7C4;bottom: 60px; height: 59px;">
+			<div class="toolbar-inner" style="background:#0DB7C4;" id="selfrep"></div>
+		</div>
+		<div class="toolbar tabbar" style="position:absolute;background:#0DB7C4; height: 59px;">
+			<div class="toolbar-inner" style="background:#0DB7C4;">
+				<a href="self_monitoring_charts.html" onclick="selfMonitoringAdd();" class="link icon-only" style="color:white;border-right:1px white solid "><i class="fa fa-plus-circle"></i>Add New</a>
+				<a href="manage_albums.html" onclick="manage_albums(44,'Self Monitoring Charts');" class="link icon-only" style="color:white"><i class="fa fa-file-image-o"></i>Manage Images</a>
+			</div>
+		</div>
+	</div>
+</div>

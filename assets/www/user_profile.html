@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+		<link rel="stylesheet" type="text/css" href="css/index1.css" />
+		<link rel="stylesheet" href="css/framework7.min.css">
+		<link rel="stylesheet" href="css/framework7.ios.min.css">
+		<!-- Path to your custom app styles-->
+		<link rel="stylesheet" href="css/my-app.css">
+		<link rel="stylesheet" href="css/home.css">
+		<link rel="stylesheet" href="font-awesome-4.3.0/css/font-awesome.min.css">
+		
+		<script type="text/javascript" src="js/index.js"></script>
+		<script src="js/jquery-1.3.2.min.js"></script>
+		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script src="js/Chart.js"></script>
+		<script src="js/jquery-ui.js"></script>
+
+
+	<title>Login</title>
+	</head>
+	<body style="background-color:#0DB7C4;">
+		<div class="statusbar-overlay"></div>
+			<div class="panel-overlay"></div>
+				<div class="panel panel-right panel-cover">
+					<div class="list-block">
+						<ul>
+							<li>
+								<a href="loginnormal.html" class="close-panel item-link" onclick="homePage();">
+									<div class="item-content">
+										<div class="item-media white">
+											<span class="homeimg"><img src="img/HOME.png" height="34"/>
+											</span>
+										</div>
+											<div class="item-inner">
+												<div class="item-title white">Home</div>
+											</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a class="close-panel item-link" href="user_profile.html" onclick="giveAlert();">
+									<div class="item-content">
+										<div class="item-media white">
+											<span class="homeimg"><img src="img/USER-PROFILE.png" height="34"/>
+											</span>
+										</div>
+											<div class="item-inner">
+												<div class="item-title white">User Profile</div>
+											</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a class="close-panel item-link" href="aboutus.html" >
+									<div class="item-content">
+										<div class="item-media white">
+											<span class="homeimg"><img src="img/ABOUT-THIS-APP.png" height="34"/></span>
+										</div>
+										<div class="item-inner">
+											<div class="item-title white">About This App</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a class="close-panel item-link" href="account_summary.html">
+									<div class="item-content">
+										<div class="item-media white">
+											<span class="homeimg"><img src="img/UPGRADE.png" height="34"/></span>
+										</div>
+											<div class="item-inner">
+												<div class="item-title white">Account Summary</div>
+											</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a class="close-panel item-link" href="grant_access.html">
+									<div class="item-content">
+										<div class="item-media white">
+											<span class="homeimg"><img src="img/GRANT-ACCESS.png" height="34"/></span>
+										</div>
+											<div class="item-inner">
+												<div class="item-title white">Grant Access</div>
+											</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a class="close-panel item-link" href="health_id.html">
+									<div class="item-content">
+										<div class="item-media white">
+											<span class="homeimg"><img src="img/HEALTH-ID.png" height="34"/></span>
+										</div>
+											<div class="item-inner">
+												<div class="item-title white">Health ID</div>
+											</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a class="close-panel item-link" href="familyaccounts.html">
+									<div class="item-content">
+										<div class="item-media white">
+											<span class="homeimg"><img src="img/FAMILY-ACCOUNTS.png" height="34"/></span>
+										</div>
+											<div class="item-inner">
+												<div class="item-title white">Family Subscribers</div>
+											</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a class="close-panel item-link" href="faq.html">
+									<div class="item-content">
+										<div class="item-media white">
+											<span class="homeimg"><img src="img/FAQ.png" height="34"/></span>
+										</div>
+											<div class="item-inner">
+												<div class="item-title white">FAQ</div>
+											</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a class="close-panel item-link" onclick="showmetrics();" href="bridge-doctor.html">
+									<div class="item-content">
+										<div class="item-media white">
+											<span class="homeimg"><img src="img/SETTINGS.png" height="34"/></span>
+										</div>
+											<div class="item-inner">
+												<div class="item-title white">Settings</div>
+											</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a class="close-panel item-link" href="contact.html">
+									<div class="item-content">
+										<div class="item-media white">
+											<span class="homeimg"><img src="img/CONTACT-US.png" height="34"/></span>
+										</div>
+											<div class="item-inner">
+												<div class="item-title white">Contact Us</div>
+											</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a class="close-panel item-link" onclick="logout();" href="#">
+									<div class="item-content">
+										<div class="item-media white">
+											<span class="homeimg"><img src="img/LOGOUT.png" height="34"/></span>
+										</div>
+											<div class="item-inner">
+												<div class="item-title white">Logout</div>
+											</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+				</div>
+		</div>
+
+
+<div class="navbar">
+	<div class="navbar-inner">
+		<div class="left sliding"><a href="loginnormal.html" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+			<div class="center sliding white" style="margin-right: 140px;">USER PROFILE</div>
+				<div class="right theme-white searchicon" >
+					<a href="#" onclick="UserProfileInfo()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i></a>
+				</div>
+			<div class="right theme-white navicon" >
+				<a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+				</a>
+			</div>
+	</div>
+</div>
+<div class="pages navbar-through">
+	<div data-page="user_profile" class="page" > 
+		<div style="overflow-y:scroll;height:inherit">  
+			<div class="list-block accordion-list" style="padding-top: 64px;margin-bottom:55px;">
+				<ul >
+					<li class="accordion-item"  >
+						<a href="" class="item-link item-content" >
+							<div class="item-inner white">
+								<div class="item-title">
+									<span style="float:left;line-height: 39px;">Login Information</span></div>
+							</div>
+						</a> 
+						<div class="accordion-item-content">
+							<div class="list-block">
+								<ul style="background-color: white">
+									<li>
+										<div class="item-content item-title_inner">
+											<div class="item-inner">
+												<div class="item-title label">First Name</div>
+													<div class="item-input">
+														<input type="text" name="nameProfile" id="nameProfile" placeholder="First Name" />
+													</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="item-content item-title_inner">
+											<div class="item-inner">
+												<div class="item-title label">Middle Name</div>
+													<div class="item-input">
+														<input type="text" name="name" id="middleName" placeholder="Middle Name" />
+													</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="item-content item-title_inner">
+											<div class="item-inner">
+												<div class="item-title label">Last Name</div>
+													<div class="item-input">
+														<input type="text" name="lname" id="lname" placeholder="Last Name" />
+													</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="item-content item-title_inner">
+											<div class="item-inner">
+												<div class="item-title label">Maiden Name</div>
+													<div class="item-input">
+														<input type="text" name="name" id="maidenName" placeholder="Maiden Name" />
+													</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="item-content item-title_inner">
+											<div class="item-inner">
+												<div class="item-title label">E-Mail</div>
+													<div class="item-input">
+														<input type="email" name="email" id="email" placeholder="E-Mail" />
+													</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="item-content item-title_inner">
+											<div class="item-inner">
+												<div class="item-title label">User Name</div>
+													<div class="item-input">
+														<input type="text" name="uname" id="uname" placeholder="User Name" />
+													</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="item-content item-title_inner">
+											<div class="item-inner">
+												<div class="item-title label">Password</div>
+													<div class="item-input">
+														<input type="password" name="password" id="password" placeholder="Password" />
+													</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+	<li class="accordion-item">
+		<a href="" class="item-link item-content">
+			<div class="item-inner white">
+				<div class="item-title">
+				<span style="float:left;line-height: 39px;">Primary Address</span></div>
+			</div>
+		</a>
+			<div class="accordion-item-content">
+				<div class="list-block">
+					<ul style="background-color: white">
+						<li>
+							<div class="item-content item-title_inner">
+								<div class="item-inner">
+									<div class="item-title label">Country</div>
+										<div class="item-input" id="addcountriesuser">
+											<!-- <input type="text" name="primary_country" id="primary_country" onclick="userCountry();" placeholder="Country" /> -->
+											<select name="primary_country" id="primary_country" onchange="userState(this.value);">
+													<option value="1">Afghanistan</option>
+												<option value="2">Albania</option>
+												<option value="3">Algeria</option>
+												<option value="4">American Samoa</option>
+												<option value="5">Andorra</option>
+												<option value="6">Angola</option>
+												<option value="7">Anguilla</option>
+												<option value="8">Antarctica</option>
+												<option value="9">Antigua and Barbuda</option>
+												<option value="10">Argentina</option>
+												<option value="11">Armenia</option>
+												<option value="12">Aruba</option>
+												<option value="13">Australia</option>
+												<option value="14">Austria</option>
+												<option value="15">Azerbaijan</option>
+												<option value="16">Bahamas</option>
+												<option value="17">Bahrain</option>
+												<option value="18">Bangladesh</option>
+												<option value="19">Barbados</option>
+												<option value="20">Belarus</option>
+												<option value="21">Belgium</option>
+												<option value="22">Belize</option>
+												<option value="23">Benin</option>
+												<option value="24">Bermuda</option>
+												<option value="25">Bhutan</option>
+												<option value="26">Bolivia</option>
+												<option value="27">Bosnia and Herzegowina</option>
+												<option value="28">Botswana</option>
+												<option value="29">Bouvet Island</option>
+												<option value="30">Brazil</option>
+												<option value="31">British Indian Ocean Territory</option>
+												<option value="32">Brunei Darussalam</option>
+												<option value="33">Bulgaria</option>
+												<option value="34">Burkina Faso</option>
+												<option value="35">Burundi</option>
+												<option value="36">Cambodia</option>
+												<option value="37">Cameroon</option>
+												<option value="38">Canada</option>
+												<option value="39">Cape Verde</option>
+												<option value="40">Cayman Islands</option>
+												<option value="41">Central African Republic</option>
+												<option value="42">Chad</option>
+												<option value="43">Chile</option>
+												<option value="44">China</option>
+												<option value="45">Christmas Island</option>
+												<option value="46">Cocos Islands</option>
+												<option value="47">Colombia</option>
+												<option value="48">Comoros</option>
+												<option value="49">Congo</option>
+												<option value="50">Cook Islands</option>
+												<option value="51">Costa Rica</option>
+												<option value="52">Cote D''Ivoire</option>
+												<option value="53">Croatia</option>
+												<option value="54">Cuba</option>
+												<option value="55">Cyprus</option>
+												<option value="56">Czech Republic</option>
+												<option value="57">Denmark</option>
+												<option value="58">Djibouti</option>
+												<option value="59">Dominica</option>
+												<option value="60">Dominican Republic</option>
+												<option value="61">East Timor</option>
+												<option value="62">Ecuador</option>
+												<option value="63">Egypt</option>
+												<option value="64">El Salvador</option>
+												<option value="65">Equatorial Guinea</option>
+												<option value="66">Eritrea</option>
+												<option value="67">Estonia</option>
+												<option value="68">Ethiopia</option>
+												<option value="69">Falkland Islands Malvinas</option>
+												<option value="70">Faroe Islands</option>
+												<option value="71">Fiji</option>
+												<option value="72">Finland</option>
+												<option value="73">France</option>
+												<option value="74">France, Metropolitan</option>
+												<option value="75">French Guiana</option>
+												<option value="76">French Polynesia</option>
+												<option value="77">French Southern Territories</option>
+												<option value="78">Gabon</option>
+												<option value="79">Gambia</option>
+												<option value="80">Georgia</option>
+												<option value="81">Germany</option>
+												<option value="82">Ghana</option>
+												<option value="83">Gibraltar</option>
+												<option value="84">Greece</option>
+												<option value="85">Greenland</option>
+												<option value="86">Grenada</option>
+												<option value="87">Guadeloupe</option>
+												<option value="88">Guam</option>
+												<option value="89">Guatemala</option>
+												<option value="90">Guinea</option>
+												<option value="91">Guinea-bissau</option>
+												<option value="92">Guyana</option>
+												<option value="93">Haiti</option>
+												<option value="94">Heard and Mc Donald Islands</option>
+												<option value="95">Honduras</option>
+												<option value="96">Hong Kong</option>
+												<option value="97">Hungary</option>
+												<option value="98">Iceland</option>
+												<option value="99">India</option>
+												<option value="100">Indonesia</option>
+												<option value="101">Iran Islamic Republic of</option>
+												<option value="102">Iraq</option>
+												<option value="103">Ireland</option>
+												<option value="104">Israel</option>
+												<option value="105">Italy</option>
+												<option value="106">Jamaica</option>
+												<option value="107">Japan</option>
+												<option value="108">Jordan</option>
+												<option value="109">Kazakhstan</option>
+												<option value="110">Kenya</option>
+												<option value="111">Kiribati</option>
+												<option value="112">Korea, Democratic People''s Republic of</option>
+												<option value="113">Korea, Republic of</option>
+												<option value="114">Kuwait</option>
+												<option value="115">Kyrgyzstan</option>
+												<option value="116">Lao People''s Democratic Republic</option>
+												<option value="117">Latvia</option>
+												<option value="118">Lebanon</option>
+												<option value="119">Lesotho</option>
+												<option value="120">Liberia</option>
+												<option value="121">Libyan Arab Jamahiriya</option>
+												<option value="122">Liechtenstein</option>
+												<option value="123">Lithuania</option>
+												<option value="124">Luxembourg</option>
+												<option value="125">Macau</option>
+												<option value="126">Macedonia, The Former Yugoslav Republic of</option>
+												<option value="127">Madagascar</option>
+												<option value="128">Malawi</option>
+												<option value="129">Malaysia</option>
+												<option value="130">Maldives</option>
+												<option value="131">Mali</option>
+												<option value="132">Malta</option>
+												<option value="133">Marshall Islands</option>
+												<option value="134">Martinique</option>
+												<option value="135">Mauritania</option>
+												<option value="136">Mauritius</option>
+												<option value="137">Mayotte</option>
+												<option value="138">Mexico</option>
+												<option value="139">Micronesia, Federated States of</option>
+												<option value="140">Moldova, Republic of</option>
+												<option value="141">Monaco</option>
+												<option value="142">Mongolia</option>
+												<option value="143">Montserrat</option>
+												<option value="144">Morocco</option>
+												<option value="145">Mozambique</option>
+												<option value="146">Myanmar</option>
+												<option value="147">Namibia</option>
+												<option value="148">Nauru</option>
+												<option value="149">Nepal</option>
+												<option value="150">Netherlands</option>
+												<option value="151">Netherlands Antilles</option>
+												<option value="152">New Caledonia</option>
+												<option value="153">New Zealand</option>
+												<option value="154">Nicaragua</option>
+												<option value="155">Niger</option>
+												<option value="156">Nigeria</option>
+												<option value="157">Niue</option>
+												<option value="158">Norfolk Island</option>
+												<option value="159">Northern Mariana Islands</option>
+												<option value="160">Norway</option>
+												<option value="161">Oman</option>
+												<option value="162">Pakistan</option>
+												<option value="163">Palau</option>
+												<option value="164">Panama</option>
+												<option value="165">Papua New Guinea</option>
+												<option value="166">Paraguay</option>
+												<option value="167">Peru</option>
+												<option value="168">Philippines</option>
+												<option value="169">Pitcairn</option>
+												<option value="170">Poland</option>
+												<option value="171">Portugal</option>
+												<option value="172">Puerto Rico</option>
+												<option value="173">Qatar</option>
+												<option value="174">Reunion</option>
+												<option value="175">Romania</option>
+												<option value="176">Russian Federation</option>
+												<option value="177">Rwanda</option>
+												<option value="178">Saint Kitts and Nevis</option>
+												<option value="179">Saint Lucia</option>
+												<option value="180">Saint Vincent and the Grenadines</option>
+												<option value="181">Samoa</option>
+												<option value="182">San Marino</option>
+												<option value="183">Sao Tome and Principe</option>
+												<option value="184">Saudi Arabia</option>
+												<option value="185">Senegal</option>
+												<option value="186">Seychelles</option>
+												<option value="187">Sierra Leone</option>
+												<option value="188">Singapore</option>
+												<option value="189">Slovakia Slovak Republic</option>
+												<option value="190">Slovenia</option>
+												<option value="191">Solomon Islands</option>
+												<option value="192">Somalia</option>
+												<option value="193">South Africa</option>
+												<option value="194">South Georgia and the South Sandwich Islands</option>
+												<option value="195">Spain</option>
+												<option value="196">Sri Lanka</option>
+												<option value="197">St. Helena</option>
+												<option value="198">St. Pierre and Miquelon</option>
+												<option value="199">Sudan</option>
+												<option value="200">Suriname</option>
+												<option value="201">Svalbard and Jan Mayen Islands</option>
+												<option value="202">Swaziland</option>
+												<option value="203">Sweden</option>
+												<option value="204">Switzerland</option>
+												<option value="205">Syrian Arab Republic</option>
+												<option value="206">Taiwan</option>
+												<option value="207">Tajikistan</option>
+												<option value="208">Tanzania, United Republic of</option>
+												<option value="209">Thailand</option>
+												<option value="210">Togo</option>
+												<option value="211">Tokelau</option>
+												<option value="212">Tonga</option>
+												<option value="213">Trinidad and Tobago</option>
+												<option value="214">Tunisia</option>
+												<option value="215">Turkey</option>
+												<option value="216">Turkmenistan</option>
+												<option value="217">Turks and Caicos Islands</option>
+												<option value="218">Tuvalu</option>
+												<option value="219">Uganda</option>
+												<option value="220">Ukraine</option>
+												<option value="221">United Arab Emirates</option>
+												<option value="222">United Kingdom</option>
+												<option value="223">United States</option>
+												<option value="224">United States Minor Outlying Islands</option>
+												<option value="225">Uruguay</option>
+												<option value="226">Uzbekistan</option>
+												<option value="227">Vanuatu</option>
+												<option value="228">Vatican City Holy See</option>
+												<option value="229">Venezuela</option>
+												<option value="230">Viet Nam</option>
+												<option value="231">Virgin Islands British</option>
+												<option value="232">Virgin Islands U.S.</option>
+												<option value="233">Wallis and Futuna Islands</option>
+												<option value="234">Western Sahara</option>
+												<option value="235">Yemen</option>
+												<option value="236">Yugoslavia</option>
+												<option value="237">Zaire</option>
+												<option value="238">Zambia</option>
+												<option value="239">Zimbabwe</option>
+											</select>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content item-title_inner">
+								<div class="item-inner">
+									<div class="item-title label">Nationality</div>
+										<div class="item-input">
+											<input type="text" name="primary_nationality" id="primary_nationality" placeholder="Nationality" />
+										</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content item-title_inner">
+								<div class="item-inner">
+									<div class="item-title label">Street</div>
+										<div class="item-input">
+											<input type="text" name="primary_street" id="primary_street" placeholder="Street" />
+										</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content item-title_inner">
+								<div class="item-inner">
+									<div class="item-title label">City</div>
+										<div class="item-input">
+											<input type="text" name="primary_city" id="primary_city" placeholder="City" />
+										</div>
+								</div>
+							</div>
+						</li> 
+						<li>
+							<div class="item-content item-title_inner">
+								<div class="item-inner">
+									<div class="item-title label">Zip</div>
+										<div class="item-input">
+											<input type="number" name="primary_zip" id="primary_zip" placeholder="Zip" />
+										</div>
+								</div>
+							</div>
+						</li> 
+						<li>
+							<div class="item-content item-title_inner">
+								<div class="item-inner">
+									<div class="item-title label">State</div>
+										<div class="item-input" id="stateid">
+											<select name="primary_state" id="primary_state" placeholder="State">
+												<option value="">Please Select Country First</option>
+											</select>
+										</div>
+								</div>
+							</div>
+						</li> 
+						<li>
+							<div class="item-content item-title_inner">
+								<div class="item-inner">
+									<div class="item-title label">Home Phone Number</div>
+										<div class="item-input">
+											<input type="number" name="primary_h_phone_no" id="primary_h_phone_no" placeholder="Home Phone Number" />
+										</div>
+								</div>
+							</div>
+						</li> 
+						<li>
+							<div class="item-content item-title_inner">
+								<div class="item-inner">
+									<div class="item-title label">Work Phone Number</div>
+										<div class="item-input">
+											<input type="number" name="primary_w_phone_no" id="primary_w_phone_no" placeholder="Work Phone Number" />
+										</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content item-title_inner">
+								<div class="item-inner">
+									<div class="item-title label">Mobile Number</div>
+										<div class="item-input">
+											<input type="number" name="primary_m_phone_no" id="primary_m_phone_no" placeholder="Mobile Number" />
+										</div>
+								</div>
+							</div>
+						</li>
+				</ul>
+			</div>
+		</div>
+	</li>
+
+	<li class="accordion-item">
+		<a href="" class="item-link item-content">
+			<div class="item-inner white">
+				<div class="item-title">
+					<span style="float:left;line-height: 39px;">Personal Information </span></div>
+				</div>
+		</a> 
+			<div class="accordion-item-content">
+				<div class="list-block">
+					<ul style="background-color: white">
+						<li>
+							<div class="item-content item-title_inner">
+								<div class="item-inner">
+									<div class="item-title label">Date Of Birth</div>
+										<div class="item-input">
+											<input type="text" name="per_dob" id="per_dob"  placeholder="Date Of Birth" readonly onclick="getcalUserP();" />
+										</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content item-title_inner">
+								<div class="item-inner">
+									<div class="item-title label">Marital Status</div>
+										<div class="item-input">
+											<!-- <input type="text" name="primary_m_status" id="primary_m_status" placeholder="Maritial Status" /> -->
+											<select name="primary_m_status" id="primary_m_status">
+												<option >Single</option>
+												<option >Married</option>
+											</select>
+										</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content item-title_inner">
+								<div class="item-inner">
+									<div class="item-title label">Gender</div>
+										<div class="item-input">
+											<select name="primary_gen" id="primary_gen">
+												<option >Male</option>
+												<option >Female</option>
+											</select>
+										</div>
+								</div>
+							</div>
+						</li>
+					<div id="showUS">
+						<li>
+							<div class="item-content item-title_inner">
+								<div class="item-inner">
+									<div class="item-title label">Height in feet :  </div>
+										<div class="item-input">
+											<input type="number" name="user_height_f" id="user_height_f" placeholder="Height in feet :" onkeyup="autocallBMI_U()">
+										</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content item-title_inner">
+								<div class="item-inner">
+									<div class="item-title label">Height in inches :  </div>
+										<div class="item-input">
+											<input type="number" name="user_height_i" id="user_height_i" placeholder="Height in inches :" onkeyup="autocallBMI_U()">
+										</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content item-title_inner">
+								<div class="item-inner">
+									<div class="item-title label">Weight in pounds  </div>
+										<div class="item-input">
+											<input type="number" name="user_weight" id="user_weight" placeholder="Weight in pounds   " onkeyup="autocallBMI_U()">
+										</div>
+								</div>
+							</div>
+						</li>
+					</div>
+					<div id="showEUROPE">
+						<li>
+							<div class="item-content item-title_inner">
+								<div class="item-inner">
+									<div class="item-title label">Height in cms :  </div>
+										<div class="item-input">
+											<input type="number" name="user_height_cm" id="user_height_cm" placeholder="Height in cms :   " onkeyup="autocallBMI_E()">
+										</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content item-title_inner">
+								<div class="item-inner">
+									<div class="item-title label">Weight in KG  </div>
+										<div class="item-input">
+											<input type="number" name="user_weight_kg" id="user_weight_kg" placeholder="Weight in KG   " onkeyup="autocallBMI_E()">
+										</div>
+								</div>
+							</div>
+						</li>
+					</div>
+						<li>
+							<div class="item-content item-title_inner">
+								<div class="item-inner">
+									<div class="item-title label">BMI  </div>
+										<div class="item-input">
+											<input type="number" name="user_bmi" id="user_bmi" placeholder="BMI">
+										</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content item-title_inner">
+								<div class="item-inner">
+									<div class="item-title label">Hospital Born At</div>
+										<div class="item-input">
+											<input type="text" name="user_born_at" id="user_born_at" placeholder="Hospital Born At" />
+										</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content item-title_inner">
+								<div class="item-inner">
+									<div class="item-title label">Blood Group</div>
+										<div class="item-input">
+											<!-- <input type="text" name="user_bgroop" id="user_bgroop" placeholder="Blood Group" /> -->
+											<select name="user_bgroop" id="user_bgroop">
+												<option value="1">A +ve</option>
+												<option value="2">A −ve</option>
+												<option value="3">B +ve</option>
+												<option value="4">B -ve</option>
+												<option value="5">O +ve</option>
+												<option value="6">O -ve</option>
+												<option value="7">AB+</option>
+												<option value="8">AB-</option>
+											</select>
+										</div>
+								</div>
+							</div>
+						</li>
+				</ul>
+			</div>
+		</div>
+	</li>
+		<li class="accordion-item">
+			<a href="" class="item-link item-content">
+				<div class="item-inner white">
+					<div class="item-title">
+						<span style="float:left;line-height: 39px;">Company Information</span></div>
+				</div>
+			</a>
+				<div class="accordion-item-content">
+					<div class="list-block">
+						<ul style="background-color: white">
+							<li>
+								<div class="item-content item-title_inner">
+									<div class="item-inner">
+										<div class="item-title label">OCCUPATION</div>
+											<div class="item-input" id="adduseroccuption">
+												<input type="text" name="comp_info_occu" id="comp_info_occu" onclick="userOccupation();" placeholder="OCCUPATION" />
+												<input type="hidden" id="comp_info_occu_id">
+											</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="item-content item-title_inner">
+									<div class="item-inner">
+										<div class="item-title label">Company Name</div>
+											<div class="item-input">
+												<input type="text" name="comp_info_compname" id="comp_info_compname" placeholder="Company Name" />
+											</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="item-content item-title_inner">
+									<div class="item-inner">
+										<div class="item-title label">Company Address</div>
+											<div class="item-input">
+												<input type="text" name="comp_info_compAddr" id="comp_info_compAddr" placeholder="Company Address" />
+											</div>
+										</div>
+								</div>
+							</li>
+							<li>
+								<div class="item-content item-title_inner">
+									<div class="item-inner">
+										<div class="item-title label">Street</div>
+											<div class="item-input">
+												<input type="text" name="comp_info_compStreet" id="comp_info_compStreet" placeholder="Street" />
+											</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="item-content item-title_inner">
+									<div class="item-inner">
+										<div class="item-title label">City</div>
+											<div class="item-input">
+												<input type="text" name="comp_info_compCity" id="comp_info_compCity" placeholder="City" />
+											</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="item-content item-title_inner">
+									<div class="item-inner">
+										<div class="item-title label">Zip</div>
+											<div class="item-input">
+												<input type="number" name="comp_info_compZip" id="comp_info_compZip" placeholder="Zip" />
+											</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="item-content item-title_inner">
+									<div class="item-inner">
+										<div class="item-title label">Country</div>
+											<div class="item-input">
+												<!-- <input type="text" name="comp_info_compCountry" id="comp_info_compCountry" placeholder="Country" /> -->
+												<select name="comp_info_compCountry" id="comp_info_compCountry">
+													<option value="1">Afghanistan</option>
+													<option value="2">Albania</option>
+													<option value="3">Algeria</option>
+													<option value="4">American Samoa</option>
+													<option value="5">Andorra</option>
+													<option value="6">Angola</option>
+													<option value="7">Anguilla</option>
+													<option value="8">Antarctica</option>
+													<option value="9">Antigua and Barbuda</option>
+													<option value="10">Argentina</option>
+													<option value="11">Armenia</option>
+													<option value="12">Aruba</option>
+													<option value="13">Australia</option>
+													<option value="14">Austria</option>
+													<option value="15">Azerbaijan</option>
+													<option value="16">Bahamas</option>
+													<option value="17">Bahrain</option>
+													<option value="18">Bangladesh</option>
+													<option value="19">Barbados</option>
+													<option value="20">Belarus</option>
+													<option value="21">Belgium</option>
+													<option value="22">Belize</option>
+													<option value="23">Benin</option>
+													<option value="24">Bermuda</option>
+													<option value="25">Bhutan</option>
+													<option value="26">Bolivia</option>
+													<option value="27">Bosnia and Herzegowina</option>
+													<option value="28">Botswana</option>
+													<option value="29">Bouvet Island</option>
+													<option value="30">Brazil</option>
+													<option value="31">British Indian Ocean Territory</option>
+													<option value="32">Brunei Darussalam</option>
+													<option value="33">Bulgaria</option>
+													<option value="34">Burkina Faso</option>
+													<option value="35">Burundi</option>
+													<option value="36">Cambodia</option>
+													<option value="37">Cameroon</option>
+													<option value="38">Canada</option>
+													<option value="39">Cape Verde</option>
+													<option value="40">Cayman Islands</option>
+													<option value="41">Central African Republic</option>
+													<option value="42">Chad</option>
+													<option value="43">Chile</option>
+													<option value="44">China</option>
+													<option value="45">Christmas Island</option>
+													<option value="46">Cocos Islands</option>
+													<option value="47">Colombia</option>
+													<option value="48">Comoros</option>
+													<option value="49">Congo</option>
+													<option value="50">Cook Islands</option>
+													<option value="51">Costa Rica</option>
+													<option value="52">Cote D''Ivoire</option>
+													<option value="53">Croatia</option>
+													<option value="54">Cuba</option>
+													<option value="55">Cyprus</option>
+													<option value="56">Czech Republic</option>
+													<option value="57">Denmark</option>
+													<option value="58">Djibouti</option>
+													<option value="59">Dominica</option>
+													<option value="60">Dominican Republic</option>
+													<option value="61">East Timor</option>
+													<option value="62">Ecuador</option>
+													<option value="63">Egypt</option>
+													<option value="64">El Salvador</option>
+													<option value="65">Equatorial Guinea</option>
+													<option value="66">Eritrea</option>
+													<option value="67">Estonia</option>
+													<option value="68">Ethiopia</option>
+													<option value="69">Falkland Islands Malvinas</option>
+													<option value="70">Faroe Islands</option>
+													<option value="71">Fiji</option>
+													<option value="72">Finland</option>
+													<option value="73">France</option>
+													<option value="74">France, Metropolitan</option>
+													<option value="75">French Guiana</option>
+													<option value="76">French Polynesia</option>
+													<option value="77">French Southern Territories</option>
+													<option value="78">Gabon</option>
+													<option value="79">Gambia</option>
+													<option value="80">Georgia</option>
+													<option value="81">Germany</option>
+													<option value="82">Ghana</option>
+													<option value="83">Gibraltar</option>
+													<option value="84">Greece</option>
+													<option value="85">Greenland</option>
+													<option value="86">Grenada</option>
+													<option value="87">Guadeloupe</option>
+													<option value="88">Guam</option>
+													<option value="89">Guatemala</option>
+													<option value="90">Guinea</option>
+													<option value="91">Guinea-bissau</option>
+													<option value="92">Guyana</option>
+													<option value="93">Haiti</option>
+													<option value="94">Heard and Mc Donald Islands</option>
+													<option value="95">Honduras</option>
+													<option value="96">Hong Kong</option>
+													<option value="97">Hungary</option>
+													<option value="98">Iceland</option>
+													<option value="99">India</option>
+													<option value="100">Indonesia</option>
+													<option value="101">Iran Islamic Republic of</option>
+													<option value="102">Iraq</option>
+													<option value="103">Ireland</option>
+													<option value="104">Israel</option>
+													<option value="105">Italy</option>
+													<option value="106">Jamaica</option>
+													<option value="107">Japan</option>
+													<option value="108">Jordan</option>
+													<option value="109">Kazakhstan</option>
+													<option value="110">Kenya</option>
+													<option value="111">Kiribati</option>
+													<option value="112">Korea, Democratic People''s Republic of</option>
+													<option value="113">Korea, Republic of</option>
+													<option value="114">Kuwait</option>
+													<option value="115">Kyrgyzstan</option>
+													<option value="116">Lao People''s Democratic Republic</option>
+													<option value="117">Latvia</option>
+													<option value="118">Lebanon</option>
+													<option value="119">Lesotho</option>
+													<option value="120">Liberia</option>
+													<option value="121">Libyan Arab Jamahiriya</option>
+													<option value="122">Liechtenstein</option>
+													<option value="123">Lithuania</option>
+													<option value="124">Luxembourg</option>
+													<option value="125">Macau</option>
+													<option value="126">Macedonia, The Former Yugoslav Republic of</option>
+													<option value="127">Madagascar</option>
+													<option value="128">Malawi</option>
+													<option value="129">Malaysia</option>
+													<option value="130">Maldives</option>
+													<option value="131">Mali</option>
+													<option value="132">Malta</option>
+													<option value="133">Marshall Islands</option>
+													<option value="134">Martinique</option>
+													<option value="135">Mauritania</option>
+													<option value="136">Mauritius</option>
+													<option value="137">Mayotte</option>
+													<option value="138">Mexico</option>
+													<option value="139">Micronesia, Federated States of</option>
+													<option value="140">Moldova, Republic of</option>
+													<option value="141">Monaco</option>
+													<option value="142">Mongolia</option>
+													<option value="143">Montserrat</option>
+													<option value="144">Morocco</option>
+													<option value="145">Mozambique</option>
+													<option value="146">Myanmar</option>
+													<option value="147">Namibia</option>
+													<option value="148">Nauru</option>
+													<option value="149">Nepal</option>
+													<option value="150">Netherlands</option>
+													<option value="151">Netherlands Antilles</option>
+													<option value="152">New Caledonia</option>
+													<option value="153">New Zealand</option>
+													<option value="154">Nicaragua</option>
+													<option value="155">Niger</option>
+													<option value="156">Nigeria</option>
+													<option value="157">Niue</option>
+													<option value="158">Norfolk Island</option>
+													<option value="159">Northern Mariana Islands</option>
+													<option value="160">Norway</option>
+													<option value="161">Oman</option>
+													<option value="162">Pakistan</option>
+													<option value="163">Palau</option>
+													<option value="164">Panama</option>
+													<option value="165">Papua New Guinea</option>
+													<option value="166">Paraguay</option>
+													<option value="167">Peru</option>
+													<option value="168">Philippines</option>
+													<option value="169">Pitcairn</option>
+													<option value="170">Poland</option>
+													<option value="171">Portugal</option>
+													<option value="172">Puerto Rico</option>
+													<option value="173">Qatar</option>
+													<option value="174">Reunion</option>
+													<option value="175">Romania</option>
+													<option value="176">Russian Federation</option>
+													<option value="177">Rwanda</option>
+													<option value="178">Saint Kitts and Nevis</option>
+													<option value="179">Saint Lucia</option>
+													<option value="180">Saint Vincent and the Grenadines</option>
+													<option value="181">Samoa</option>
+													<option value="182">San Marino</option>
+													<option value="183">Sao Tome and Principe</option>
+													<option value="184">Saudi Arabia</option>
+													<option value="185">Senegal</option>
+													<option value="186">Seychelles</option>
+													<option value="187">Sierra Leone</option>
+													<option value="188">Singapore</option>
+													<option value="189">Slovakia Slovak Republic</option>
+													<option value="190">Slovenia</option>
+													<option value="191">Solomon Islands</option>
+													<option value="192">Somalia</option>
+													<option value="193">South Africa</option>
+													<option value="194">South Georgia and the South Sandwich Islands</option>
+													<option value="195">Spain</option>
+													<option value="196">Sri Lanka</option>
+													<option value="197">St. Helena</option>
+													<option value="198">St. Pierre and Miquelon</option>
+													<option value="199">Sudan</option>
+													<option value="200">Suriname</option>
+													<option value="201">Svalbard and Jan Mayen Islands</option>
+													<option value="202">Swaziland</option>
+													<option value="203">Sweden</option>
+													<option value="204">Switzerland</option>
+													<option value="205">Syrian Arab Republic</option>
+													<option value="206">Taiwan</option>
+													<option value="207">Tajikistan</option>
+													<option value="208">Tanzania, United Republic of</option>
+													<option value="209">Thailand</option>
+													<option value="210">Togo</option>
+													<option value="211">Tokelau</option>
+													<option value="212">Tonga</option>
+													<option value="213">Trinidad and Tobago</option>
+													<option value="214">Tunisia</option>
+													<option value="215">Turkey</option>
+													<option value="216">Turkmenistan</option>
+													<option value="217">Turks and Caicos Islands</option>
+													<option value="218">Tuvalu</option>
+													<option value="219">Uganda</option>
+													<option value="220">Ukraine</option>
+													<option value="221">United Arab Emirates</option>
+													<option value="222">United Kingdom</option>
+													<option value="223">United States</option>
+													<option value="224">United States Minor Outlying Islands</option>
+													<option value="225">Uruguay</option>
+													<option value="226">Uzbekistan</option>
+													<option value="227">Vanuatu</option>
+													<option value="228">Vatican City Holy See</option>
+													<option value="229">Venezuela</option>
+													<option value="230">Viet Nam</option>
+													<option value="231">Virgin Islands British</option>
+													<option value="232">Virgin Islands U.S.</option>
+													<option value="233">Wallis and Futuna Islands</option>
+													<option value="234">Western Sahara</option>
+													<option value="235">Yemen</option>
+													<option value="236">Yugoslavia</option>
+													<option value="237">Zaire</option>
+													<option value="238">Zambia</option>
+													<option value="239">Zimbabwe</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="item-content item-title_inner">
+									<div class="item-inner">
+										<div class="item-title label">Company Phone</div>
+											<div class="item-input">
+												<input type="number" name="comp_info_compPhone" id="comp_info_compPhone" placeholder="Company Phone" />
+											</div>
+									</div>
+								</div>
+							</li> 
+						</ul>
+				</div>
+			</div>
+		</li>
+<li class="accordion-item">
+	<a href="" class="item-link item-content"  >
+		<div class="item-inner white">
+			<div class="item-title">
+			<span style="float:left;line-height: 39px;">Preferred Hospitals Info</span></div>
+		</div>
+	</a> 
+	<div class="accordion-item-content">
+		<div class="list-block">
+			<ul style="background-color: white" id="PerfHospitalData">
+				<li>
+					<div class="item-content item-title_inner">
+						<div class="item-inner">
+							<div class="item-title label">Hospital</div>
+							<div class="item-input">
+								<input type="text" name="pre_hospital" id="pre_hospital_0" placeholder="Hospital" />
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content item-title_inner">
+						<div class="item-inner">
+							<div class="item-title label">Medical record number </div>
+							<div class="item-input">
+								<input type="text" name="pref_me_re_no" id="pref_me_re_no_0" placeholder="Medical record number " />
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content item-title_inner">
+						<div class="item-inner">
+							<div class="item-title label">Hospital telephone number</div>
+							<div class="item-input">
+								<input type="number" name="pre_ho_no" id="pre_ho_no_0" placeholder="Hospital telephone number" />
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<span id="responce1"></span>
+			<input type="hidden" name="count" id="count" value="0" />
+			<button name="addButton" id='addButton' onClick="addFields1()" style="float:right;border:none;background:none;">
+				<i class="fa fa-plus-circle fa-2x"></i>
+			</button>
+		</div>
+	</div>
+</li>
+<li class="accordion-item" >
+	<a href="" class="item-link item-content" >
+		<div class="item-inner white">
+			<div class="item-title">
+				<span style="float:left;line-height: 39px;">Preferred Pharmacies</span></div>
+		</div>
+	</a> 
+		<div class="accordion-item-content">
+			<div class="list-block">
+				<ul style="background-color: white" id="PerfPharmaData">
+					<li>
+						<div class="item-content item-title_inner">
+							<div class="item-inner">
+								<div class="item-title label">Pharmacy Name </div>
+									<div class="item-input">
+										<input type="text" name="user_phar_name" id="user_phar_name_0" placeholder="Pharmacy Name " />
+									</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item-content item-title_inner">
+							<div class="item-inner">
+								<div class="item-title label">Pharmacy Number  </div>
+									<div class="item-input" >
+										<input type="number" name="user_phar_number" id="user_phar_number_0" placeholder="Pharmacy Number  " />
+									</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<span id="responce"></span>
+					<input type="hidden" name="phar_count" id="phar_count" value="0" />
+						<button name="addButton" id='addButton' onClick="addFields()" style="float:right;border:none;background:none;"><i class="fa fa-plus-circle fa-2x"></i></button>
+			</div>
+		</div>
+</li>
+<li>
+	<div id="image_display"></div>
+	<ul style="background-color:white;">
+		<li>
+			<div data-role="content">
+				<!-- <form method="post" id="file-attachment-form" action="http://healthrecordspro.com/upload.php" enctype="multipart/form-data"> -->
+				<form method="post" onsubmit="return uploadProfilePic()" id="file-attachment-form"  enctype="multipart/form-data">
+					<div data-role="fieldcontain" class="field">
+					<!-- <label for="attachment">User Image</label> -->
+					<!-- <input type="file" name="attachment" id="attachment" /> -->
+						<div class="fileupload fileupload-new" data-provides="fileupload" style="overflow:hidden">
+						<div style="width:100%;text-align:center;height:300px">
+						<div><p> profile picture <p></div>
+							<div class="row" style="background-image: url('img/Trees.png'); background-position:cover;">	
+								<div class="col-35">
+								</div>
+								<div class="col-40">
+									<div class="fileupload-preview fileupload-exists thumbnail" id="user_img_display" style="max-width:200px; max-height: 200px;  line-height: 20px;">	
+									</div>
+								</div>
+								<div class="col-30"></div>
+							</div>
+							<div class="row">
+       							<div class="col-50">
+       								<div class="image-upload">
+    									<label for="attachment">
+    							  			<img src="img/editz.png" style=" margin-top: 10px;width:35%;height:35%"/>
+    									</label>
+								 		<input style="visibility:hidden" type="file" class="inputfile" value="hello" name="attachment" id="attachment" />
+								 	</div>
+								 </div>
+								 <div class="col-50"  style="text-align:center">
+								 	<img src="img/remove.png" style=" margin-top: 10px;width: 35%;"  onclick="removeUserProfileImage();"/>
+								 </div>
+							</div>
+							<input type="hidden" name="attachment_id" id="attachment_id"/>	
+							</div>
+					</div>
+       				<div data-role="fieldcontain" class="field">
+						<!-- <label for="birth_cir">Birth Certificate Picture</label> -->
+						<!--  <input type="file" name="birth_cir" id="birth_cir" /> -->	
+						<div class="fileupload fileupload-new" data-provides="fileupload" style="overflow:hidden">
+						<div style="width:100%;text-align:center;height:300px">
+							<div><p> Birth Certificate Picture <p></div>
+								<div class="row" style="background-image: url('img/Trees.png'); background-position:cover;">	
+							     	<div class="col-29">
+							     	</div>
+									<div class="col-40">
+										<div class="fileupload-preview fileupload-exists thumbnail" id="dob_img_display" style="max-width: 200px; max-height: 150px; line-height: 20px;">
+										</div>
+									</div>
+								  	<div class="col-30">
+								  	</div>
+								</div>
+								<div style=" margin-top: 58px;">
+									<div class="row">
+       							 			<div class="col-50">									 
+       							 				<div class="image-upload">
+    												<label for="birth_cir">
+    							  						<img src="img/editz.png" style=" margin-top: 10px;width:35%;height:35%"/>
+    												</label>
+													<input style="visibility:hidden" type="file" name="birth_cir" id="birth_cir"/>
+										 		</div>
+								 			</div>
+								 				<!-- <a href="#" style=" margin-top: 10px;width: 200px;" class="button fileupload-exists remove_dob_btn" data-dismiss="fileupload">Remove</a> -->
+											<div class="col-50"  style="text-align:center">
+													<img src="img/remove.png" style=" margin-top: 10px;width: 35%;"  onclick="removeUserBirthImage();"/>
+											</div>
+											<input type="hidden" name="birth_id" id="birth_id"/>
+									</div>
+											
+								</div>
+						</div>
+						</div>
+				    </div>
+				</form>
+			</div>
+			</li>
+			</ul>
+	
+</li>
+</ul>
+     <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;">
+		<div class="toolbar-inner" style="background:#0DB7C4;">
+			<a href="#" onclick="userProfileUpdate();" class="link icon-only"  style="color:white;border-right:1px white solid ">Update</a>
+			<a href="loginnormal.html" class="link icon-only" style="color:white">Cancel</a>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="cordova.js"></script>
+</body>
+</html>

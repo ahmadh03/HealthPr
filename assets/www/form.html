@@ -1,0 +1,122 @@
+<div class="navbar">
+   <div class="navbar-inner">
+     <div class="left sliding"><a href="loginnormal.html" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+      <div class="center sliding white" style="margin-right: 160px;">Sign Up</div>
+        <div class="right theme-white navicon" ><img src="img/logosplash.png" height="46"/></div> 
+   </div>
+ </div>
+
+<div class="pages navbar-through">
+    <div data-page="form" class="page">
+      <div style="overflow-y:scroll; height:inherit"> 
+        <div class="content-block-title" style="padding-top: 64px;font-size:18px;">Sign Up</div>
+          <div class="list-block" style="margin-bottom: 70px;">
+            <ul style="background-color:#FFFFFF;">
+              <li>
+                <div class="item-content" >
+                  <div class="item-inner" >
+                    <div class="item-title label" style="width: 40%;">First Name:</div>
+                      <div class="item-input">
+                        <input type="text" name="first_name" id="first_name" placeholder="First name"/>
+                      </div> 
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content" >
+                  <div class="item-inner" >
+                    <div class="item-title label">Last name</div>
+                      <div class="item-input">
+                        <input type="text" name="last_name" id="last_name" placeholder="Last name"/>
+                      </div> 
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content" >
+                  <div class="item-inner" >
+                    <div class="item-title label">E-Mail</div>
+                      <div class="item-input">
+                        <input type="text" name="e_mail" id="e_mail" placeholder="E-Mail"/>
+                      </div> 
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content" >
+                  <div class="item-inner" >
+                    <div class="item-title label">Gender</div>
+                      <label class="label-radio item-content">
+                        <input type="radio" name="gender" id="radio" value="male" onClick="getResults(this)" >
+                          <div class="item-inner">
+                            <div class="item-title">Male</div>
+                          </div>
+                      </label>
+                      <label class="label-radio item-content">
+                        <input type="radio" name="gender"  value="female" onClick="getResults(this)" >
+                          <div class="item-inner">
+                            <div class="item-title">Female</div>
+                          </div>
+                      </label>
+                  </div>
+                </div>
+              </li>
+              <li>
+                 <div class="item-content">
+                   <div class="item-inner">
+                    <div class="item-title label">DOB</div>
+                     <div class="item-input">
+                       <input type="text" placeholder="DOB" readonly id="picker-date">
+                     </div>
+                   </div>
+                 </div>
+              </li>
+              <!-- <div id="picker-date-container"></div> -->
+              <li>
+                <div class="item-content" >
+                  <div class="item-inner" >
+                    <div class="item-title label">Country</div>
+                      <div class="item-input" id="addcountries">
+                        <input type="text" name="form_country" placeholder="Select Name"/>
+                      </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content" >
+                  <div class="item-inner" >
+                    <div class="item-title label">Password</div>
+                      <div class="item-input">
+                        <input type="password" name="u_password" id="u_password" placeholder="Password"/>
+                      </div> 
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content">
+                  <div class="item-input" style="height: 94px;">
+                  <a href="TermsConditionsPage.html">
+                    <label class="label-checkbox item-content">
+                      <input type="checkbox" name="my-checkbox" id="check" value="">
+                       <div class="item-media">
+                          <i class="icon icon-form-checkbox"></i>
+                       </div>
+                        <div class="item-inner">
+                          <div class="item-title" style="margin-top: 11px; color: black;">I read and accept the Terms And </br> Conditions</div>
+                        </div>
+                    </label>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+      </div>
+      <div class="toolbar tabbar" style="position:absolute;background:#0DB7C4; height: 59px;">
+        <div class="toolbar-inner" style="background:#0DB7C4">
+          <a href="#" onclick="registerformSubmit();" class="link icon-only" style="color:white;border-right:1px white solid ">Submit</a>
+          <a href="index.html" class="link icon-only" style="color:white">Cancel</a>
+        </div>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,2143 @@
+<div class="navbar">
+   <div class="navbar-inner">
+     <div class="left sliding"><a href="loginnormal.html" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+     <div class="center sliding white" style="margin-right: 140px;">Past Medical History</div>
+     <div class="right theme-white searchicon" >
+        <a href="#" onclick="pastmedicalhistoryforminfo()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i></a>
+      </div>
+      <div class="right theme-white navicon" >
+        <a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+        </a>
+      </div>
+   </div>
+ </div>
+ 
+<div class="pages navbar-through" >
+  	<div data-page="past_medical_his_form" class="page" > 
+  		<div style="overflow-y:scroll; height:inherit">
+    		<div class="content-block-title" style="padding-top: 48px;font-size:18px;">Has the child had</div>
+    			<div class="list-block" style="margin-bottom:70px;">
+    				<ul style="background-color:#FFFFFF">
+    					<li>
+					      <div class="item-content " >
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-title label">Child Name </div>
+                    <!-- <i class="fa fa-sort-desc" style="float:right;font-size: 30px;position: absolute;right: 6px;margin-top: -22px;"></i> -->
+					          <div class="item-input" id="childname">
+					            <input type="text" name="past_medi_his_chainame" id="past_medi_his_chainame" placeholder="Child Name ">
+					            <input type="hidden" id="past_medi_his_chainame_id">
+					          </div>
+					        </div>
+					      </div>
+			    		</li>
+    					<li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Allergy anemia (iron deficiency, Sickle Cell, Thalessemia )</div>
+                           
+                          </div>
+                        </div>                        
+                           <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                <input type="radio" name="my-radio" id="past_medi_his_aller" value="1" >
+                                <div class="item-media">
+                                  <i class="icon icon-form-checkbox">
+                                  </i>
+                                </div>
+                                <div class="item-inner" style="padding-bottom: 4px;">
+                                  <div class="item-title">  Yes  </div>
+                                </div>
+                              </label>
+                           <label class="label-checkbox item-content" >
+                                <input type="radio" name="my-radio" id="past_medi_his_aller1" value="0" >
+                                <div class="item-media">
+                                  <i class="icon icon-form-checkbox">
+                                  </i>
+                                </div>
+                                <div class="item-inner">
+                                  <div class="item-title"> No </div>
+                                </div>
+                              </label>
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Blood Transfusion</div>
+                           
+                          </div>
+                        </div>                        
+                           <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                <input type="radio" name="my-radio1" id="past_medi_his_bltr" value="1" >
+                                <div class="item-media">
+                                  <i class="icon icon-form-checkbox">
+                                  </i>
+                                </div>
+                                <div class="item-inner" style="padding-bottom: 4px;">
+                                  <div class="item-title">  Yes  </div>
+                                </div>
+                              </label>
+                           <label class="label-checkbox item-content" >
+                                <input type="radio" name="my-radio1" id="past_medi_his_bltr1" value="0" >
+                                <div class="item-media">
+                                  <i class="icon icon-form-checkbox">
+                                  </i>
+                                </div>
+                                <div class="item-inner">
+                                  <div class="item-title"> No </div>
+                                </div>
+                              </label>
+                      </li>
+                      <li>
+                      <div class="item-content">
+                         <div class="item-media"></div>
+                         <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                            <div class="item-title label" style="width:100%;">Chickenpox (Varicella)</div>
+                             
+                            </div>
+                          </div>
+                            <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio2" id="past_medi_his_chknpox" value="1" >
+                                     <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content" >
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio2" id="past_medi_his_chknpox1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                            
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Contusions</div>
+                           
+                          </div>
+                        </div>
+                              <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio3" id="past_medi_his_contusions" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content" >
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio3" id="past_medi_his_contusions1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Convulsions</div>
+                           
+                          </div>
+                        </div>
+                        
+                                <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio4" id="past_medi_his_convulison" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content" >
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio4" id="past_medi_his_convulison1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Fractures</div>
+                           
+                          </div>
+                        </div>
+                        
+                              <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio5" id="past_medi_his_fractures" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                                <label class="label-checkbox item-content" >
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio5" id="past_medi_his_fractures1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                            
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">German Measles (rubella)</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio6" id="past_medi_his_germea" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content" >
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio6" id="past_medi_his_germea1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Hospitalizations</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio7" id="past_medi_his_hospi" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                                <label class="label-checkbox item-content" >
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio7" id="past_medi_his_hospi1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Measles (Rubeola)</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio9" id="past_medi_his_measles" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content" >
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio9" id="past_medi_his_measles1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Meningits</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio10" id="past_medi_his_meningts" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio10" id="past_medi_his_meningts1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                            
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Mumps</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio11" id="past_medi_his_mumps" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio11" id="past_medi_his_mumps1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Operations</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio12" id="past_medi_his_oper" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio12" id="past_medi_his_oper1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+      					      <div class="item-content " >
+      					        <div class="item-media"></div>
+      					        <div class="item-inner" style="margin-left:0px;">
+      					          <div class="item-title label" style="width:100%;">Reason </div>
+      					         
+      					        </div>
+      					      </div>
+      			    		</li>
+                    <li>
+                      <div class="item-content " >
+                        <div class="item-media"></div>
+                        <div class="item-inner">
+                          <div class="item-input" style="margin-left:0px;">
+                            <input type="text" name="past_medi_his_reason" id="past_medi_his_reason" placeholder="Reason ">
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+			    		     <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Other medical illnesses</div>
+                           
+                          </div>
+                        </div>
+                        
+                              <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio13" id="past_medi_his_omill" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio13" id="past_medi_his_omill1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                            
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Is your child currently taking any medications</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio14" id="past_medi_his_iucctm" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio14" id="past_medi_his_iucctm1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li style="font-size:19px;">Medical Dosage</li>
+                      <li>
+                      <div class="item-content text7" >
+                        <div class="item-media"></div>
+                        <div class="item-inner">
+                          <div class="item-title label">Medication</div>
+                          <div class="item-input">
+                            <input type="text" name="past_medi_his_medication" id="past_medi_his_medication_0" placeholder="Medication" >
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item-content text7">
+                        <div class="item-media"></div>
+                        <div class="item-inner">
+                          <div class="item-title label">Dose</div>
+                          <div class="item-input">
+                            <input type="text" name="past_medi_his_dose" id="past_medi_his_dose_0" placeholder="Dose">
+                          </div>
+                        </div>
+                      </div>
+                      <span id="responce1"></span>
+
+        <input type="hidden" name="medidos_count" id="medidos_count" value="0" />
+        <button name="addButton" id='addButton' onClick="addFieldsMedidosage()" style="float:right;border:none;background:none;"><i class="fa fa-plus-circle fa-2x"></i></button>
+                    </li>
+                    
+                      <h1><li style="font-size: 19px;">Eyes</li></h1>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Any visual problems?</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio15" id="past_medi_his_avpr" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio15" id="past_medi_his_avpr1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Do eyes look crossed?</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio16" id="past_medi_his_doelc" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio16" id="past_medi_his_doelc1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Does the child wear eyeglasses?</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio17" id="past_medi_his_docweg" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio17" id="past_medi_his_docweg1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li style="font-size:19px;">Ears</li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Hearing problems?</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio18" id="past_medi_his_hprob" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio18" id="past_medi_his_hprob1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Ear infections</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio19" id="past_medi_his_einfe" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio19" id="past_medi_his_einfe1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li style="font-size:19px;">Nose</li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Does child have frequent attacks of sneezing or rubbing his/her nose?</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio20" id="past_medi_his_dchfaosn" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio20" id="past_medi_his_dchfaosn1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Has nose bleeds?</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio21" id="past_medi_his_hnobl" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio21" id="past_medi_his_hnobl1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li style="font-size:19px;">Throat</li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Throat infections ?</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio22" id="past_medi_his_thinfe" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                              <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio22" id="past_medi_his_thinfe1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li style="font-size:19px;">Heart</li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">A heart murmur?</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio23" id="past_medi_his_hrtmur" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                                <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio23" id="past_medi_his_hrtmur1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Heart defect?</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio24" id="past_medi_his_hrtdef" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                              <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio24" id="past_medi_his_hrtdef1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">High blood pressure?</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio25" id="past_medi_his_hbp" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                              <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio25" id="past_medi_his_hbp1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li style="font-size:19px;">Lungs </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Asthama/wheezing?</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio26" id="past_medi_his_asthama" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio26" id="past_medi_his_asthama1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Bronchitis or pneumonia?</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio27" id="past_medi_his_bron" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio27" id="past_medi_his_bron1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Chronic cough?</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio28" id="past_medi_his_chronic" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio28" id="past_medi_his_chronic1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li style="font-size:19px;">Abdomen</li>
+                      <li style="font-size:19px;">Has your child even had </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Blood in stools</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio29" id="past_medi_his_bldst" value="1" >
+                                     <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio29" id="past_medi_his_bldst1" value="0" >
+                                     <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Frequent abdominal pain ?</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio30" id="past_medi_his_fap" value="1" >
+                                     <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio30" id="past_medi_his_fap1" value="0" >
+                                     <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Frequent vomiting or diarrhea ?</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio31" id="past_medi_his_fvd" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio31" id="past_medi_his_fvd1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                            
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Jaundice ?</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio32" id="past_medi_his_jaundies" value="1" >
+                                     <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                                <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio32" id="past_medi_his_jaundies1" value="0" >
+                                     <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Marked weight loss ?</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio33" id="past_medi_his_mwloss" value="1" >
+                                     <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio33" id="past_medi_his_mwloss1" value="0" >
+                                     <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                            
+                      </li>
+                      <li>
+      					      <div class="item-content " >
+      					        <div class="item-media"></div>
+      					        <div class="item-inner" style="margin-left:0px;">
+      					          <div class="item-title label" style="width:100%;">If yes please explain </div>
+      					          
+      					        </div>
+      					      </div>
+      			    		</li>
+                     <li>
+                      <div class="item-content " >
+                        <div class="item-media"></div>
+                        <div class="item-inner">
+                          <div class="item-input" style="margin-left:0px;">
+                            <input type="text" name="past_medi_his_ifyese" id="past_medi_his_ifyese" placeholder="if yes">
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+			    		<li style="font-size:19px;">Kidney</li>
+			    		<li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Burning or frequency of urination ? </div>
+                          
+                          </div>
+                        </div>
+                         
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio34" id="past_medi_his_boffuri" value="1" >
+                                     <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio34" id="past_medi_his_boffuri1" value="0" >
+                                     <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                         
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Wetting the bed ?</div>
+                          
+                          </div>
+                        </div>
+                         
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio35" id="past_medi_his_webed" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                                <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio35" id="past_medi_his_webed1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                         
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">blood in the urine ?</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio36" id="past_medi_his_blinur" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                                <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio36" id="past_medi_his_blinur1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Urinary tract infection ?</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio37" id="past_medi_his_uranatrin" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio37" id="past_medi_his_uranatrin1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                            
+                      </li>
+                      <li style="font-size:19px;">Skin</li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Acne ?</div>
+                          
+                          </div>
+                        </div>
+                         
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio38" id="past_medi_his_acne" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                              <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio38" id="past_medi_his_acne1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                         
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Sensitivity or allergy?</div>
+                          
+                          </div>
+                        </div>
+                         
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio39" id="past_medi_his_sensi" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio39" id="past_medi_his_sensi1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                         
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Eczema or atopic dermatitis ?</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio40" id="past_medi_his_ecad" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio40" id="past_medi_his_ecad1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>Extremities</li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Weakness or paralysis of arms or lrgs ? </div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio41" id="past_medi_his_wpofarleg" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio41" id="past_medi_his_wpofarleg1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Persistent limp?</div>
+                          
+                          </div>
+                        </div>
+                         
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio42" id="past_medi_his_perlimp" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio42" id="past_medi_his_perlimp1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                         
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Corrective shoes or braces ?</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio43" id="past_medi_his_cosbr" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio43" id="past_medi_his_cosbr1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li style="font-size:19px;">Neurological</li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Convulsions or seizures ?</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio44" id="past_medi_his_conorsei" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio44" id="past_medi_his_conorsei1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Dizziness ?</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio45" id="past_medi_his_dizzins" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio45" id="past_medi_his_dizzins1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Fainting ? </div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio46" id="past_medi_his_fainting" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                              <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio46" id="past_medi_his_fainting1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Frequent headaches ?</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio47" id="past_medi_his_frehead" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio47" id="past_medi_his_frehead1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li style="font-size:19px;">Is your Child</li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Impulsive ?</div>
+                           
+                          </div>
+                        </div>
+                        
+                                <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio48" id="past_medi_his_implsive" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio48" id="past_medi_his_implsive1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Lacking in self-control ? </div>
+                           
+                          </div>
+                        </div>
+                        
+                                <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio49" id="past_medi_his_linselfc" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio49" id="past_medi_his_linselfc1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Overactive ?</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio50" id="past_medi_his_ovact" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio50" id="past_medi_his_ovact1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Attending School ?</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio51" id="past_medi_his_attsch" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                                <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio51" id="past_medi_his_attsch1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Attention span ?</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio52" id="past_medi_his_attspan" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                                <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio52" id="past_medi_his_attspan1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Learning ?</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio53" id="past_medi_his_learning" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                                <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio53" id="past_medi_his_learning1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Mood ? </div>
+                           
+                          </div>
+                        </div>
+                        
+                                <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio54" id="past_medi_his_mood" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio54" id="past_medi_his_mood1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Parents ?</div>
+                           
+                          </div>
+                        </div>
+                        
+                                <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio55" id="past_medi_his_parents" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio55" id="past_medi_his_parents1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Peers ? </div>
+                           
+                          </div>
+                        </div>
+                        
+                                <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio56" id="past_medi_his_peers" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio56" id="past_medi_his_peers1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Siblings ?</div>
+                          
+                          </div>
+                        </div>
+                         
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio57" id="past_medi_his_siblings" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio57" id="past_medi_his_siblings1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                           
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Sleep ?</div>
+                           
+                          </div>
+                        </div>
+                        
+                                <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio58" id="past_medi_his_sleep" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio58" id="past_medi_his_sleep1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Concerns about phydical sexual emotional abuse ? </div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio59" id="past_medi_his_conabtpseea" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio59" id="past_medi_his_conabtpseea1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                        
+                      </li>
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Has your Child begun puberty ?</div>
+                           
+                          </div>
+                        </div>
+                        
+                               <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio60" id="past_medi_his_hycbp" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio60" id="past_medi_his_hycbp1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                            
+                      </li>
+                    <li>
+                      <div class="item-content " >
+                        <div class="item-media"></div>
+                        <div class="item-inner" style="margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Any other Concerns </div>
+                          
+                        </div>
+                      </div>
+                    </li>
+                     <li>
+                      <div class="item-content " >
+                        <div class="item-media"></div>
+                        <div class="item-inner">
+                          <div class="item-input" style="margin-left:0px;">
+                             <input type="text" name="past_medi_his_aoconcerns" id="past_medi_his_aoconcerns" placeholder="other Concerns ">
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+			    		     <li>
+                      <div class="item-content " >
+                        <div class="item-media"></div>
+                        <div class="item-inner" style="margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Provider name</div>
+                          
+                        </div>
+                      </div>
+                    </li>
+                     <li>
+                      <div class="item-content " >
+                        <div class="item-media"></div>
+                        <div class="item-inner">
+                          <div class="item-input" style="margin-left:0px;">
+                             <input type="text" name="past_medi_his_proname" id="past_medi_his_proname" placeholder="Provider name">
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+					</ul>
+					 <input type="hidden" name="past_medi_his_update" id="past_medi_his_update" placeholder="Place of Birth">
+				</div>
+			</div>
+			<!-- <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;">
+    <div class="toolbar-inner" style="background:#0DB7C4">
+      <a href="#" onclick="pastmediHisformSubmit();" class="link icon-only" style="color:white;border-right:1px white solid ">Submit</a>
+      <a href="loginnormal.html" class="link icon-only" style="color:white">Cancel</a>
+    </div>
+  </div> --> 
+  <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;" id="pastmedical_inbtn">
+      <div class="toolbar-inner" style="background:#0DB7C4;" >
+        <a href="#" class="link icon-only" onclick="pastmediHisformSubmit();" style="color:white;border-right:1px white solid ">Update</a>
+        <a href="#" onclick="deletepastmediPedHis();" class="link icon-only" style="color:white">Delete</a>
+      </div>
+    </div>  
+    <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;" id="pastmedical_upbtn">
+      <div class="toolbar-inner" style="background:#0DB7C4;" >
+        <a href="#" class="link icon-only" onclick="pastmediHisformSubmit();" style="color:white;border-right:1px white solid ">Submit</a>
+        <a href="loginnormal.html" class="link icon-only" style="color:white">Cancel</a>
+      </div>
+    </div>
+	</div>
+</div>
+    					

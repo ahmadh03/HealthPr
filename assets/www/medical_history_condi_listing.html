@@ -1,0 +1,49 @@
+<div class="navbar">
+   <div class="navbar-inner">
+     <div class="left sliding"><a href="index.html" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+     <div class="center sliding white" style="margin-right: 80px;">Medical History And Conditions</div>
+     <div class="right theme-white searchicon" >
+        <a href="#" onclick="MedicalhistoryInfo()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i></a>
+      </div>
+      <div class="right theme-white navicon" >
+        <a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+        </a>
+      </div>
+   </div>
+ </div>
+
+<div class="pages navbar-through">
+  <div data-page="medical_history_condi_listing" class="page" >
+    <div style="overflow-y:scroll; height:inherit">
+      <div class="page-content">
+        <div class="content-block">
+          <div class="buttons-row">
+            <a href="#tab1" class="tab-link active button" >Current</a>
+            <a href="#tab2"  class="tab-link button">Previous</a>
+          </div>
+        </div>
+        <div class="tabs">
+          <div id="tab1" class="tab active" >
+            <div class="list-block" style="margin-bottom:130px;" id="medicalhistory">
+              <ul >
+              </ul>
+            </div>
+          </div>
+          <div id="tab2" class="tab" >
+            <div class="content-block">
+              <div class="list-block" id="medicalhistory1">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;">
+      <div class="toolbar-inner" style="background:#0DB7C4;">
+        <a href="medical_history.html" onclick="medihistoryAdd();" class="link icon-only" style="color:white;border-right:1px white solid "><i class="fa fa-plus-circle"></i>
+  Add New</a>
+        <a href="manage_albums.html" onclick="manage_albums(12,'Medical History');" class="link icon-only" style="color:white"><i class="fa fa-file-image-o"></i>
+  Manage Images</a>
+    </div>
+  </div>
+</div>

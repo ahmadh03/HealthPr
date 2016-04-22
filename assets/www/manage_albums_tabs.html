@@ -1,0 +1,96 @@
+<div class="navbar">
+   <div class="navbar-inner">
+     <div class="left sliding"><a href="loginnormal.html" class="back link"><i class="icon icon-back"></i><i class="icon icon-back"></i></a></div>
+     <div class="center sliding white" style="margin-right:100px;">Manage Albums</div>
+     <div class="right theme-white searchicon" >
+        <a href="#" onclick="MobileAppInfo()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i></a>
+      </div>
+      <div class="right theme-white navicon" >
+        <a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+        </a>
+      </div>
+   </div>
+ </div>
+
+<div class="pages navbar-through">
+  <div data-page="manage_albums_tabs" class="page" >
+  	<div style="overflow-y:scroll; height:inherit">
+  		<div class="page-content">
+  			<div class="content-block">
+				<div class="buttons-row">
+					<a href="#tab1" class="tab-link active button" >Upload From Gallery</a>
+					<a href="#tab2"  class="tab-link button">Camera</a>
+				</div>
+			</div>
+			<div class="tabs">
+				<div id="tab1" class="tab active" >
+					<div class="list-block" style="margin-bottom:130px;">
+						<form id="createalbum_form" onsubmit="uploadAlbums(); return false;">
+          <ul style="background-color:#FFFFFF">
+            <li>
+              <div class="item-content">
+                <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-title label">Album Name : </div>
+                      <div class="item-input">
+                         <input type="text" name="title" id="title" placeholder="Name" required/>
+                         <input type="hidden" name="titleID" id="titleID" />
+                      </div>
+                  </div>
+                </div>   
+            </li>
+            <div style="clear:both;padding:1%;"></div>
+            <li>  
+              <input type="file" name="myfile[]" id="file" multiple="true" accepts="image/*" required/>
+                            
+                <div style="clear:both;padding:1%;"></div>
+                  <div id="addrow"></div>
+                    <input type="button" value="+" class="button button-blue pull-right" onclick="AddMoreRow();" style="font-size: 24px;width: 30px;height: 30px;margin:0px;padding:0px;" />
+                    <div style="clear:both;padding:1%;"></div>
+            </li>
+          </ul>
+            <div class="row" >
+              <div id="albumscatiddiv"></div>
+              <input type="hidden" name="albumid" id="albumid" value="100" />
+              <input type="hidden" name="uid" id="uid" value="" />
+              <input type="hidden" name="submit" id="submit" value="Insert" />
+                <div class="col-35"></div>
+                <div class="col-30"><input type="submit" name="" value="Submit" class="button  button-fill" style="background-color:#0DB7C4;"/></div>
+                 <div class="col-35"></div>
+
+            </div>
+
+<!-- <input type="submit" name="" value="Submit" class="button button-raised button-fill color-cyan"/> -->
+        </form>
+					</div>
+				</div>
+				<div id="tab2" class="tab" >
+					<div class="content-block">
+						<div class="list-block">
+							<form id="updatealbum_form" onsubmit="AlbumUpdateCameraImage(); return false;">
+        <div class="row" >
+          <input type="text" name="albumid_up" id="albumid_up" value=""/>
+          <input type="hidden" name="uid_up" id="uid_up" value="" />
+          <div class="col-5"></div>
+          <div class="col-55">
+            <input type="button" id="cameraCapture" onclick="capturePhoto();" class="Cambutton"/>
+          </div>
+          <canvas id="cameraCanvas" width="200" height="200"></canvas>
+          <div class="col-5"></div>
+          <div class="col-30">
+            <input type="submit" name="" value="Submit" class="button button-fill" style="background-color:#0DB7C4;"/>
+          </div>
+        </div>
+      </form>
+						</div>
+					</div>
+				</div>
+			</div>
+  		</div>
+  		<div class="content-block-title" style="font-size:16px;">Manage Existing Albums <br><hr></div>
+        <div id="display_albums_area" style=" padding-left: 10px;text-align: center;">
+          
+      </div>
+  	</div>
+  </div>
+</div>

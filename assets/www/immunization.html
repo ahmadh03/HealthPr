@@ -1,0 +1,129 @@
+<div class="navbar">
+   <div class="navbar-inner">
+     <div class="left sliding"><a href="loginnormal.html" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+     <div class="center sliding white" style="margin-right: 110px;">IMMUNIZATIONS</div>
+     <div class="right theme-white searchicon" >
+        <a href="#" onclick="ImmuniztionformInfo()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i></a>
+      </div>
+      <div class="right theme-white navicon" >
+        <a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+        </a>
+      </div>
+   </div>
+</div>
+
+<div class="pages navbar-through">
+  <div data-page="immunization" class="page" >
+    <div style="overflow-y:scroll; height:inherit">
+      <div class="content-block-title" style="padding-top: 64px;font-size:18px;">List of all your immunizations taken.</div>
+        <div class="list-block" style="margin-bottom:70px;" id="immunization_hide">
+          <span id="responce6"></span>
+            <ul style="background-color:#FFFFFF">
+              <input type="hidden" id="rowIdFH11" value="0" />
+                <li>
+                   <div class="item-content">
+                    <div class="item-media"></div>
+                      <div class="item-inner">
+                        <div class="item-title label" >Medicine Name :</div>
+                        <!-- <i class="fa fa-sort-desc" style="float:right;font-size: 30px;position: absolute;right: 6px;margin-top: -22px;"></i> -->
+                          <div class="item-input" id="addselectmedicinename_0">
+                              <input type="text" name="immu_name" id="immu_name_0" placeholder="Select Name"/>
+                              <input type="hidden" name="immu_name_id" id="immu_name_id_0"/>
+                          </div>
+                      </div>
+                   </div>
+                </li>
+                 <li id="immu_name_others_li_0" style="display:none;"> 
+                   <div class="item-content">
+                      <div class="item-media"></div>
+                        <div class="item-inner">
+                          <div class="item-title label" >Others</div>
+                            <div class="item-input">
+                              <input type="text" name="immu_name_others_0" id="immu_name_others_0" placeholder="Specify"/>
+                              <input type="hidden" name="immu_name_id" id="immu_name_id_0"/>
+                            </div>
+                        </div>
+                   </div>
+                 </li>
+                  <li>
+                   <div class="item-content">
+                     <div class="item-media"></div>
+                      <div class="item-inner">
+                        <div class="item-title label">Booster1 : </div>
+                          <div class="item-input">
+                            <input type="text" name="boost1" id="boost1_0" placeholder="Booster1"  />
+                          </div>
+                      </div>
+                   </div>
+                 </li>
+               <li>
+                 <div class="item-content">
+                   <div class="item-media"></div>
+                    <div class="item-inner">
+                      <div class="item-title label">Booster2 : </div>
+                        <div class="item-input">
+                          <input type="text" name="boost2" id="boost2_0" placeholder="Booster2"  />
+                        </div>
+                    </div>
+                  </div>
+               </li>
+               <li>
+                 <div class="item-content">
+                   <div class="item-media"></div>
+                    <div class="item-inner">
+                      <div class="item-title label">Booster3 : </div>
+                        <div class="item-input">
+                          <input type="text" name="boost3" id="boost3_0" placeholder="Booster3" />
+                        </div>
+                    </div>
+                 </div>
+               </li>
+                <li>
+                  <div data-role="content">
+                     <form method="post" onsubmit="return uploadImmunizationPic()" id="file-attachment-form12"  enctype="multipart/form-data">
+                      <div data-role="fieldcontain" class="field">
+                          <div class="fileupload fileupload-new" data-provides="fileupload" style="overflow:hidden">
+                              <div class="fileupload-preview fileupload-exists thumbnail" id="immunization_img_display" style="max-width: 200px; max-height: 200px;  line-height: 20px;"></div>
+                              <div >
+                                <span class="btn btn-file">
+                                  <span class="fileupload-new">Image</span>
+                                  <span class="fileupload-exists"></span>
+                                  <div class="image-upload">
+                                    <label for="immunization_image">
+                                      <i class="fa fa-upload fa-2x" style=" color: #000;font-size: 40px;height:50px;"></i>
+                                        <!-- <span align="center" style="color:#000;font-size:13px;display:block;">Upload Image</span> -->
+                                    </label>
+                                    <input type="file" name="immunization_image" id="immunization_image" />
+                                  </div>
+                                
+                                </span>
+                                <a href="#" style=" margin-top: 10px;width: 200px;" class="button button-round" id="immuniRemovehide" onclick="removeImmuImage();">Remove</a>
+                              </div>
+                          </div>
+                          <input type="hidden" name="immunization_image_id" id="immunization_image_id"/>
+                      </div>
+                    </form>
+                  </div>
+                </li>
+                <span id="responce21"></span>
+                <!-- <input type="button" value=' AddMore '  name="immu_add" id='immu_add' onClick="addFields6()" style="float:right"> -->
+                <button name="immu_add" id='immu_add' onClick="addFields6()" style="float:right;border:none;background:none;"><i class="fa fa-plus-circle fa-2x"></i>
+                </button>
+            </ul>
+            <input type="hidden" name="immunization_id" id="immunization_id" placeholder="Booster3" />
+        </div>
+   </div>
+   <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;" id="immunization_inbtn">
+      <div class="toolbar-inner" style="background:#0DB7C4;" >
+        <a href="#" class="link icon-only" onclick="immunizationSubmit();" style="color:white;border-right:1px white solid ">Update</a>
+        <a href="#" onclick="deleteImmunization();" class="link icon-only" style="color:white">Delete</a>
+      </div>
+    </div>
+    <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;" id="immunization_upbtn">
+      <div class="toolbar-inner" style="background:#0DB7C4;" >
+        <a href="#" class="link icon-only" onclick="immunizationSubmit();" style="color:white;border-right:1px white solid ">Submit</a>
+        <a href="loginnormal.html" class="link icon-only" style="color:white">Cancel</a>
+      </div>
+    </div>
+  </div>
+</div>

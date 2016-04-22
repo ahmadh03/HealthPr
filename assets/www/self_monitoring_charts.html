@@ -1,0 +1,56 @@
+<div class="navbar">
+	<div class="navbar-inner">
+		<div class="left sliding"><a href="loginnormal.html" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+		<div class="center sliding white" style=" margin-right: 80px;">SELF MONITORING CHARTS</div>
+			<div class="right theme-white searchicon" >
+			<a href="#" onclick="MobileAppInfo()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i></a>
+			</div>
+			<div class="right theme-white navicon" >
+			<a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+			</a>
+			</div>
+	</div>
+</div>
+
+<div class="pages navbar-through" >
+	<div data-page="self_monitoring_charts" class="page">
+		<div style="overflow-y:scroll; height:inherit">
+			<div class="content-block-title" style="padding-top: 64px;font-size:18px;">All your self-monitored conditions including, blood pressure, fasting blood sugar level, etc.</div>
+				<div class="list-block" style="margin-bottom: 70px">
+					<ul style="background-color:#FFFFFF;margin-right: 2px;margin-left: 3px;" id="self_tests">
+						<li style="font-size: 13px;">
+							<div class="item-content">
+								<div class="item-media"></div>
+									<div class="item-inner">
+										<div class="item-title label " id="self_r_list">Date </div>
+											<div class="item-input form_date" >
+												<input id="self_date" name="self_date"  type="text" placeholder=" Date" readonly  required style="font-size: 13px;">
+											</div>
+									</div>
+							</div>
+						</li>
+
+						<div id="self_ap"></div>
+						
+					</ul>
+					<input type="hidden" name="extrafieldcount_id" id="extrafieldcount_id"> 
+						<input class="button button-blue" type="button" id="add" value="+" style="float: right;font-size: 24px;width: 30px;height: 30px;margin:0px;padding:0px;" onClick="mySelfAdd('dynamicInput');">
+						<div id="dynamicInput" style="clear:both;background-color:white;"> </div>
+						<input type="hidden" name="extrafieldcount" id="extrafieldcount" value="0">
+						<input type="hidden" name="update_id" id="update_id" >
+				</div>
+		</div>
+		<div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;" id="changeonInsert_self">
+			<div class="toolbar-inner" style="background:#0DB7C4;" >
+				<a href="#" class="link icon-only" onclick="selfmonitoringSubmit();" style="color:white;border-right:1px white solid ">Submit</a>
+				<a href="loginnormal.html" class="link icon-only" style="color:white">Cancel</a>
+			</div>
+		</div>
+		<div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;" id="changeonUpdate_self">
+			<div class="toolbar-inner" style="background:#0DB7C4;" >
+				<a href="#" class="link icon-only" onclick="selfmonitoringSubmit();" style="color:white;border-right:1px white solid ">Update</a>
+				<a href="#" onclick="deleteselfItem();" class="link icon-only" style="color:white">Delete</a>
+			</div>
+		</div>
+	</div>
+</div>

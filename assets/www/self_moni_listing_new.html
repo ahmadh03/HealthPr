@@ -1,0 +1,55 @@
+<div class="navbar">
+	<div class="navbar-inner">
+		<div class="left sliding"><a href="loginnormal.html" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a>
+		</div>
+			<div class="center sliding white" style="  margin-right: 80px;">SELF MONITORING CHARTS</div>
+			<div class="right theme-white searchicon" >
+				<a href="#" onclick="MobileAppInfo()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i>
+				</a>
+			</div>
+			<div class="right theme-white navicon" >
+				<a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+				</a>
+			</div>
+	</div>
+</div>
+
+<div class="pages navbar-through">
+	<div data-page="self_moni_listing_new" class="page" >
+		<div style="overflow-y:scroll; height:inherit">
+			<div class="page-content">
+				<div class="content-block">
+					<div class="buttons-row">
+						<a href="#tab1" class="tab-link active button" >By Test</a>
+						<a href="#tab2"  class="tab-link button" onclick="getSelfData();">By Date</a>
+					</div>
+				</div>
+				<div class="tabs">
+					<div id="tab1" class="tab active" >
+						<div class="list-block" style="margin-bottom:130px;">
+							<ul id="self_listpage_data">
+								
+								<!-- <div id="self_others"> </div> -->
+							</ul>
+						</div>
+					</div>
+					<!-- Tab 2 -->
+					<div id="tab2" class="tab" >
+						<div class="content-block">
+							<div class="list-block"  id="getallselfmonitoringchart"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="toolbar tabbar" style="position:absolute;background:#0DB7C4;bottom: 60px; height: 59px;">
+			<div class="toolbar-inner" style="background:#0DB7C4;" id="selfrep"></div>
+		</div>
+		<div class="toolbar tabbar" style="position:absolute;background:#0DB7C4; height: 59px;">
+			<div class="toolbar-inner" style="background:#0DB7C4;">
+				<a href="self_monitoring_charts.html" onclick="selfMonitoringAdd();" class="link icon-only" style="color:white;border-right:1px white solid "><i class="fa fa-plus-circle"></i>Add New</a>
+				<a href="manage_albums.html" onclick="manage_albums(44,'Self Monitoring Charts');" class="link icon-only" style="color:white"><i class="fa fa-file-image-o"></i>Manage Images</a>
+			</div>
+		</div>
+	</div>
+</div>

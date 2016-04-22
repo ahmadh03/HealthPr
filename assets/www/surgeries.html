@@ -1,0 +1,187 @@
+<div class="navbar">
+   <div class="navbar-inner">
+     <div class="left sliding"><a href="loginnormal.html" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+     <div class="center sliding white" style="margin-right: 80px;">Hospitalization And Surgeries</div>
+     <div class="right theme-white searchicon" >
+        <a href="#" onclick="surgeriesFormInfo()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i></a>
+      </div>
+      <div class="right theme-white navicon" >
+        <a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+        </a>
+      </div>
+   </div>
+ </div>
+
+<div class="pages navbar-through" >
+  <div data-page="surgeries" class="page"  >
+    <div style="overflow-y:scroll; height:inherit">
+      <div class="content-block-title" style="font-size:17px">List of all surgeries you have undergone</div>
+        <div class="list-block" style="margin-bottom:70px; margin-top: 36px;">
+          <ul style="background-color:#FFFFFF">
+            <!-- Text inputs -->
+            <li>
+              <div class="item-content">
+                <div class="item-media"></div>
+                <div class="item-inner">
+                  <div class="item-title label">Admission Date</div>
+                  <div class="item-input">
+                    <input type="text" name="sur_add_date" id="sur_add_date" placeholder="Admission date">
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content">
+                <div class="item-media"></div>
+                <div class="item-inner">
+                  <div class="item-title label">Discharge Date</div>
+                  <div class="item-input">
+                    <input type="text" name="sur_dis_date" id="sur_dis_date" placeholder="Discharge date">
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content">
+                <div class="item-media"></div>
+                <div class="item-inner">
+                  <div class="item-title label">Case Number</div>
+                  <div class="item-input">
+                    <input type="text" name="sur_caseno" id="sur_caseno" placeholder="Case Number " >
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content">
+                <div class="item-media"></div>
+                <div class="item-inner">
+                  <div class="item-title label">Physician </div>
+                  <div class="item-input">
+                    <input type="text" name="sur_physician" id="sur_physician" placeholder="Physician ">
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content">
+                <div class="item-media"></div>
+                <div class="item-inner">
+                  <div class="item-title label">Reason</div>
+                  <div class="item-input">
+                    <input type="text" name="sur_reason" id="sur_reason" placeholder="Reason " >
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content">
+                <div class="item-media"></div>
+                <div class="item-inner">
+                  <div class="item-title label">Hospital</div>
+                  <div class="item-input">
+                    <input type="text" name="sur_hospital" id="sur_hospital" placeholder="Hospital">
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content">
+                <div class="item-media"></div>
+                <div class="item-inner">
+                  <div class="item-title label">Address</div>
+                  <div class="item-input">
+                    <input type="text" name="sur_address" id="sur_address" placeholder="Address:" >
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content">
+                <div class="item-media"></div>
+                <div class="item-inner">
+                  <div class="item-title label">Diagnosis </div>
+                  <div class="item-input">
+                    <input type="text" name="sur_diag" id="sur_diag" placeholder="Diagnosis ">
+                  </div>
+                </div>
+              </div>
+            </li>
+             <li>
+              <div class="item-content">
+                <div class="item-media"></div>
+                <div class="item-inner">
+                  <div class="item-title label">Procedure  </div>
+                  <div class="item-input">
+                    <input type="text" name="sur_procedure" id="sur_procedure" placeholder="Procedure  ">
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content">
+                <div class="item-media"></div>
+                <div class="item-inner">
+                  <div class="item-title label">Pathology   </div>
+                  <div class="item-input">
+                    <input type="text" name="sur_pathology" id="sur_pathology" placeholder="Pathology   ">
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content">
+                <div class="item-media"></div>
+                <div class="item-inner">
+                  <div class="item-title label">Important Findings</div>
+                  <div class="item-input">
+                    <!-- <input type="text" name="sur_important_findings" id="sur_important_findings" placeholder="Important Findings   "> -->
+                     <textarea id="sur_important_findings" name="sur_important_findings"></textarea>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div data-role="content">
+                <form method="post" onsubmit="return uploadSurgeriesUploadPic()" id="file-attachment-form5"  enctype="multipart/form-data">
+                  <div data-role="fieldcontain" class="field">
+                    <div class="fileupload fileupload-new" data-provides="fileupload" style="overflow:hidden">
+                      <div class="fileupload-preview fileupload-exists thumbnail" id="surgeries_img_display" style="max-width: 200px; max-height: 200px;  line-height: 20px;"></div>
+                        <div >
+                          <span class="btn btn-file">
+                            <span class="fileupload-new">Image</span>
+                            <span class="fileupload-exists"></span>
+                              <div class="image-upload">
+                                <label for="sur_upload_image">
+                                  <i class="fa fa-upload fa-2x" style=" color: #000;font-size: 40px;height:50px;"></i>
+                                    <!-- <span align="center" style="color:#000;font-size:13px;display:block;">Upload Image</span> -->
+                                </label>
+                              <input type="file" name="sur_upload_image" id="sur_upload_image" />
+                            </div>
+                          </span>
+                          <a href="#" style=" margin-top: 10px;width: 200px;" class="button button-round" id="surgeriesRemovehide" onclick="removeSurgeriesImage();">Remove</a>
+                        </div>
+                    </div>
+                    <input type="hidden" name="sur_upload_image_id" id="sur_upload_image_id"/>
+                  </div>
+                </form>
+              </div>
+            </li>
+          </ul>
+          <input type="hidden" name="surgeries_id" id="surgeries_id" placeholder="Oxygen Saturation : ">
+      </div>
+    </div>
+    <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;" id="surgeries_inbtn">
+        <div class="toolbar-inner" style="background:#0DB7C4;" >
+          <a href="#" class="link icon-only" onclick="surgeriesSubmit();" style="color:white;border-right:1px white solid ">Update</a>
+          <a href="#" onclick="deleteSurgeries();" class="link icon-only" style="color:white">Delete</a>
+        </div>
+    </div>
+    <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;" id="surgeries_upbtn">
+      <div class="toolbar-inner" style="background:#0DB7C4;" >
+        <a href="#" class="link icon-only" onclick="surgeriesSubmit();" style="color:white;border-right:1px white solid ">Submit</a>
+        <a href="surgeries_listing.html" class="link icon-only" style="color:white">Cancel</a>
+      </div>
+    </div>
+  </div>
+</div>

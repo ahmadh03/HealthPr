@@ -1,0 +1,302 @@
+<div class="navbar">
+   <div class="navbar-inner">
+     <div class="left sliding"><a href="loginnormal.html" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+     <div class="center sliding white" style="margin-right: 80px;">Physical Exams And Vitals</div>
+    <div class="right theme-white searchicon" >
+        <a href="#" onclick="physicalExamForminfo()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i></a>
+      </div>
+      <div class="right theme-white navicon" >
+        <a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+        </a>
+      </div>
+   </div>
+ </div>
+ 
+<div class="pages navbar-through" >
+  <div data-page="physical_exam_form" class="page">
+   <div style="overflow-y:scroll; height:inherit">
+    <div class="content-block-title" style="font-size: 20px;font-weight: bold;margin: 46px 23px -4px;">List of all physical exams made with the name of the physician, date conducted, etc.</div>
+      <div class="list-block" style="margin-bottom:70px;">
+         <ul style="background-color:#FFFFFF">
+           <li>
+              <div class="item-content">
+                <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-title label">Physician Name  </div>
+                    <!-- <i class="fa fa-sort-desc" style="float:right;font-size: 30px;position: absolute;right: 6px;margin-top: -22px;"></i> -->
+                    
+                      <div class="item-input" id="physicianNameExams">
+                        <input type="text" name="physical_name" id="physical_name" placeholder="Physician Name">
+                        <input type="hidden" name="physical_name_id" id="physical_name_id" placeholder="Physician Name">
+                      </div>
+                  </div>
+              </div>
+           </li>
+           <li>
+             <div class="item-content">
+                <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-title label">Specialty</div>
+                      <!-- <i class="fa fa-sort-desc" style="float:right;font-size: 30px;position: absolute;right: 6px;margin-top: -22px;"></i> -->
+                      <div class="item-input" id="addSpecialityPhy">
+                        <input type="text" name="physical_speciality" id="physical_speciality" placeholder="Specialty  ">
+                        <input type="hidden" name="physical_speciality_id" id="physical_speciality_id" />
+                      </div>
+                   </div>
+             </div>
+           </li>
+           <!-- <li id="physical_speciality_others_li_0" style="display:none;">
+             <div class="item-content">
+                <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-title label">Others</div>
+                      <div class="item-input">
+                        <input type="text" name="physical_speciality_others_0" id="physical_speciality_others_0" placeholder="Specialty  ">
+                        <input type="hidden" name="physical_speciality_others_id" id="physical_speciality_others_id_0"/>
+                      </div>
+                  </div>
+             </div>
+           </li> -->
+            <li>
+              <div class="item-content">
+                <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-title label">Date of Exam </div>
+                      <div class="item-input">
+                        <input type="text" name="physical_doe" id="physical_doe" placeholder="Date of Exam" >
+                      </div>
+                   </div>
+              </div>
+           </li>
+           <li>
+             <div class="item-content">
+               <div class="item-media"></div>
+                <div class="item-inner">
+                  <div class="item-title label">Height (<span id="pev_metricheight"></span>)</div>
+                    <div class="item-input">
+                      <select name="physical_ht" id="physical_ht" style="display:none">
+                       <option value="inch">inch</option>
+                      </select>
+                      <input type="number" name="physical_height" id="physical_height" placeholder="Height ">
+                    </div>
+                 </div>
+             </div>
+           </li>
+           <li>
+             <div class="item-content">
+                <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-title label">Weight(<span id="pev_metricweight"></span>)</div>
+                      <div class="item-input">
+                         <select name="physical_wt" id="physical_wt" style="display:none">
+                         <option value="pounds">pounds</option>
+                        </select>
+                         <input type="number" name="physical_weight" id="physical_weight" placeholder="Weight ">
+                      </div>
+                   </div>
+             </div>
+           </li>
+           <li>
+             <div class="item-content">
+                <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-title label">Temperature (<span id="pev_metrictemp"></span>)</div>
+                      <div class="item-input">
+                         <select name="physical_tmp" id="physical_tmp" style="display:none">
+                            <option value="fahrenheit">fahrenheit</option>
+                        </select>
+                            <input type="number" name="physical_temp" id="physical_temp" placeholder="Temp ">
+                      </div>
+                   </div>
+             </div>
+           </li>
+           <li>
+             <div class="item-content">
+                <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-title label">Systolic BP L Am </div>
+                      <div class="item-input">
+                        <input type="number" name="physical_bpr" id="physical_bpr" placeholder="Systolic BP L Am">
+                      </div>
+                   </div>
+             </div>
+           </li>
+           <li>
+             <div class="item-content">
+                <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-title label">Diastolic BP L Am</div>
+                      <div class="item-input">
+                        <input type="number" name="physical_bpl" id="physical_bpl" placeholder="Diastolic BP L Am">
+                      </div>
+                   </div>
+             </div>
+           </li>
+           <li>
+             <div class="item-content">
+                <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-title label">Systolic BP R Am</div>
+                      <div class="item-input">
+                        <input type="number" name="physical_sysbpr2" id="physical_sysbpr2" placeholder="Systolic BP R Am">
+                      </div>
+                   </div>
+             </div>
+           </li>
+           <li>
+             <div class="item-content">
+                <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-title label">Diastolic BP R Am</div>
+                      <div class="item-input">
+                        <input type="number" name="physical_diabpl2" id="physical_diabpl2" placeholder="Diastolic BP R Am">
+                      </div>
+                 </div>
+             </div>
+           </li>
+           <li>
+             <div class="item-content">
+                <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-title label">Heart rate</div>
+                      <div class="item-input">
+                        <input type="number" name="physical_hrate" id="physical_hrate" placeholder="Heart rate ">
+                      </div>
+                  </div>
+             </div>
+           </li>
+           <li>
+             <div class="item-content">
+                <div class="item-media"></div>
+                  <div class="item-inner">
+                     <div class="item-title label">Respiratory rate</div>
+                        <div class="item-input">
+                          <input type="number" name="physical_resrate" id="physical_resrate" placeholder="Respiratory rate ">
+                        </div>
+                   </div>
+             </div>
+           </li>
+            <li>
+             <div class="item-content">
+                <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-title label">Physical exam</div>
+                      <!-- <i class="fa fa-sort-desc" style="float:right;font-size: 30px;position: absolute;right: 6px;margin-top: -22px;"></i> -->
+                        <div class="item-input" id="addPhysicalexam_0">
+                           <input type="text" name="physical_exam_name" id="physical_exam_name_0"  placeholder="Physical Exam ">
+                           <input type="hidden" id="physical_exam_name_id_0"/>
+                        </div>
+                   </div>
+             </div>
+           </li>
+           <li id="physical_exam_name_others_li_0" style="display:none;">
+             <div class="item-content">
+              <div class="item-media"></div>
+                <div class="item-inner">
+                  <div class="item-title label">Others</div>
+                    <div class="item-input">
+                      <input type="text" name="physical_exam_name_others_0" id="physical_exam_name_others_0" placeholder="Specify">
+                      <input type="hidden" name="physical_exam_name_others_id" id="physical_exam_name_others_id_0"/>
+                    </div>
+                </div>
+             </div>
+           </li>
+            <li>
+              <div class="item-content">
+                <div class="item-media"></div>
+                  <div class="item-inner">
+                    <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                        <input type="radio" name="physical_n" id="physical_n_0"   value="1" >
+                          <div class="item-media">
+                            <i class="icon icon-form-checkbox"></i>
+                          </div>
+                            <div class="item-inner">
+                              <div class="item-title">Normal ?</div>
+                            </div>
+                      </label>
+                      <label class="label-checkbox item-content">
+                        <input type="radio" name="physical_n" id="physical_ab_0"   value="0" >
+                          <div class="item-media">
+                            <i class="icon icon-form-checkbox"></i>
+                          </div>
+                          <div class="item-inner">
+                            <div class="item-title">Abnormal ?</div>
+                          </div>
+                      </label>
+                  </div>
+              </div>
+            </li>
+            <!-- <li>
+              <div class="item-content">
+                <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-input">
+                      <label class="label-checkbox item-content">
+                        <input type="radio" name="physical_n" id="physical_ab_0"   value="0" >
+                          <div class="item-media">
+                            <i class="icon icon-form-checkbox"></i>
+                          </div>
+                          <div class="item-inner">
+                            <div class="item-title">Abnormal ?</div>
+                          </div>
+                      </label>
+                    </div>
+                  </div>
+              </div>
+            </li> -->
+           <li>
+             <div class="item-content">
+                <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-title label">Description</div>
+                      <div class="item-input">
+                       <input type="hidden" name="physicalform_id" id="physicalform_id" placeholder="Description " >
+                        <!-- <input type="text" name="physical_desc" style="height:144px" id="physical_desc_0" placeholder="Description "> -->
+                        <textarea id="physical_desc_0" name="physical_desc"  style="height:144px"></textarea>
+                      </div>
+
+                        <button name="addButton" id='addButton' onClick="addFields3()" style="float:right;border:none;background:none;margin-right: 13px;"><i class="fa fa-plus-circle fa-2x"></i>
+                        </button>
+                        <li id="responce3"></li>
+                        <input type="hidden" name="count" id="count" value="0" />
+                   </div>
+             </div>
+           </li>
+         </ul>
+          <li>
+            <div data-role="content">
+               <form method="post" onsubmit="return uploadPhysicalExamPic()" id="file-attachment-form13"  enctype="multipart/form-data">
+                 <div data-role="fieldcontain" class="field">
+                    <div class="fileupload fileupload-new" data-provides="fileupload" style="overflow:hidden">
+                        <div class="fileupload-preview fileupload-exists thumbnail" id="physicalexam_img_display" style="max-width: 200px; max-height: 200px;  line-height: 20px;"></div>
+                        <div >
+                          <span class="btn btn-file">
+                            <span class="fileupload-new">Image</span>
+                            <span class="fileupload-exists">Change</span>
+                          <input type="file" name="phy_exam_image" id="phy_exam_image" />
+                          </span> 
+                          <a href="#" style=" margin-top: 10px;width: 200px;" class="button fileupload-exists removeEmgImg" data-dismiss="fileupload">Remove</a>
+                        </div>
+                    </div>
+                    <input type="hidden" name="phy_exam_image_id" id="phy_exam_image_id"/>
+                </div>
+               </form>
+              </div>
+            </li>
+            <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;" id="physical_inbtn">
+                <div class="toolbar-inner" style="background:#0DB7C4;" >
+                  <a href="#" class="link icon-only" onclick="physicalExamsSubmit();" style="color:white;border-right:1px white solid ">Update</a>
+                  <a href="#" onclick="physicalDelete();" class="link icon-only" style="color:white">Delete</a>
+                </div>
+              </div>
+            <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;" id="physical_upbtn">
+              <div class="toolbar-inner" style="background:#0DB7C4;" >
+                <a href="#" class="link icon-only" onclick="physicalExamsSubmit();" style="color:white;border-right:1px white solid ">Submit</a>
+                <a href="physical_exam.html" class="link icon-only" style="color:white">Cancel</a>
+              </div>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
+ 

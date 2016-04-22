@@ -1,0 +1,1914 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+		<link rel="stylesheet" type="text/css" href="css/index1.css" />
+		<link rel="stylesheet" href="css/framework7.min.css">
+		<link rel="stylesheet" href="css/framework7.ios.min.css">
+		<!-- Path to your custom app styles-->
+		<link rel="stylesheet" href="css/my-app.css">
+		<link rel="stylesheet" href="css/home.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="font-awesome-4.3.0/css/font-awesome.min.css">
+		<!-- Fullcalendar -->
+		<link rel="stylesheet" href="css/fullcalendar.css">
+		<link rel="stylesheet" href="css/fullcalendar.print.css" media="print">
+		<link rel='stylesheet' type='text/css'href='css/timepicki.css'/>
+		<link rel='stylesheet' type='text/css'href='css/jquery.share.css'/>
+		<!-- <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.1.0/jssocials.css" />
+		<link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.1.0/jssocials-theme-flat.css" /> -->
+
+		<!-- ################# SCRIPT ############################  -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="js/jquery.ui.touch.js"></script>
+		<script src="js/jquery-1.3.2.min.js"></script>
+		
+		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script type='text/javascript'src='js/timepicki.js'></script>
+
+		<!--<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>-->
+		<!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>-->
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+		<script type="text/javascript" src="googlemap.js"></script>
+		<script src="js/Chart.js"></script>
+		<!-- FullCalendar -->
+		<script src="js/fullcalendar.min.js"></script>
+		<!-- File Uploader -->
+		<script src="js/jquery.imagesloaded.min.js"></script>
+		<script src="js/bootstrap-fileupload.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+
+			var pictureSource;// picture source
+			var destinationType;// sets the format of returned value
+
+			document.addEventListener("deviceready", onDeviceReady, false);
+
+			function onDeviceReady() {
+				pictureSource = navigator.camera.PictureSourceType;
+				destinationType = navigator.camera.DestinationType;
+				document.addEventListener("backbutton", onBackKeyDown, false);
+			}
+
+			function clearCache() {
+				navigator.camera.cleanup();
+			}
+
+			var retries = 0;
+			//var CategoryId = "";
+			function onCapturePhoto(fileURI) {
+
+				var url = encodeURI("http://healthrecordspro.com/mobileapp1/scriptfiles/albumscript/DriveUpload.php");
+				// myApp.showPreloader();
+				$('#loadingmessage').show();
+				var win = function(r) {
+					// myApp.alert("Code = " + r.responseCode);
+					// myApp.alert("Response = " + r.response);
+					// myApp.alert("Sent = " + r.bytesSent);
+
+					clearCache();
+					retries = 0;
+					myApp.hidePreloader();
+					$('.popup').remove();
+					$('.popup-overlay').remove();
+					// myApp.alert('Uploaded!');
+					$('#loadingmessage').hide();
+					myApp.alert("Uploaded",'Success');
+					//manage_albums(CategoryId);
+				}
+				var fail = function (error) {
+					if(retries == 0) {
+						retries ++
+						setTimeout(function() {
+							onCapturePhoto(fileURI)
+						}, 1000)
+					}else{
+						retries = 0;
+						clearCache();
+						myApp.alert('Upload Failed!','Failed');
+					}
+				}
+				// myApp.showPreloader();
+				$('#loadingmessage').show();
+				var options = new FileUploadOptions();
+				options.fileKey = "myfile";
+				options.fileName = fileURI.substr(fileURI.lastIndexOf('/') + 1);
+				options.mimeType = "image/jpeg";
+
+				var params = new Object();
+				params.catId = document.getElementById('camera_catId').value;
+				params.customerId = document.getElementById('camera_customerId').value;
+				params.sectionname = document.getElementById('camera_sectionname').value;
+				params.option = "UploadCameraImage";
+
+				options.params = params;
+
+				// options.params = {}; // if we need to send parameters to the server request
+				var ft = new FileTransfer();
+				ft.upload(fileURI, url, win, fail, options);
+				// myApp.hidePreloader();
+				$('#loadingmessage').hide();
+				//myApp.alert(fileURI);
+				movePic(fileURI);
+			}
+
+			function movePic(file){ 
+				window.resolveLocalFileSystemURI(file, resolveOnSuccess, resOnError);
+			}
+
+			function resolveOnSuccess(entry){
+				var d = new Date();
+				var n = d.getTime();
+				//new file name
+				var newFileName = n + ".jpg";
+				var myFolderApp = "HRP";
+
+				window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function(fileSys) {
+				//The folder is created if doesn't exist
+					fileSys.root.getDirectory( myFolderApp,
+					{create:true, exclusive: false},
+					function(directory) {
+						entry.moveTo(directory, newFileName,  successMove, resOnError);
+					},
+					resOnError);
+				},
+				resOnError);
+			}
+
+			//Callback function when the file has been moved successfully - inserting the complete path
+			function successMove(entry) {
+			//Store imagepath in session for future use
+			// like to store it in database
+				sessionStorage.setItem('imagepath', entry.fullPath);
+				window.plugins.scanmedia.scanFile(entry.fullPath, function (msg) {
+					myApp.alert("Plz Check gallery","HRP");
+					//myApp.alert(entry.fullPath);
+				},
+				function (err) {
+				// alert("Fail ScanMedia: " + err);
+				})
+			}
+
+			function resOnError(error) {
+				myApp.alert(error.code);
+			}
+
+			function capturePhoto() {
+				//CategoryId = catId;
+				navigator.camera.getPicture(onCapturePhoto, onFail, {
+					quality: 20,
+					destinationType: destinationType.FILE_URI,
+					sourceType : Camera.PictureSourceType.CAMERA,
+					allowEdit : true,
+					encodingType: Camera.EncodingType.JPEG,
+					targetWidth: 500,
+					targetHeight: 500,
+					popoverOptions: CameraPopoverOptions,
+					saveToPhotoAlbum: true
+				});
+			}
+			// new camera
+			var retries1 = 0;
+			var albumIdGlobal = "";
+			function onCapturePhoto1(fileURI1) {
+
+				var url3 = encodeURI("http://healthrecordspro.com/mobileapp1/scriptfiles/albumscript/DriveAlbumSingleImgUpload.php");
+				// myApp.showPreloader();
+				$('#loadingmessage1').show();
+				var win1 = function(r) {
+					// myApp.alert("Code = " + r.responseCode);
+					// myApp.alert("Response = " + r.response);
+					// myApp.alert("Sent = " + r.bytesSent);
+					clearCache();
+					retries1 = 0;
+					// myApp.hidePreloader();
+					$('#loadingmessage1').hide();
+					myApp.alert("Uploaded",'Success');
+					$('.popup').remove();
+					$('.popup-overlay').remove();
+					$('#self_img').empty();
+
+					view_album_images(albumIdGlobal);
+				}
+				var fail1 = function (error) {
+					if (retries1 == 0) {
+						retries1 ++
+						setTimeout(function() {
+							onCapturePhoto1(fileURI1);
+						}, 1000)
+					} else {
+						retries1 = 0;
+						clearCache();
+						myApp.alert('Upload Failed!','Failed');
+					}
+				}
+				// myApp.showPreloader();
+				$('#loadingmessage1').show();
+				var options = new FileUploadOptions();
+				options.fileKey = "myfile";
+				options.fileName = fileURI1.substr(fileURI1.lastIndexOf('/') + 1);
+				options.mimeType = "image/jpeg";
+
+				var params = new Object();
+				params.camera_albumid = document.getElementById('camera_albumid').value;
+				params.customerId = document.getElementById('camera_customerId').value;
+				//params.sectionname = document.getElementById('camera_sectionname').value;
+				params.option = "UploadCameraImage1";
+
+				options.params = params;
+
+				// options.params = {}; // if we need to send parameters to the server request
+				var ft = new FileTransfer();
+				ft.upload(fileURI1, url3, win1, fail1, options);
+				// myApp.hidePreloader();
+				$('#loadingmessage1').hide();
+				// myApp.alert(fileURI);
+				movePic1(fileURI1);
+
+			}
+
+			function movePic1(file1){ 
+				window.resolveLocalFileSystemURI(file1, resolveOnSuccess1, resOnError1);
+			}
+
+			function resolveOnSuccess1(entry){
+				var d = new Date();
+				var n = d.getTime();
+				//new file name
+				var newFileName = n + ".jpg";
+				var myFolderApp = "HRP";
+
+				window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function(fileSys) {
+				//The folder is created if doesn't exist
+					fileSys.root.getDirectory( myFolderApp,
+					{create:true, exclusive: false},
+					function(directory) {
+						entry.moveTo(directory, newFileName,  successMove1, resOnError1);
+					},
+					resOnError1);
+				},
+				resOnError1);
+			}
+
+			//Callback function when the file has been moved successfully - inserting the complete path
+			function successMove1(entry) {
+			//Store imagepath in session for future use
+			// like to store it in database
+				sessionStorage.setItem('imagepath', entry.fullPath);
+				window.plugins.scanmedia.scanFile(entry.fullPath, function (msg) {
+					myApp.alert("Plz Check gallery","HRP");
+				},
+				function (err) {
+				// alert("Fail ScanMedia: " + err);
+				})
+			}
+
+			function resOnError1(error) {
+				myApp.alert(error.code);
+			}
+
+			function capturePhoto1(albumId){
+				albumIdGlobal = albumId;
+				navigator.camera.getPicture(onCapturePhoto1, onFail1, {
+					quality: 20,
+					destinationType: destinationType.FILE_URI,
+					sourceType : Camera.PictureSourceType.CAMERA,
+					allowEdit : true,
+					encodingType: Camera.EncodingType.JPEG,
+					targetWidth: 500,
+					targetHeight: 500,
+					popoverOptions: CameraPopoverOptions,
+					saveToPhotoAlbum: true
+				});
+			}
+			function onFail1(message){
+				myApp.alert('Failed because: ' + message);
+			}
+
+			function onFail(message) {
+				alert('Failed because: ' + message);
+			}
+
+			function onBackKeyDown() {
+				history.go(-1);
+				navigator.app.backHistory();
+			}
+
+			//emergency contact camera
+			var retries2 = 0;
+			function onCapturePhotoEmer(imageUri){
+				var c=document.getElementById("myCanvas1");
+				var ctx=c.getContext("2d");
+				var img=new Image();
+				img.onload = function(){
+					c.width=this.width*0.1;
+					c.height=this.height*0.1;
+					ctx.drawImage(img, 0,0,c.width,c.height);
+				};
+				img.src=imageUri;
+				var dataURL = c.toDataURL("image/jpeg");
+				// alert(dataURL);
+
+				// var url4 = encodeURI("http://healthrecordspro.com/mobileapp1/scriptfiles/emergency_cam.php");
+				// var win2 = function(r) {
+				// 	// myApp.alert("Code = " + r.responseCode);
+				// 	// myApp.alert("Response = " + r.response);
+				// 	// myApp.alert("Sent = " + r.bytesSent);
+				// 	clearCache();
+				// 	retries2 = 0;
+				// 	// myApp.hidePreloader();
+				// 	myApp.alert("Uploaded",'Success');
+				// }
+				// var fail2 = function (error) {
+				// 	if (retries1 == 0) {
+				// 		retries1 ++
+				// 		setTimeout(function() {
+				// 			onCapturePhoto1(ImagePath);
+				// 		}, 1000)
+				// 	} else {
+				// 		retries1 = 0;
+				// 		clearCache();
+				// 		myApp.alert('Upload Failed!','Failed');
+				// 	}
+				// }
+				// var options = new FileUploadOptions();
+				// options.fileKey = "file";
+				// options.fileName = ImagePath.substr(ImagePath.lastIndexOf('/') + 1);
+				// options.mimeType = "image/jpeg";
+
+				// var params = new Object();
+				// params.emer_cam_con_image_id = document.getElementById('emer_cam_con_image_id').value;
+				// //params.sectionname = document.getElementById('camera_sectionname').value;
+				// params.option = "UploadCameraImage1";
+
+				// options.params = params;
+
+				// // options.params = {}; // if we need to send parameters to the server request
+				// var ft = new FileTransfer();
+				// ft.upload(ImagePath, url4, win2, fail2, options);
+			}
+			function onFailEmer(error){
+				alert('Failed because: ' + error);
+			}
+			function capturePhotoemergency(){
+				navigator.camera.getPicture(onCapturePhotoEmer, onFailEmer, {
+					quality: 20,
+					destinationType: destinationType.FILE_URI
+				});
+			}
+			
+
+			// Audio player
+			var my_media = null;
+			var mediaTimer = null;
+
+			// Play audio
+			function playAudio(src)
+			{
+				$("#audio_track_start").css('display','none');
+				$("#audio_track_stop").css('display','block');
+					my_media = new Media(src, onSuccess, onError);
+					if (mediaTimer == null) {
+						mediaTimer = setInterval(function() {
+						// get my_media position
+						my_media.play();
+						my_media.getCurrentPosition(
+							// success callback
+							function(position) {
+								if (position > -1) {
+									setAudioPosition((position) + " sec");
+								}
+							},
+							// error callback
+							function(e) {
+								console.log("Error getting pos=" + e);
+								setAudioPosition("Error: " + e);
+							}
+						);
+					}, 1000);
+				}
+			}
+
+			function onSuccess()
+			{
+				console.log("playAudio():Audio Success");
+			}
+			function onError(error)
+			{
+				// alert('code: '    + error.code    + '\n' + 
+				// 'message: ' + error.message + '\n');
+			}
+			
+			function stopAudio()
+			{
+				$("#audio_track_start").css('display','block'); 
+				$("#audio_track_stop").css('display','none');
+					if (my_media) {
+						my_media.stop();
+					}
+						clearInterval(mediaTimer);
+						mediaTimer = null;
+			}
+
+// 			var myPosition;
+// 			var myMedia;
+//   
+// 			function playVideo(src){
+// 				alert(src);
+// 				myMedia.play();
+// 				myPosition = setInterval(updatePosition, 100);
+// 			}
+// 			function pauseVideo(){
+// 				myMedia.pause();
+// 				clearInterval(myPosition);
+// 			}
+// 			function stopVideo(){
+// 				myMedia.pause();
+// 				myMedia.currentTime = 0;
+// 				clearInterval(myPosition);
+// 			}
+
+		
+		</script>
+
+		<title>Login</title>
+	</head>
+	<body style="background-color:#0DB7C4;">
+	<!-- Status bar overlay for fullscreen mode-->
+	<script src="js/jquery.share.js"></script>
+	
+	<div class="statusbar-overlay"></div>
+	<!-- Panels overlay-->
+	<div class="panel-overlay"></div>
+	<!-- Left panel with reveal effect-->
+	<!-- Right panel with cover effect-->
+	<div class="panel panel-right panel-cover">
+		<div class="list-block">
+			<ul>
+				<li>
+					<a href="#" class="close-panel item-link" onclick="selectHomepageDisplay();">
+						<div class="item-content">
+							<div class="item-media white">
+								<span class="homeimg"><img src="img/HOME.png" height="34"/></span>
+							</div>
+								<div class="item-inner">
+									<div class="item-title white">Home
+									</div>
+								</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a class="close-panel item-link" href="user_profile.html" onclick="giveAlert();">
+						<div class="item-content">
+							<div class="item-media white">
+								<span class="homeimg"><img src="img/USER-PROFILE.png" height="34"/></span>
+							</div>
+								<div class="item-inner">
+									<div class="item-title white">User Profile</div>
+								</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a class="close-panel item-link" href="report_bug.html">
+						<div class="item-content">
+							<div class="item-media white">
+								<span class="homeimg"><img src="img/ABOUT-THIS-APP.png" height="34"/></span>
+							</div>
+								<div class="item-inner">
+									<div class="item-title white">Report a bug</div>
+								</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a class="close-panel item-link" href="suggestions.html">
+						<div class="item-content">
+							<div class="item-media white">
+								<span class="homeimg"><img src="img/ABOUT-THIS-APP.png" height="34"/></span>
+							</div>
+								<div class="item-inner">
+									<div class="item-title white">Suggestions</div>
+								</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a class="close-panel item-link" href="aboutus.html" onClick="getAboutData();">
+						<div class="item-content">
+							<div class="item-media white">
+								<span class="homeimg"><img src="img/ABOUT-THIS-APP.png" height="34"/></span>
+							</div>
+								<div class="item-inner">
+									<div class="item-title white">About This App</div>
+								</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a class="close-panel item-link" href="account_summary.html" onclick="account_summary();">
+						<div class="item-content">
+							<div class="item-media white">
+								<span class="homeimg"><img src="img/UPGRADE.png" height="34"/></span>
+							</div>
+								<div class="item-inner">
+									<div class="item-title white">Account Summary</div>
+								</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a class="close-panel item-link" href="grant_access.html">
+						<div class="item-content">
+							<div class="item-media white">
+								<span class="homeimg"><img src="img/GRANT-ACCESS.png" height="34"/></span>
+							</div>
+								<div class="item-inner">
+									<div class="item-title white">Grant Access</div>
+								</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a class="close-panel item-link" href="health_id.html">
+						<div class="item-content">
+							<div class="item-media white">
+								<span class="homeimg"><img src="img/HEALTH-ID.png" height="34"/></span>
+							</div>
+								<div class="item-inner">
+									<div class="item-title white">Health ID</div>
+								</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a class="close-panel item-link" href="familyaccounts.html" onclick="getFamilyAccountData();">
+						<div class="item-content">
+							<div class="item-media white">
+								<span class="homeimg"><img src="img/FAMILY-ACCOUNTS.png" height="34"/></span>
+							</div>
+								<div class="item-inner">
+									<div class="item-title white">Family Subscribers</div>
+								</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a class="close-panel item-link" onClick="getFaqQtion();" href="faq.html">
+						<div class="item-content">
+							<div class="item-media white">
+								<span class="homeimg"><img src="img/FAQ.png" height="34"/></span>
+							</div>
+								<div class="item-inner">
+									<div class="item-title white">FAQ</div>
+								</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a class="close-panel item-link" onclick="getSectionsData();" href="section_preference.html">
+						<div class="item-content">
+							<div class="item-media white">
+								<span class="homeimg"><i class="fa fa-th-large" style="font-size:25px"/></i></span>
+							</div>
+								<div class="item-inner">
+									<div class="item-title white">Section Preference</div>
+								</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a class="close-panel item-link" onClick="showmetrics();" href="settings.html">
+						<div class="item-content">
+							<div class="item-media white">
+								<span class="homeimg"><img src="img/SETTINGS.png" height="34"/></span>
+							</div>
+								<div class="item-inner">
+									<div class="item-title white">Settings</div>
+								</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a class="close-panel item-link" href="contact.html">
+						<div class="item-content">
+							<div class="item-media white">
+								<span class="homeimg"><img src="img/CONTACT-US.png" height="34"/></span>
+							</div>
+								<div class="item-inner">
+									<div class="item-title white">Contact Us</div>
+								</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a class="close-panel item-link" onClick="logout();" href="#">
+						<div class="item-content">
+							<div class="item-media white">
+								<span class="homeimg"><img src="img/LOGOUT.png" height="34"/></span>
+							</div>
+								<div class="item-inner">
+									<div class="item-title white">Logout</div>
+								</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+<!-- ############################ for mobile tips code to slide from left ################################## -->
+	<div class="panel-overlay"></div>
+		<div class="panel panel-left panel-reveal">
+			<div class="content-block">
+				<div class="content-block-title" style="font-size: 27px;">Useful Tips</div>
+					<div class="list-block">
+						<ul id="usefultips_mobile" style="background-color: #D9D9D9;">
+
+						</ul>
+					</div>
+			</div>
+		</div>
+
+	<div class="views">
+		<div class="view view-main">
+			<div class="navbar" style="background-color:#0DB7C4;border-bottom:none;">
+				<div class="navbar-inner">
+				</div>
+			</div>
+			<div class="pages navbar-through">
+				<div data-page="index" class="page" style="background-color:#0DB7C4;">
+					<div id="logo" style="background-color:#0DB7C4;padding-top:100px;">
+						<div align="center"><img class="logo1" src="img/logosplash.png" >
+						</div>
+					</div>
+						<div class="Login" style="background-color:#0DB7C4;padding-bottom:100px;">
+							<div align="center" style="background-color:#0DB7C4;">
+								<input type="text" name="user_email" required value="" id="user_email" placeholder="Username or email"/>
+									<li style="list-style: none;">
+										<p style=" font-size: 16px;"><span id="email_error"></span></p>
+									</li>
+								<input type="password" name="user_password" required value="" id="user_password" placeholder="User password"/>
+								<li style="list-style: none;">
+									<p style=" font-size: 16px;"><span id="password_error"></span></p>
+								</li>
+								<input type="button" name="submit" onClick="loginsubmit();" value="Login" class="myButton"/>
+								<li style="list-style: none;">
+									<a href="password.html">Forget Password</a>
+								</li>
+							</div>
+						</div>
+					<div class="signup" style="background-color:#0DB7C4;">
+						<div align="center"><a href="form.html" onclick="getSignUpData();">Sign Up</a>
+							<a href="needHelp.html" onClick="getFaqQtion();">Need Help?</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="js/SocialSharing.js"></script>
+	<script type="text/javascript" src="scanMedia.js"></script>
+	<script type="text/javascript" src="js/Calendar.js"></script>
+	
+	<script type="text/javascript">
+		app.initialize();
+	</script>
+	
+	<script type="text/javascript" src="js/framework7.min.js"></script>
+	<script type="text/javascript" src="js/my-app.js"></script>
+	
+	<script type="text/javascript">
+
+	//Home page script display all sections
+
+	// $(document).ready(function(){
+	// 	 myApp.showPreloader();
+	// 	setTimeout(function(){
+	// 		// getHomepageSections();
+	// 		alert('hiii');
+	// 	},1000);
+	// 	myApp.hidePreloader();
+	// 	//back functioin
+	// 	$(document).on('click','.back',function(){
+	// 		setTimeout(function(){
+		// 			// getHomepageSections();
+		// 		},500);
+	// 	});
+	// 	myApp.hidePreloader();
+	// });
+
+$$(document).on('pageInit', function (e) {
+	var page = e.detail.page;
+	// Code for About page
+	if (page.name === 'loginnormal') {
+		getHomepageSections();
+	}
+	if (page.name === 'hrp_all_sections') {
+		getGridViewSections();
+	}
+
+});
+
+$$(document).on('pageInit', function (e) {
+	var page = e.detail.page;
+	// Code for About page
+	if (page.name === 'emergency_contact_listing') {
+		// return false;
+		getEmergencyContactData();
+	}
+});
+
+$$(document).on('pageInit', function (e) {
+	var page = e.detail.page;
+	// Code for About page
+	if (page.name === 'health_provider_listing') {
+		// return false;
+		gethealthProviderData();
+	}
+});
+
+$$(document).on('pageInit', function (e) {
+	var page = e.detail.page;
+	// Code for About page
+	if (page.name === 'insurance') {
+		// return false;
+		getInsuranceData();
+	}
+});
+
+$$(document).on('pageInit', function (e) {
+	var page = e.detail.page;
+	// Code for About page
+	if (page.name === 'medications_listing') {
+		// return false;
+		getMedicationsData();
+	}
+});
+
+$$(document).on('pageInit', function (e) {
+	var page = e.detail.page;
+	// Code for About page
+	if (page.name === 'medical_history_condi_listing') {
+		// return false;
+		getmedihistoryData();
+	}
+});
+
+$$(document).on('pageInit', function (e) {
+	var page = e.detail.page;
+	// Code for About page
+	if (page.name === 'allergies_listing') {
+		// return false;
+		getAllergiesData();
+	}
+});
+
+$$(document).on('pageInit', function (e) {
+	var page = e.detail.page;
+	// Code for About page
+	if (page.name === 'surgeries_listing') {
+		// return false;
+		getSurgeriesData();
+	}
+});
+
+$$(document).on('pageInit', function (e) {
+	var page = e.detail.page;
+	// Code for About page
+	if (page.name === 'physical_exam') {
+		// return false;
+		getPhysicalExamData();
+	}
+});
+
+$$(document).on('pageInit', function (e) {
+	var page = e.detail.page;
+	// Code for About page
+	if (page.name === 'obestetric_history_listing') {
+		// return false;
+		getObestetricData();
+	}
+});
+
+$$(document).on('pageInit', function (e) {
+	var page = e.detail.page;
+	// Code for About page
+	if (page.name === 'past_medical_his_listing') {
+		// return false;
+		getpastmediHis();
+	}
+});
+
+$$(document).on('pageInit', function (e) {
+	var page = e.detail.page;
+	// Code for About page
+	if (page.name === 'birth_ped_his_listing') {
+		// return false;
+		getBirthData();
+	}
+});
+
+$$(document).on('pageInit', function (e) {
+	var page = e.detail.page;
+	// Code for About page
+	if (page.name === 'development_his_listing') {
+		// return false;
+		getDevelopmentHisData();
+	}
+});
+
+$$(document).on('pageInit', function (e) {
+	var page = e.detail.page;
+	// Code for About page
+	if (page.name === 'family_ped_his_listing') {
+		// return false;
+		getFamilyPreData();
+	}
+});
+
+$$(document).on('pageInit', function (e) {
+	var page = e.detail.page;
+	// Code for About page
+	if (page.name === 'dental_history_listing') {
+		// return false;
+		getdentalhistoryData();
+	}
+});
+
+$$(document).on('pageInit', function (e) {
+	var page = e.detail.page;
+	// Code for About page
+	if (page.name === 'Prescription_eye_listing') {
+		// return false;
+		// getdentalhistoryData();
+	}
+});
+
+$$(document).on('pageInit', function (e) {
+	var page = e.detail.page;
+	// Code for About page
+	if (page.name === 'foodand_nutrition_history') {
+		// return false;
+		getFoodData();
+	}
+});
+
+$$(document).on('pageInit', function (e) {
+	var page = e.detail.page;
+	// Code for About page
+	if (page.name === 'bio_chemical_listing') {
+		// return false;
+		getbioData();
+	}
+});
+
+$$(document).on('pageInit', function (e) {
+	var page = e.detail.page;
+	// Code for About page
+	if (page.name === 'monitoringand_evolution') {
+		// return false;
+		getMonitoringEvoData();
+	}
+});
+
+$$(document).on('pageInit', function (e) {
+	var page = e.detail.page;
+	// Code for About page
+	if (page.name === 'medicalandlega_directives_listing') {
+		// return false;
+		getMedicalDirectorsData();
+	}
+});
+
+$$(document).on('pageInit', function (e) {
+	var page = e.detail.page;
+	// Code for About page
+	if (page.name === 'doctors_counsaltation_listing') {
+		// return false;
+		getdocCounsaltationData();
+	}
+});
+
+// $$(document).on('pageInit', function (e) {
+// 	var page = e.detail.page;
+// 	// Code for About page
+// 	if (page.name === 'urinalysis_listing') {
+// 		// return false;
+// 		getLabRecordsByCatId(Catid,labCatName);
+// 	}
+// });
+function addFieldsMedidosage()
+{
+	var count = $('#medidos_count').val();
+	count = parseInt(count)+1;
+	$("#medidos_count").val(count);
+	var name="<li><div class='item-content item-title_inner'><div class='item-inner'><div class='item-title label'>Medication </div><div class='item-input'><input id='past_medi_his_medication_"+count+"' type='text' placeholder='Medication  ' name='past_medi_his_medication'></div></div></div></li><li><div class='item-content item-title_inner'><div class='item-inner'><div class='item-title label'>Dose </div><div class='item-input'><input id='past_medi_his_dose_"+count+"' type='text' placeholder='Dose ' name='past_medi_his_dose'></div></div></div></li>";
+	$("#responce1").append(name);
+}
+//user profile1
+function addFields()
+{
+	var count1 = $('#phar_count').val();
+	count1 = parseInt(count1)+1;
+	$("#phar_count").val(count1);
+	
+	var name="<li><div class='item-content item-title_inner'><div class='item-inner'><div class='item-title label'>Pharmacy Name </div><div class='item-input'><input id='user_phar_name_"+count1+"' type='text' placeholder='Pharmacy Name ' name='user_phar_name'></div></div></div></li><li><div class='item-content item-title_inner'><div class='item-inner'><div class='item-title label'>Pharmacy Number </div><div class='item-input'><input id='user_phar_number_"+count1+"' type='text' placeholder='Pharmacy Number ' name='user_phar_number'></div></div></div></li>";
+	$("#responce").append(name);
+}
+
+//userprofile2
+function addFields1()
+{
+	var count = $('#count').val();
+	count = parseInt(count)+1;
+	$("#count").val(count);
+	
+	var hname="<div class='item-content item-title_inner'><div class='item-inner'><div class='item-title label'>Hospital</div><div class='item-input'><input type='text' name='pre_hospital' id='pre_hospital_"+count+"' placeholder='Hospital' /></div></div></div></li><li><div class='item-content item-title_inner'><div class='item-inner'><div class='item-title label'>Medical record number </div><div class='item-input'><input type='text' name='pref_me_re_no' id='pref_me_re_no_"+count+"' placeholder='Medical record number ' /></div></div></div></li><li><div class='item-content item-title_inner'><div class='item-inner'><div class='item-title label'>Hospital telephone number</div><div class='item-input'><input type='text' name='pre_ho_no' id='pre_ho_no_"+count+"' placeholder='Hospital telephone number' /></div></div></div>";
+
+	$("#responce1").append(hname);
+
+}
+
+function addFamilyCausesofde()
+{
+	var count = $('#rowIdFH2').val();
+	count = parseInt(count)+1;
+	$("#rowIdFH2").val(count);
+
+	var name = '<li><div class="item-content"><div class="item-media"></div><div class="item-inner"><div class="item-title label" style="width: 55%;">Select Name</div><div class="item-input" id="displayFamilyCausD_'+count+'"><input type="text" name="family_his_causeofDe" id="family_his_causeofDe_'+count+'" placeholder="select"><input type="hidden" name="family_his_causeofDe_id" id="family_his_causeofDe_id_'+count+'" placeholder="Date of Appointment : " /></div></div></div></li><li id="family_cuses_of_de_li_'+count+'" style="display:none;"><div class="item-content"><div class="item-media"></div><div class="item-inner"><div class="item-title label" style="width: 55%;">Others</div><div class="item-input"><input type="text" name="family_his_causeofDe_others" id="family_his_causeofDe_others_'+count+'" placeholder="Specify"><input type="hidden" name="family_his_causeofDe_id" id="family_his_causeofDe_id_'+count+'" placeholder="Date of Appointment : " /></div></div></div></li><li style="list-style:none;"><div class="item-content"><div class="item-media"></div><div class="item-inner"><div class="item-title label">Causes of Death</div><div class="item-input"><input type="text" name="family_caus_death" id="family_caus_death_'+count+'" placeholder="Causes of Death"></div></div></div></li>';
+	$("#responce7").append(name);
+	FamilyHisCauseofD(count);
+}
+function addFamilyHisFields()
+{
+	var count1 = $('#Family_his_count').val();
+	count1 = parseInt(count1)+1;
+	$("#Family_his_count").val(count1);
+
+	var name1 = "<li><div class='item-content'><div class='item-media'></div><div class='item-inner'><div class='item-title label'></div><div class='item-input'><input id='family_his_others_"+count1+"' type='text' placeholder='other ' name='family_his_others'></div></div></div></li>";
+	
+	$('#responce4').append(name1);
+	// $('#rowIdother_'+id1).val(ct);
+}
+
+function addFieldsmedihis()
+{
+	var count = $('#rowIdFH10').val();
+	count = parseInt(count)+1;
+	$("#rowIdFH10").val(count);
+
+	var column = '<ul style="background-color:#FFFFFF"><li><div class="item-content"><div class="item-media"></div><div class="item-inner"><div class="item-title label">Name</div><div class="item-input" id="addselectdieases_'+count+'"><input type="text" name="medi_his_name" placeholder="Select Name" id="medi_his_name_'+count+'"/><input type="hidden" name="medi_his_name_id"  id="medi_his_name_id_'+count+'" placeholder="Select Name" /></div></div></div></li><li id="medi_his_name_others_li_'+count+'" style="display:none;"><div class="item-content"><div class="item-media"></div><div class="item-inner"><div class="item-title label">Others</div><div class="item-input"><input type="text" name="medi_his_name_others" placeholder="Specify" id="medi_his_name_others_'+count+'"/><input type="hidden" id="medi_his_name_id_'+count+'"/></div></div></div></li><li><div class="item-content"><div class="item-media"></div><div class="item-inner"><div class="item-input"><label class="label-checkbox item-content"><input type="checkbox" name="medi_sactive" id="medi_sactive_'+count+'"   value="1" onClick="getResults3(this)" ><div class="item-media"><i class="icon icon-form-checkbox"></i></div><div class="item-inner"><div class="item-title">Still Active</div></div></label></div></div></div></li><li><div class="item-content"><div class="item-media"></div><div class="item-inner"><div class="item-title label">Start Date</div><div class="item-input"><input type="text" name="medi_sdate" id="medi_sdate_'+count+'" placeholder="Start Date"></div></div></div></li><li><div class="item-content text3" ><div class="item-media"></div><div class="item-inner " id="dvPassport"><div class="item-title label">Resolved(Date)</div><div class="item-input" ><input type="text" name="medi_rdate" id="medi_rdate_'+count+'" placeholder="Resolved(Date)"></div></div></div></li><li><div class="item-content" ><div class="item-media"></div><div class="item-inner "><div class="item-title label">Description</div><div class="item-input" ><input type="text" name="medi_descr" id="medi_descr_'+count+'" placeholder="Description"></div></div></div></li></ul>';
+
+	$("#responce20").append(column);
+	DieasesName(count);
+	// displayMediHisOtherField(count);
+	getcalendarMedihis(count);
+	getcalendarMedihis1(count);
+}
+function showDiv(obj,id) {
+	debugger
+
+	if (obj.checked) {
+		document.getElementById('content_'+id).innerHTML = '<li><div class="item-content"><div class="item-media"></div><div class="item-inner"><div class="item-title label"></div><div class="item-input"><input type="text" name="family_his_mot" id="family_his_mot_'+id+'" ></div></div></div></li>';
+	}else{
+			document.getElementById('content_'+id).innerHTML = '';
+		}
+}
+function showDiv1(obj,id) {
+	debugger
+	if (obj.checked) {
+		document.getElementById('content1_'+id).innerHTML = '<li><div class="item-content"><div class="item-media"></div><div class="item-inner"><div class="item-title label"></div><div class="item-input"><input type="text" name="family_his_fat" id="family_his_fat_'+id+'" ></div></div></div></li>';
+		}
+		else {
+			document.getElementById('content1_'+id).innerHTML = '';
+		}
+}
+function showDiv2(obj,id) {
+debugger
+	if (obj.checked) {
+		document.getElementById('content2_'+id).innerHTML = '<li><div class="item-content"><div class="item-media"></div><div class="item-inner"><div class="item-title label"></div><div class="item-input"><input type="text" name="family_his_sib" id="family_his_sib_'+id+'" ></div></div></div></li>';
+	}
+	else {
+		document.getElementById('content2_'+id).innerHTML = '';
+	}
+}
+//physical form
+function addFields3()
+{
+	var count = $('#count').val();
+	count = parseInt(count)+1;
+	count1 = parseInt(count)+2;
+	$("#count").val(count);
+
+	var name="<li><div class='item-content'><div class='item-media'></div><div class='item-inner'><div class='item-title label'>Physical exam</div><div class='item-input' id='addPhysicalexam_"+count+"'><input type='text' name='physical_exam_name' id='physical_exam_name_"+count+"' placeholder='Physical Exam '><input type='hidden' id='physical_exam_name_id_"+count+"'/></div></div></div></li><li id='physical_exam_name_others_li_"+count+"' style='display:none;'><div class='item-content'><div class='item-media'></div><div class='item-inner'><div class='item-title label'>Others</div><div class='item-input'><input type='text' name='physical_exam_name_others_0' id='physical_exam_name_others_"+count+"' placeholder='Specify'><input type='hidden' name='physical_exam_name_others_id' id='physical_exam_name_others_id_"+count+"'/></div></div></div></li>";
+	var name1="<div class='item-content'><div class='item-media'></div><div class='item-inner'><label class='label-checkbox item-content' style='float:left;width: 50%;'><input type='radio' name='physical_n_"+count1+"' id='physical_n_"+count+"' value='1'><div class='item-media'><i class='icon icon-form-checkbox'></i></div><div class='item-inner'><div class='item-title'>Normal ?</div></div></label><label class='label-checkbox item-content'><input type='radio' name='physical_n_"+count1+"' id='physical_ab_"+count+"' value='0' ><div class='item-media'><i class='icon icon-form-checkbox'></i></div><div class='item-inner'><div class='item-title'>Abnormal ?</div></div></label></div></div>";
+	var desc="<div class='item-content'><div class='item-media'></div><div class='item-inner'><div class='item-title label'>Description</div><div class='item-input'><input type='text' name='physical_desc' id='physical_desc_"+count+"' placeholder='Description '></div></div></div>";
+	$("#responce3").append(name,name1,desc);
+	PhysicalExamVal(count);
+}
+
+function addFieldsLabFields(){
+	var count123 = $('#count123').val();
+	count123 = parseInt(count123)+1;
+	$("#count123").val(count123);
+	if (count123 == 1) {
+		$("#displaythefi").css('display','none');
+	}
+	if (count123 != 1) {
+		var namess = "<li id='displaythefi'><div class='item-content'><div class='item-media'></div><div class='item-inner'><div class='item-input' id='addLabRecords_"+count123+"'><input type='text' name='recordsfield' id='recordsfield_"+count123+"' placeholder='Records Fields' value='' required='required'/></div><div class='item-input' style='display: inline-flex;'><input type='number' name='name_"+count123+"' id='recordsvalue_"+count123+"' placeholder='Records Value' style='width: 94%;display: -moz-inline-box;font-size:13px;'/></div></div></div></li><li id='lab_name_others_value_li_"+count123+"' style='display:none;'><div class='item-content'><div class='item-media'></div><div class='item-inner'><div class='item-title label'><input type='text' name='lab_rec_text_val_"+count123+"' id='lab_rec_text_val_"+count123+"' placeholder='recordsfield' style='font-size: 13px;'></div><div class='item-input'><input type='number' name='lab_rec_val_"+count123+"' id='lab_rec_val_"+count123+"' placeholder='recordsvalue' style='font-size: 13px;'><input type='hidden' name='lab_rec_val_id' id='lab_rec_val_id_"+count123+"'/></div></div></div></li>";
+		$("#responce10").append(namess);
+	}
+	labRecordsExtraValues(count123);
+}
+
+function labRecordsExtraValues(ele){
+	var idss = $('#cat_id').val();
+	var url= "http://www.healthrecordspro.com/ws.php?type=select_one&format=json&table=labsRecords&columns=*&condition=Catid="+idss;
+	$.getJSON (url, function (json) {
+		var text = "";
+			text += "<select name='recordsfield' id='recordsfield_"+ele+"' onchange='labdataExtrafield(this,"+ele+")' style='font-size: 13px;'>"
+					+ "<option value='0'>Select</option>";
+		$.each( json['posts'], function( key, val ) {
+			if (val['defaultvalue'] == 0) {
+				text += "<option value='"+val['lab_id']+"'>"+val['name']+",'NV='"+val['normalvalue']+"</option>";
+			}
+		});
+		text += "<option value='-1'>Others</option>";
+		text += "</select>";
+		$("#addLabRecords_"+ele).html(text);
+	});
+}
+function labdataExtrafield(thiss,elee){
+	var val = thiss.value;
+	if( val == -1){
+		$('#lab_name_others_value_li_'+elee).css('display','block');
+
+	}else{
+		$('#lab_name_others_value_li_'+elee).css('display','none');
+	}
+	// $('#recordsvalue_'+elee).val(thiss.value);
+	$('#recordsvalue_'+elee).attr('name',"name_"+thiss.value);
+	$('#recordsvalue_'+elee).attr('id',"value_"+ thiss.value);
+}
+//immunization
+function addFields6()
+{
+
+	var count = $('#rowIdFH11').val();
+	count = parseInt(count)+1;
+	$("#rowIdFH11").val(count);
+	
+	var name='<ul style="background-color:#FFFFFF;margin-left: -45px;"><li><div class="item-content"><div class="item-media"></div><div class="item-inner"><div class="item-title label" >Medicine Name :  </div><div class="item-input" id="addselectmedicinename_'+count+'"><input type="text" name="immu_name" id="immu_name_'+count+'" placeholder="Select Name"/><input type="hidden" name="immu_name_id" id="immu_name_id_'+count+'" placeholder="Select Name"  /></div></div></div></li><li id="immu_name_others_li_'+count+'" style="display:none;"><div class="item-content"><div class="item-media"></div><div class="item-inner"><div class="item-title label" >Others</div><div class="item-input"><input type="text" name="immu_name_others_0" id="immu_name_others_'+count+'" placeholder="Specify"/><input type="hidden" name="immu_name_id" id="immu_name_id_'+count+'"/></div></div></div></li><li><div class="item-content"><div class="item-media"></div><div class="item-inner"><div class="item-title label">Booster1 : </div><div class="item-input"><input type="text" name="boost1" id="boost1_'+count+'" placeholder="Booster1" /></div></div></div></li><li><div class="item-content"><div class="item-media"></div><div class="item-inner"><div class="item-title label">Booster2 : </div><div class="item-input"><input type="text" name="boost2" id="boost2_'+count+'" placeholder="Booster2"  /></div></div></div></li><li><div class="item-content"><div class="item-media"></div><div class="item-inner"><div class="item-title label">Booster3 : </div><div class="item-input"><input type="text" name="boost3" id="boost3_'+count+'" placeholder="Booster3"  /></div></div></div></li></ul>';
+
+$("#responce21").append(name);
+	MedicineName(count);
+	getimmuCalander(count);
+	getimmuCalander1(count);
+	getimmuCalander2(count);
+}
+//family pedriction
+function addFields8()
+{
+	
+	var count = $('#rowIdFH').val();
+	count = parseInt(count)+1;
+	$("#rowIdFH").val(count);
+
+	var prname="<h4><div style='margin-left: 28px;'>Contact Information for Parent "+count+"</div></h4><li><div class='item-content'><div class='item-media'></div><div class='item-inner'><div class='item-title label'>Name</div><div class='item-input'><input type='text' name='fam_ped_his_pname' id='fam_ped_his_pname_"+count+"'' placeholder='Name'></div></div></div></li><li><div class='item-content ' ><div class='item-media'></div><div class='item-inner'><div class='item-title label'>Email</div><div class='item-input'><input type='text' name='fam_ped_his_pemail' id='fam_ped_his_pemail_"+count+"'' placeholder='Email'></div></div></div></li><li><div class='item-content ' ><div class='item-media'></div><div class='item-inner'><div class='item-title label'>Home address</div><div class='item-input'><input type='text' name='fam_ped_his_hadres' id='fam_ped_his_hadres_"+count+"'' placeholder='Home address'></div></div></div></li><li><div class='item-content ' ><div class='item-media'></div><div class='item-inner'><div class='item-title label'>Home Phone</div><div class='item-input'><input type='text' name='fam_ped_his_pephne' id='fam_ped_his_pephne_"+count+"'' placeholder='Home Phone'></div></div></div></li><li><div class='item-content ' ><div class='item-media'></div><div class='item-inner'><div class='item-title label'>Work Phone</div><div class='item-input'><input type='text' name='fam_ped_his_pewpnno' id='fam_ped_his_pewpnno_"+count+"'' placeholder='Work Phone'></div></div></div></li><li><div class='item-content ' ><div class='item-media'></div><div class='item-inner'><div class='item-title label'>Cell/Other</div><div class='item-input'><input type='text' name='fam_ped_his_pecel' id='fam_ped_his_pecel_"+count+"'' placeholder='Cell/Other'></div></div></li>";
+	$("#responce8").append(prname);
+
+}
+
+function deleteFields8(id){
+
+	var rowIdFH = $('#rowIdFH').val();
+
+	$('#fam_ped_his_pname_'+rowIdFH).parent('div').parent('div').parent('div').parent('li').remove();
+	$('#fam_ped_his_pemail_'+rowIdFH).parent('div').parent('div').parent('div').parent('li').remove();
+	$('#fam_ped_his_hadres_'+rowIdFH).parent('div').parent('div').parent('div').parent('li').remove();
+	$('#fam_ped_his_pephne_'+rowIdFH).parent('div').parent('div').parent('div').parent('li').remove();
+	$('#fam_ped_his_pewpnno_'+rowIdFH).parent('div').parent('div').parent('div').parent('li').remove();
+	$('#fam_ped_his_pecel_'+rowIdFH).parent('div').parent('div').parent('div').parent('li').remove();
+	
+	rowIdFH = parseInt(rowIdFH)-1;
+	$("#rowIdFH").val(rowIdFH);
+}
+//organ donations
+$(document).ready(function() {
+	$(".text").hide();
+});
+function getResults(elem) {
+	elem.checked && elem.value == "1" ? $(".text").show() : $(".text").hide();
+};
+$(document).ready(function() {
+	$(".text1").hide();
+});
+function getResults1(elem) {
+	elem.checked && elem.value == "1" ? $(".text1").show() : $(".text1").hide();
+};
+$(document).ready(function() {
+	$(".text2").hide();
+});
+function getResults2(elem) {
+	elem.checked && elem.value == "1" ? $(".text2").show() : $(".text2").hide();
+};
+
+//medical history
+$(document).ready(function() {
+	$(".text3").hide();
+});
+function getResults3(elem) {
+	elem.checked && elem.value == "1" ? $(elem).parent().parent().parent().parent().parent().next().next().children().hide() : $(elem).parent().parent().parent().parent().parent().next().next().children().show();
+};
+
+//family history for checkboxes
+$(document).ready(function() {
+	$(".text4").hide();
+});
+function getResults4(elem) {
+	elem.checked && elem.value == "1" ? $(".text4").show() : $(".text4").hide();
+};
+
+$(document).ready(function() {
+	$(".text5").hide();
+});
+function getResults5(elem) {
+	elem.checked && elem.value == "1" ? $(".text5").show() : $(".text5").hide();
+};
+
+$(document).ready(function() {
+	$(".text6").hide();
+});
+function getResults6(elem) {
+	elem.checked && elem.value == "1" ? $(".text6").show() : $(".text6").hide();
+};
+
+//womens section
+$(document).ready(function() {
+	$(".text7").hide();
+});
+function getResults7(elem) {
+	elem.checked && elem.value == "0" ? $(".text7").hide() : $(".text7").show();
+};
+function ShowHideDiv(gyne_his_have_abpap) {
+	var dvPassport = document.getElementById("dvPassport");
+	var dvPassport1 = document.getElementById("dvPassport1");
+	dvPassport.style.display = gyne_his_have_abpap.checked ? "block" : "none";
+	dvPassport1.style.display = gyne_his_have_abpap.checked ? "block" : "none";
+}
+function ShowHideDiv1(gyne_his_have_sex_trinf) {
+	var dvPassport3 = document.getElementById("dvPassport3");
+	dvPassport3.style.display = gyne_his_have_sex_trinf.checked ? "block" : "none";
+}
+
+function checkAll(ele) {
+	var checkboxes = document.getElementsByClassName('mon');
+	if(ele.checked) {$('.mon').prop('checked', true);}else{ $('.mon').prop('checked', false);}
+}
+</script>
+
+	<script type="text/javascript">
+
+function MedicineName(ele,mediName){
+
+	var url="http://www.healthrecordspro.com/ws.php?type=select&format=json&table=immunization_types&limit=250&columns=immunizations_type_id,type&condition=1";
+	$.getJSON (url, function (json) {
+		var text = "";
+		var selectText1 = "";
+		text += "<i class='fa fa-sort-desc' style='float:right;font-size: 30px;position: absolute;right: 6px;'></i><select name='immu_name' id='immu_name_"+ele+"' onchange='displayImmuOtherField(this,"+ele+")'>"
+				+ "<option value='0'>Select</option>";
+		$.each( json['posts'], function( key, val ) {
+			var selectText = "";
+			if( mediName ==  val['immunizations_type_id'] ){
+					selectText = "selected = selected";
+				}
+			text += "<option value='"+val['immunizations_type_id']+"' "+selectText+" >"+val['type']+"</option>";
+
+		});
+		if( mediName ==  -1){
+					selectText1 = "selected = selected";
+				}
+		text += "<option value='-1'  "+selectText1+" >Others</option>";
+		text += "</select>";
+		$("#addselectmedicinename_"+ele).html(text);
+	});
+
+}
+
+function displayImmuOtherField(elem,id)
+{
+	var val = elem.value;
+
+	if( val == -1){
+		$('#immu_name_others_li_'+id).css('display','block');
+
+	}else{
+		$('#immu_name_others_li_'+id).css('display','none');
+	}
+}
+
+function Speciality( selectedId ){
+
+	var url="http://www.healthrecordspro.com/ws.php?type=select&format=json&table=doctors_speciality&limit=250&columns=id,name&condition=1";
+	$.getJSON (url, function (json) {
+
+		var text = "";
+		var selectText = "";
+			text += "<i class='fa fa-sort-desc' style='float:right;font-size: 30px;position: absolute;right: 6px;'></i><select name='doc_apoint_speciality' id='doc_apoint_speciality' onchange='displayOtherField(this)'>"
+			+ "<option value='0'>Select</option>";
+				$.each( json['posts'], function( key, val ) {
+					var selectText1 = "";
+				if( selectedId ==  val['id'] ){
+					selectText1 = "selected = selected";
+				}
+				text += "<option value='"+val['id']+"' "+selectText1+" >"+val['name']+"</option>";
+			});
+				if( selectedId ==  -1){
+					selectText = "selected = selected";
+				}
+			text += "<option value='-1'  "+selectText+" >Others</option>";
+			text += "</select>";
+		$("#addselectspeciality").html(text);
+	});
+
+}
+function displayOtherField( ele )
+{
+	var val = ele.value;
+
+	if( val == -1){
+		$('#doc_apoint_speciality_others_li').css('display','block');
+
+	}else{
+		$('#doc_apoint_speciality_others_li').css('display','none');
+	}
+
+}
+
+function FamilyHisTypes(selecid){
+	var url="http://www.healthrecordspro.com/ws.php?type=select&format=json&table=familyhistory&limit=250&columns=id,type&condition=1";
+		$.getJSON (url, function (json) {
+			var text = "";
+			var selectText1 = "";
+			text += "<i class='fa fa-sort-desc' style='float:right;font-size: 30px;position: absolute;right: 6px;'></i><select name='family_his_speciality' id='family_his_speciality' onchange='displayFamilyHisOtherField(this)'>"
+				+ "<option value='0'>Select</option>";
+			$.each( json['posts'], function( key, val ) {
+				var selectText = "";
+				if( selecid ==  val['id'] ){
+						selectText = "selected = selected";
+					}
+				text += "<option value='"+val['id']+"' "+selectText+" >"+val['type']+"</option>";
+				
+			});
+			if( selecid ==  -1){
+						selectText1 = "selected = selected";
+					}
+			text += "<option value='-1'  "+selectText1+" >Others</option>";
+			text += "</select>";
+			$("#displayFamilyHis").html(text);
+		});
+}
+
+function displayFamilyHisOtherField(ele)
+{
+	var val = ele.value;
+
+	if( val == -1){
+		$('#family_his_speciality_li').css('display','block');
+
+	}else{
+		$('#family_his_speciality_li').css('display','none');
+	}
+}
+
+//family cause of death
+function FamilyHisCauseofD(ele,selecid){
+	var url="http://www.healthrecordspro.com/ws.php?type=select&format=json&table=familycauseofdeath&limit=250&columns=id,name&condition=1";
+	$.getJSON (url, function (json) {
+		var text = "";
+		var selectText1 = "";
+		text += "<i class='fa fa-sort-desc' style='float:right;font-size: 30px;position: absolute;right: 6px;'></i><select name='family_his_causeofDe' id='family_his_causeofDe_"+ele+"' onchange='displayFamilyCauseDOtherField(this,"+ele+")'>"
+			+ "<option value='0'>Select</option>";
+		$.each( json['posts'], function( key, val ) {
+			var selectText = "";
+			if( selecid ==  val['id'] ){
+					selectText = "selected = selected";
+				}
+			text += "<option value='"+val['id']+"' "+selectText+" >"+val['name']+"</option>";
+
+		});
+		if( selecid ==  -1){
+					selectText1 = "selected = selected";
+				}
+		text += "<option value='-1'  "+selectText1+" >Others</option>";
+		text += "</select>";
+		$("#displayFamilyCausD_"+ele).html(text);
+	});
+}
+function displayFamilyCauseDOtherField(ele,id)
+{
+	var val = ele.value;
+
+	if( val == -1){
+		$('#family_cuses_of_de_li_'+id).css('display','block');
+
+	}else{
+		$('#family_cuses_of_de_li_'+id).css('display','none');
+	}
+}
+
+function PhysicalExamSpeciality( selectedId1 ){
+
+	var url="http://www.healthrecordspro.com/ws.php?type=select&format=json&table=doctors_speciality&limit=250&columns=id,name&condition=1";
+	$.getJSON (url, function (json) {
+
+		var text = "";
+			text += "<i class='fa fa-sort-desc' style='float:right;font-size: 30px;position: absolute;right: 6px;'></i><select name='physical_speciality' id='physical_speciality'>"
+			+ "<option value='0'>Select</option>";
+				$.each( json['posts'], function( key, val ) {
+					var selectText1 = "";
+				if( selectedId1 ==  val['id'] ){
+					selectText1 = "selected = selected";
+				}
+				text += "<option value='"+val['id']+"' "+selectText1+" >"+val['name']+"</option>";
+			});
+				
+			text += "</select>";
+		$("#addSpecialityPhy").html(text); 
+	});
+
+}
+
+function DieasesName(ele,medidie){
+
+var url="http://www.healthrecordspro.com/ws.php?type=select&format=json&table=illnesses&limit=250&columns=id,name&condition=1";
+	$.getJSON (url, function (json) {
+		var text = "";
+		var selectText1 = "";
+		text += "<select name='medi_his_name' id='medi_his_name_"+ele+"' onchange='displayMediHisOtherField(this,"+ele+")'>"
+			+ "<option value='0'>Select</option>";
+		$.each( json['posts'], function( key, val ) {
+			var setText = "";
+			if( medidie ==  val['id'] ){
+					setText = "selected = selected";
+				}
+			text += "<option value='"+val['id']+"' "+setText+" >"+val['name']+"</option>";
+			
+		});
+		if( medidie ==  -1){
+					selectText1 = "selected = selected";
+				}
+		text += "<option value='-1'  "+selectText1+" >Others</option>";
+		text += "</select>";
+		$("#addselectdieases_"+ele).html(text);	
+	});
+
+}
+
+function displayMediHisOtherField(elem,id)
+{
+	var val = elem.value;
+
+	if( val == -1){
+		$('#medi_his_name_others_li_'+id).css('display','block');
+
+	}else{
+		$('#medi_his_name_others_li_'+id).css('display','none');
+	}
+}
+function FamilyHistoryType(){
+
+	var url="http://www.healthrecordspro.com/ws.php?type=select&format=json&table=familyhistory&limit=250&columns=id,type&condition=1";
+	$.getJSON (url, function (json) {
+		var text = "";
+		text += "<select name='typename' id='typename'>"
+			+ "<option value='0'>Select</option>";
+		$.each( json['posts'], function( key, val ) {
+			text += "<option value='"+val['id']+"'>"+val['type']+"</option>";
+
+		});
+		text += "</select>";
+		$("#addselecttype").html(text);
+	});
+
+}
+function FamilyCausesOfDeType(){
+
+	var url="http://www.healthrecordspro.com/ws.php?type=select&format=json&table=familycauseofdeath&limit=250&columns=id,name&condition=1";
+	$.getJSON (url, function (json) {
+		var text = "";
+		text += "<select name='causesofdeath' id='causesofdeath'>";
+
+		$.each( json['posts'], function( key, val ) {
+			text += "<option value='"+val['id']+"'>"+val['name']+"</option>";
+
+		});
+		text += "</select>";
+		$("#addcauseofdeath").html(text);
+	});
+
+}
+function healthProSpeciality(selecid){
+
+	var url="http://www.healthrecordspro.com/ws.php?type=select&format=json&table=doctors_speciality&limit=250&columns=id,name&condition=1";
+	$.getJSON (url, function (json) {
+		var text = "";
+
+		text += "<i class='fa fa-sort-desc' style='float:right;font-size: 30px;position: absolute;right: 6px;'></i><select name='hp_speciality' id='hp_speciality'>"
+			+ "<option value='0'>Select</option>";
+		$.each( json['posts'], function( key, val ) {
+			var selectText = "";
+			if( selecid ==  val['id'] ){
+					selectText = "selected = selected";
+				}
+			text += "<option value='"+val['id']+"' "+selectText+" >"+val['name']+"</option>";
+
+		});
+		text += "</select>";
+		$("#docSpeciality").html(text);
+	});
+
+}
+
+function birthpedhiscname(){
+	var storedData1 = myApp.formGetData('logged_userId');
+	var url="http://www.healthrecordspro.com/ws.php?type=select&format=json&table=pediatricsfamilyhistory&limit=250&columns=id,childName&condition=customerId="+storedData1['userId'];
+	$.getJSON (url, function (json) {
+		var text = "";
+		text += "<i class='fa fa-sort-desc' style='float:right;font-size: 30px;position: absolute;right: 6px;'></i><select name='birth_his_cname' id='birth_his_cname'>"
+			+ "<option value='0'>Select</option>";
+		$.each( json['posts'], function( key, val ) {
+			text += "<option value='"+val['id']+"'>"+val['childName']+"</option>";
+
+		});
+		text += "</select>";
+		$("#birth_his_chaildname").html(text);
+	});
+
+}
+function developmentHiscname(){
+
+	var storedData1 = myApp.formGetData('logged_userId');
+	var url="http://www.healthrecordspro.com/ws.php?type=select&format=json&table=pediatricsfamilyhistory&limit=250&columns=id,childName&condition=customerId="+storedData1['userId'];
+	$.getJSON (url, function (json) {
+		var text = "";
+		text += "<i class='fa fa-sort-desc' style='float:right;font-size: 30px;position: absolute;right: 6px;'></i><select name='deve_his_chainame' id='deve_his_chainame'>"
+			+ "<option value='0'>Select</option>";
+		$.each( json['posts'], function( key, val ) {
+			text += "<option value='"+val['id']+"'>"+val['childName']+"</option>";
+
+		});
+		text += "</select>";
+		$("#develophistory").html(text);
+	});
+
+}
+
+function pastmedicalHiscname(){
+
+	var storedData1 = myApp.formGetData('logged_userId');
+	var url="http://www.healthrecordspro.com/ws.php?type=select&format=json&table=pediatricsfamilyhistory&limit=250&columns=id,childName&condition=customerId="+storedData1['userId'];
+	$.getJSON (url, function (json) {
+		var text = "";
+		text += "<i class='fa fa-sort-desc' style='float:right;font-size: 30px;position: absolute;right: 6px;'></i><select name='past_medi_his_chainame' id='past_medi_his_chainame'>"
+			+ "<option value='0'>Select</option>";
+		$.each( json['posts'], function( key, val ) {
+			text += "<option value='"+val['id']+"'>"+val['childName']+"</option>";
+
+		});
+		text += "</select>";
+		$("#develophistory").html(text);
+	});
+}
+
+function PhysicianNameExams(selectIds){
+	var storedData1 = myApp.formGetData('logged_userId');
+
+		var url="http://www.healthrecordspro.com/ws.php?type=select&format=json&table=healthcare_providers&limit=250&columns=hcp_id,first_name&condition=user_id="+storedData1['userId'];
+		$.getJSON (url, function (json) {
+			var text = "";
+			text += "<i class='fa fa-sort-desc' style='float:right;font-size: 30px;position: absolute;right: 6px;'></i><select name='physical_name' id='physical_name'>"
+				+ "<option value='0'>Select</option>";
+			$.each( json['posts'], function( key, val ) {
+				var selectedText = "";
+
+				if( selectIds ==  val['hcp_id'] ){
+					selectedText = "selected = selected";
+				}
+				text += "<option value='"+val['hcp_id']+"'  "+selectedText+" >"+val['first_name']+"</option>";
+			});
+			text += "</select>";
+			$("#physicianNameExams").html(text);
+		});
+}
+
+function physicianProvider( selectedIds ){
+
+var storedData1 = myApp.formGetData('logged_userId');
+
+var url="http://www.healthrecordspro.com/ws.php?type=select&format=json&table=healthcare_providers&limit=250&columns=hcp_id,first_name&condition=user_id="+storedData1['userId'];
+	$.getJSON (url, function (json) {
+		var text = "";
+		var selectedText1 = "";
+		text += "<i class='fa fa-sort-desc' style='float:right;font-size: 30px;position: absolute;right: 6px;'></i><select name='doc_apoint_phyname' id='doc_apoint_phyname' onchange='displayPhysicianProOtherField(this)'>"
+			+ "<option value='0'>Select</option>";
+		$.each( json['posts'], function( key, val ) {
+			var selectedText = "";
+			if( selectedIds ==  val['hcp_id'] ){
+					selectedText = "selected = selected";
+				}
+			text += "<option value='"+val['hcp_id']+"'  "+selectedText+" >"+val['first_name']+"</option>";
+
+		});
+		if( selectedIds ==  -1){
+					selectedText1 = "selected = selected";
+				}
+		text += "<option value='-1'  "+selectedText1+" >Others</option>";
+		text += "</select>";
+		$("#addphysicianprovider").html(text);
+	});
+
+}
+
+function displayPhysicianProOtherField(ele)
+{
+	var val = ele.value;
+
+	if( val == -1){
+		$('#doc_apoint_phyname_others_li').css('display','block');
+
+	}else{
+		$('#doc_apoint_phyname_others_li').css('display','none');
+	}
+}
+
+function organphysicianProvider(){
+
+var storedData1 = myApp.formGetData('logged_userId');
+var url="http://www.healthrecordspro.com/ws.php?type=select&format=json&table=healthcare_providers&limit=250&columns=hcp_id,first_name&condition=user_id="+storedData1['userId'];
+	$.getJSON (url, function (json) {
+		var text = "";
+		text += "<select name='organ_name_doc' id='organ_name_doc'>"
+			+ "<option value='0'>Select</option>";
+		$.each( json['posts'], function( key, val ) {
+			text += "<option value='"+val['hcp_id']+"'>"+val['first_name']+"</option>";
+			
+		});
+		text += "</select>";
+		$("#orgphysicianprovider").html(text);
+	});
+
+}
+
+function organphysiciProvider(){
+
+	var storedData1 = myApp.formGetData('logged_userId');
+	var url="http://www.healthrecordspro.com/ws.php?type=select&format=json&table=healthcare_providers&limit=250&columns=hcp_id,first_name&condition=user_id="+storedData1['userId'];
+	$.getJSON (url, function (json) {
+		var text = "";
+		text += "<select name='organ_name_doc1' id='organ_name_doc1'>"
+			+ "<option value='0'>Select</option>";
+		$.each( json['posts'], function( key, val ) {
+			text += "<option value='"+val['hcp_id']+"'>"+val['first_name']+"</option>";
+
+		});
+		text += "</select>";
+		$("#orgphysicianprovi").html(text);
+	});
+
+}
+function prescribed(medicaId){
+
+	var storedData1 = myApp.formGetData('logged_userId');
+	var url="http://www.healthrecordspro.com/ws.php?type=select&format=json&table=healthcare_providers&limit=250&columns=hcp_id,first_name&condition=user_id="+storedData1['userId'];
+	$.getJSON (url, function (json) {
+		var text = "";
+		var selectText1 = "";
+		text += "<i class='fa fa-sort-desc' style='float:right;font-size: 30px;position: absolute;right: 6px;'></i><select name='medi_precribed' id='medi_precribed' onchange='displayMedicationOthe(this)'>"
+			+ "<option value='0'>Select</option>";
+		$.each( json['posts'], function( key, val ) {
+			var selectText = "";
+
+			if( medicaId ==  val['hcp_id'] ){
+					selectText = "selected = selected";
+				}
+			text += "<option value='"+val['hcp_id']+"' "+selectText+" >"+val['first_name']+"</option>";
+
+		});
+		if( medicaId ==  -1){
+					selectText1 = "selected = selected";
+				}
+		text += "<option value='-1'  "+selectText1+" >Others</option>";
+		text += "</select>";
+		$("#addprescribed").html(text);
+	});
+
+}
+function displayMedicationOthe(ele)
+{
+	var val = ele.value;
+
+	if( val == -1){
+		$('#medi_precribed_others_li').css('display','block');
+
+	}else{
+		$('#medi_precribed_others_li').css('display','none');
+	}
+}
+
+function childname(childnme){
+
+	var storedData1 = myApp.formGetData('logged_userId');
+	var url="http://www.healthrecordspro.com/ws.php?type=select&format=json&table=pediatricschild&limit=250&columns=id,childname&condition=customerId="+storedData1['userId'];
+	$.getJSON (url, function (json) {
+		var text = "";
+		text += "<i class='fa fa-sort-desc' style='float:right;font-size: 30px;position: absolute;right: 6px;'></i><select name='past_medi_his_chainame' id='past_medi_his_chainame'>"
+			+ "<option value='0'>Select</option>";
+		$.each( json['posts'], function( key, val ) {
+			var selectText = "";
+			if( childnme ==  val['id'] ){
+					selectText = "selected = selected";
+				}
+
+			text += "<option value='"+val['id']+"' "+selectText+" >"+val['childname']+"</option>";
+
+		});
+		text += "</select>";
+		$("#childname").html(text);
+	});
+
+}
+function childnamebirth(chldNme){
+
+	var storedData1 = myApp.formGetData('logged_userId');
+	var url="http://www.healthrecordspro.com/ws.php?type=select&format=json&table=pediatricschild&limit=250&columns=id,childname&condition=customerId="+storedData1['userId'];
+	$.getJSON (url, function (json) {
+		var text = "";
+		text += "<i class='fa fa-sort-desc' style='float:right;font-size: 30px;position: absolute;right: 6px;'></i><select name='birth_his_cname' id='birth_his_cname'>"
+			+ "<option value='0'>Select</option>";
+		$.each( json['posts'], function( key, val ) {
+			var selectText = "";
+			if( chldNme ==  val['id'] ){
+					selectText = "selected = selected";
+				}
+
+			text += "<option value='"+val['id']+"' "+selectText+" >"+val['childname']+"</option>";
+
+		});
+		text += "</select>";
+		$("#birth_his_chaildname").html(text);
+	});
+
+}
+function developmentHiscname(devCname){
+
+	var storedData1 = myApp.formGetData('logged_userId');
+	var url="http://www.healthrecordspro.com/ws.php?type=select&format=json&table=pediatricschild&limit=250&columns=id,childname&condition=customerId="+storedData1['userId'];
+	$.getJSON (url, function (json) {
+		var text = "";
+		text += "<i class='fa fa-sort-desc' style='float:right;font-size: 30px;position: absolute;right: 6px;'></i><select name='deve_his_chainame' id='deve_his_chainame'>"
+			+ "<option value='0'>Select</option>";
+		$.each( json['posts'], function( key, val ) {
+			var SelectText = "";
+			if( devCname ==  val['id'] ){
+					SelectText = "selected = selected";
+				}
+			text += "<option value='"+val['id']+"' "+SelectText+" >"+val['childname']+"</option>";
+
+		});
+		text += "</select>";
+		$("#develophistory").html(text);
+	});
+
+}
+function familypedChild(fampedchd){
+
+	var storedData1 = myApp.formGetData('logged_userId');
+	var url="http://www.healthrecordspro.com/ws.php?type=select&format=json&table=pediatricschild&limit=250&columns=id,childname&condition=customerId="+storedData1['userId'];
+	$.getJSON (url, function (json) {
+		var text = "";
+		text += "<i class='fa fa-sort-desc' style='float:right;font-size: 30px;position: absolute;right: 6px;'></i><select name='fam_ped_his_cn' id='fam_ped_his_cn'>"
+			+ "<option value='0'>Select</option>";
+		$.each( json['posts'], function( key, val ) {
+			var selectText = "";
+			if( fampedchd ==  val['id'] ){
+					selectText = "selected = selected";
+				}
+
+			text += "<option value='"+val['id']+"' "+selectText+" >"+val['childname']+"</option>";
+
+		});
+		text += "</select>";
+		$("#familypedch").html(text);
+	});
+
+}
+function FormCountry(){
+
+	//var storedData1 = myApp.formGetData('logged_userId');
+	var url="http://www.healthrecordspro.com/ws.php?type=select&format=json&table=country&limit=250&columns=id,name&condition=1";
+	$.getJSON (url, function (json) {
+		console.log(json['posts']);
+		var text = "";
+		text += "<i class='fa fa-sort-desc' style='float:right;font-size: 30px;position: absolute;right: 6px;'></i><select name='countryform' id='countryform'>"
+			+ "<option value='0'>Select</option>";
+		$.each( json['posts'], function( key, val ) {
+			console.log(val['id']);
+			text += "<option value='"+val['id']+"'>"+val['name']+"</option>";
+
+		});
+		text += "</select>";
+		$("#addcountries").html(text);
+	});
+
+}
+
+function userOccupation(){
+	var storedData1 = myApp.formGetData('logged_userId');
+	var url="http://www.healthrecordspro.com/ws.php?type=select&format=json&table=occupation&limit=250&columns=id,occupation_name&condition=1";
+	$.getJSON (url, function (json) {
+		var text = "";
+		text += "<select name='comp_info_occu' id='comp_info_occu'>";
+
+		$.each( json['posts'], function( key, val ) {
+			text += "<option value='"+val['id']+"'>"+val['occupation_name']+"</option>";
+
+		});
+		text += "</select>";
+		$("#adduseroccuption").html(text);
+	});
+}
+//physicalexam
+function PhysicalExamVal(ele,physicalexn){
+
+	var url="http://www.healthrecordspro.com/ws.php?type=select&format=json&table=physicalexambodysystems&limit=250&columns=id,name&condition=1";
+	$.getJSON (url, function (json) {
+		var text = "";
+		var selectText1 = "";
+		text += "<i class='fa fa-sort-desc' style='float:right;font-size: 30px;position: absolute;right: 6px;'></i><select name='physical_exam_name' id='physical_exam_name_"+ele+"' onchange='displayPhysicalEOtherField(this,"+ele+")'>"
+			+ "<option value='0'>Select</option>";
+		$.each( json['posts'], function( key, val ) {
+		var selectText = "";
+			if( physicalexn ==  val['id'] ){
+					selectText = "selected = selected";
+				}
+			text += "<option value='"+val['id']+"' "+selectText+" >"+val['name']+"</option>";
+
+		});
+		if( physicalexn ==  -1){
+					selectText1 = "selected = selected";
+				}
+		text += "<option value='-1'  "+selectText1+" >Others</option>";
+		text += "</select>";
+		$("#addPhysicalexam_"+ele).html(text);
+	});
+
+}
+
+function displayPhysicalEOtherField(elem,id){
+	var val = elem.value;
+
+	if( val == -1){
+		$('#physical_exam_name_others_li_'+id).css('display','block');
+
+	}else{
+		$('#physical_exam_name_others_li_'+id).css('display','none');
+	}
+}
+
+function hideinput(count){
+	document.getElementById("value"+[count]).style.visibility = "hidden";
+}
+
+function showinput(count){
+	document.getElementById("value"+[count]).style.visibility = "visible";
+}
+
+function Checklogin(){
+	var storedData1 = myApp.formGetData('logged_userId');
+	if(storedData1['userId'] == ''){
+
+	}else{
+		selectHomepageDisplay();
+		// mainView.router.loadPage('loginnormal.html');
+	}
+
+
+
+}
+Checklogin();
+
+function calendarM()
+{
+
+	setTimeout(function(){
+		var storedData1 = myApp.formGetData('logged_userId');
+		if ($("#CalendarPlace").length > 0) {
+			$('#CalendarPlace').fullCalendar({
+				header: {
+					left: 'prev',
+					center: 'title',
+					right: 'next'
+				},
+				editable: false,
+				events: 'http://healthrecordspro.com/newsite/events.php?id='+storedData1['userId'],
+				eventClick: function(event, jsEvent, view) 
+				{
+				
+				$('jsEvent').addTouch();
+				
+					$.ajax({
+						type: 'POST',
+						url: 'http://healthrecordspro.com/newsite/eventsdetails.php?iid='+event['id'],
+						success:function (data) {
+							var popupHTML = '<div class="popup" style="background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;">'+
+												'<div class="list-block popup-self">'+
+													'<div class="content-block-title" style="text-align:-webkit-center;"><h3 style="font-size: 5vw;margin: 10px 0;">Medication Calendar</h3></div>'+
+													'<div class="item-media"></div>'+
+													'<div class="item-inner item-inner1">'+
+														'<div class="item-input">'+
+															data+
+													'</div>'+
+												'</div>'+
+												'<p align="right"><a href="medications.html" onclick="medicationEdit('+event['itemId']+');" style="width:20%;" class="button close-popup" id="button_search">Edit</a></p>'+
+												'<p><a href="#" style="color:black;float:right;position:absolute;top:0;right:0;" class="close-popup"><i class="fa fa-times-circle fa-2x" ></i></a></p>'+
+												'</div>'+
+											'</div>';
+
+							myApp.popup(popupHTML);
+						}
+					});
+					return false;
+					
+				}
+			});
+		}
+	},500);
+
+}
+
+function calendarA()
+{
+
+	setTimeout(function(){
+		var storedData1 = myApp.formGetData('logged_userId');
+		if ($("#CalendarPlace_Appoitment").length > 0) {
+			$('#CalendarPlace_Appoitment').fullCalendar({
+				header: {
+					left: 'prev',
+					center: 'title',
+					right: 'next'
+				},
+				editable: false,
+				events: 'http://healthrecordspro.com/newsite/dc_events.php?id='+storedData1['userId'],
+				eventClick: function(event, jsEvent, view) 
+				{
+					
+					$('jsEvent').addTouch();
+					
+					$.ajax({
+						type: 'POST',
+						url: 'http://healthrecordspro.com/newsite/dc_eventsdetails.php?iid='+event['id'],
+						success:function (data) {
+							var popupHTML = '<div class="popup" style="background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;">'+
+												'<div class="list-block popup-self">'+
+													'<div class="content-block-title" style="text-align:-webkit-center;"><h3 style="font-size: 5vw;margin: 10px 0;">Medication Calendar</h3></div>'+
+													'<div class="item-media"></div>'+
+													'<div class="item-inner item-inner1">'+
+														'<div class="item-input">'+
+															data+
+														'</div>'+
+													'</div>'+
+
+												'<p align="right"><a href="doctor_consultation.html" onclick="doctorsEdit('+event['id']+');" style="width:20%;" class="button close-popup" id="button_search">Edit</a></p>'+
+												'<p><a href="#" style="color:black;float:right; position:absolute;top:0;right:0;" class="close-popup"><i class="fa fa-times-circle fa-2x" ></i></a></p>'+
+											'</div>'+
+											'</div>'+
+											'</div>';
+
+							myApp.popup(popupHTML);
+						}
+					});
+					return false;
+					
+				}
+			});
+		}
+	},1000);
+
+}
+
+	
+	</script>
+	</body>
+</html>

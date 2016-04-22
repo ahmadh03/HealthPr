@@ -1,0 +1,101 @@
+<div class="navbar">
+   <div class="navbar-inner">
+     <div class="left sliding"><a href="loginnormal.html" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+     <div class="center sliding white" style="margin-right:80px;">Implants/Medical Devices</div>
+    <div class="right theme-white searchicon" >
+        <a href="#" onclick="implantdeviceforminfo()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i></a>
+      </div>
+      <div class="right theme-white navicon" >
+        <a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+        </a>
+      </div>
+   </div>
+ </div>
+ 
+ <div class="pages navbar-through">
+  	<div data-page="implants_medicaldevices_listing" class="page" >
+  		<div style="overflow-y:scroll; height:inherit">
+  			<div class="content-block-title" style="padding-top: 64px;font-size:18px;">List of all implants and medical devices.</div>
+  		
+			<div class="list-block" style="margin-bottom: 70px;">
+			  <ul style="background-color:#FFFFFF">
+			    <li>
+			      <div class="item-content">
+			        <div class="item-media"></div>
+			        <div class="item-inner">
+			          <div class="item-title label">Physician </div>
+			          <div class="item-input">
+			            <input type="text" name="implants_meddevices_physician" id="implants_meddevices_physician" placeholder="Physician  ">
+			          </div>
+			        </div>
+			      </div>
+			    </li>
+			    <li>
+			      <div class="item-content">
+			        <div class="item-media"></div>
+			        <div class="item-inner">
+			          <div class="item-title label">Hospital </div>
+			          <div class="item-input">
+			            <input type="text" name="implants_meddevices_hospital" id="implants_meddevices_hospital" placeholder="Hospital ">
+			          </div>
+			        </div>
+			      </div>
+			    </li>
+			    <li>
+			      <div class="item-content">
+			        <div class="item-media"></div>
+			        <div class="item-inner">
+			          <div class="item-title label">Date </div>
+			          <div class="item-input">
+			            <input type="text" name="implants_meddevices_date" id="implants_meddevices_date" placeholder="Date ">
+			          </div>
+			        </div>
+			      </div>
+			    </li>
+			    <li>
+			      <div class="item-content">
+			        <div class="item-media"></div>
+			        <div class="item-inner">
+			          <div class="item-title label">Type </div>
+			          <div class="item-input">
+			            <input type="text" name="implants_meddevices_type" id="implants_meddevices_type" placeholder="Type">
+			          </div>
+			        </div>
+			      </div>
+			    </li>
+			    <li>
+			      <div class="item-content">
+			        <div class="item-media"></div>
+			        <div class="item-inner">
+			          <div class="item-title label">Reason </div>
+			          <div class="item-input">
+			            <input type="text" name="implants_meddevices_reason" id="implants_meddevices_reason" placeholder="Reason  ">
+			          </div>
+			        </div>
+			      </div>
+			    </li>
+			    
+			  </ul>
+			  <input type="hidden" name="update_implants_id" id="update_implants_id" placeholder="id">
+		  </div>
+		</div>
+		<!-- <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;">
+    		<div class="toolbar-inner" style="background:#0DB7C4;">
+		      <a href="#" onclick="implantsdataSubmit();" class="link icon-only" style="color:white;border-right:1px white solid ">Submit</a>
+		      <a href="loginnormal.html"  class="link icon-only" style="color:white">Cancel</a>
+   			 </div>
+  		</div>   -->
+  		<div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;" id="implants_inbtn">
+      <div class="toolbar-inner" style="background:#0DB7C4;" >
+        <a href="#" class="link icon-only" onclick="implantsdataSubmit();" style="color:white;border-right:1px white solid ">Update</a>
+        <a href="#" onclick="deleteImplantsAndMedicalDevices();" class="link icon-only" style="color:white">Delete</a>
+      </div>
+    </div>  
+    <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;" id="implants_upbtn">
+      <div class="toolbar-inner" style="background:#0DB7C4;" >
+        <a href="#" class="link icon-only" onclick="implantsdataSubmit();" style="color:white;border-right:1px white solid ">Submit</a>
+        <a href="loginnormal.html" class="link icon-only" style="color:white">Cancel</a>
+      </div>
+    </div>	
+	</div>
+</div>

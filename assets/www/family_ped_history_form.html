@@ -1,0 +1,306 @@
+<div class="navbar">
+   <div class="navbar-inner">
+     <div class="left sliding"><a href="loginnormal.html" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+     <div class="center sliding white" style="margin-right:160px;">Family History</div>
+     <div class="right theme-white searchicon" >
+        <a href="#" onclick="familypediatrichistoryform()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i></a>
+      </div>
+      <div class="right theme-white navicon" >
+        <a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+        </a>
+      </div>
+   </div>
+ </div>
+ 
+<div class="pages navbar-through" >
+  	<div data-page="family_ped_history_form" class="page" > 
+  		<div style="overflow-y:scroll; height:inherit">
+    		<div class="content-block-title" style="padding-top: 48px;font-size:18px;"></div>
+    			<div class="list-block" style="margin-bottom:70px;">
+    				<ul style="background-color:#FFFFFF">
+						<li>
+					      <div class="item-content " >
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-title label">Date</div>
+					          <div class="item-input">
+					            <input type="text" name="fam_ped_his_huh" id="fam_ped_his_huh" placeholder="Date Completed">
+					          </div>
+					        </div>
+					      </div>
+			    		</li>
+			    		<li>
+					      <div class="item-content " >
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-title label">Child's Name</div>
+                    <!-- <i class="fa fa-sort-desc" style="float:right;font-size: 30px;position: absolute;right: 6px;margin-top: -22px;"></i> -->
+					          <div class="item-input" id="familypedch">
+					            <input type="text" name="fam_ped_his_cn" id="fam_ped_his_cn" placeholder="Child's Name">
+					            <input type="hidden" name="fam_ped_his_cn_id" id="fam_ped_his_cn_id" >
+					          </div>
+					        </div>
+					      </div>
+			    		</li>
+			    		<div id="parentcontact_hide">
+				    		<h4><div style="margin-left: 28px;">Contact Information for Parent</div></h4>
+				    		<li>
+				    			<input type="hidden" id="rowIdFH" value="0" />
+						      <div class="item-content " >
+						        <div class="item-media"></div>
+						        <div class="item-inner">
+						          <div class="item-title label">Name</div>
+						          <div class="item-input">
+						            <input type="text" name="fam_ped_his_pname" id="fam_ped_his_pname_0" placeholder="Name">
+						          </div>
+						        </div>
+						      </div>
+				    		</li>
+				    		<li>
+						      <div class="item-content " >
+						        <div class="item-media"></div>
+						        <div class="item-inner">
+						          <div class="item-title label">Email</div>
+						          <div class="item-input">
+						            <input type="text" name="fam_ped_his_pemail" id="fam_ped_his_pemail_0" placeholder="Email">
+						          </div>
+						        </div>
+						      </div>
+				    		</li>
+				    		<li>
+						      <div class="item-content " >
+						        <div class="item-media"></div>
+						        <div class="item-inner">
+						          <div class="item-title label">Home address</div>
+						          <div class="item-input">
+						            <input type="text" name="fam_ped_his_hadres" id="fam_ped_his_hadres_0" placeholder="Home address">
+						          </div>
+						        </div>
+						      </div>
+				    		</li>
+				    		<li>
+						      <div class="item-content " >
+						        <div class="item-media"></div>
+						        <div class="item-inner">
+						          <div class="item-title label">Home Phone</div>
+						          <div class="item-input">
+						            <input type="text" name="fam_ped_his_pephne" id="fam_ped_his_pephne_0" placeholder="Home Phone">
+						          </div>
+						        </div>
+						      </div>
+				    		</li>
+				    		<li>
+						      <div class="item-content " >
+						        <div class="item-media"></div>
+						        <div class="item-inner">
+						          <div class="item-title label">Work Phone</div>
+						          <div class="item-input">
+						            <input type="text" name="fam_ped_his_pewpnno" id="fam_ped_his_pewpnno_0" placeholder="Work Phone">
+						          </div>
+						        </div>
+						      </div>
+				    		</li>
+				    		<li>
+						      <div class="item-content " >
+						        <div class="item-media"></div>
+						        <div class="item-inner">
+						          <div class="item-title label">Cell/Other</div>
+						          <div class="item-input">
+						            <input type="text" name="fam_ped_his_pecel" id="fam_ped_his_pecel_0" placeholder="Cell/Other">
+						          </div>
+						        </div>
+						        
+						       
+						      </div>
+				    		</li>
+				    		<li id="responce8"></li>
+				    	</div>
+				    	<button name="addButton" id='addButton' onClick="addFields8()" style="float:right;border:none;background:none;"><i class="fa fa-plus-circle fa-2x"></i></button>
+						<button name="deleteButton" id='deleteButton' onClick="deleteFields8(this)" style="float:right;border:none;background:none;"><i class="fa fa-minus-circle fa-2x"></i>
+						</button>
+						<div style="margin:5%;"></div>
+						<li>				
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px; width: 143%;">
+                          <div class="item-title label" style=" width: 45%;">The Child Live with ?</div>
+                           <div class="item-input">
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio1" id="fam_ped_his_tchlw" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Mother  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio1" id="fam_ped_his_tchlw1" value="2" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title">  Father </div>
+                                    </div>
+                                  </label>
+								  <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio1" id="fam_ped_his_tchlw2" value="3" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">   Mother / Father   </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio1" id="fam_ped_his_tchlw3" value="4" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title">  Mother / Partner  </div>
+                                    </div>
+                                  </label>
+								   <label class="label-checkbox item-content">
+                                    <!-- Checked by default -->
+                                    <input type="radio" name="my-radio1" id="fam_ped_his_tchlw4" value="5" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title">  Grandparent / Other  </div>
+                                    </div>
+                                  </label>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+					  <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Are there cultural or religious practices</br> that might affect your child's </br> medical care ?</div>
+                           
+                          </div>
+                        </div>
+                        
+                              <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <input type="radio" name="my-radio2" id="fam_ped_his_atcrptmymc" value="1" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                                <label class="label-checkbox item-content">
+                                    <input type="radio" name="my-radio2" id="fam_ped_his_atcrptmymc1" value="0" >
+                                    <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                            
+                      </li>
+					  <li>
+					      <div class="item-content " >
+					        <div class="item-media"></div>
+					        <div class="item-inner">
+					          <div class="item-title label">If yes, please explain (e.g. blood transfusion, </br> dietary rules,etc)?</div>
+					          <div class="item-input">
+					            <input type="text" name="fam_ped_his_pe" id="fam_ped_his_pe" placeholder="please explain">
+					          </div>
+					        </div>
+					      </div>
+			    		</li>
+						<!-- <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;">
+                          <div class="item-title label">Is there tabacoo use </br> in/around your household?</div>
+                           <div class="item-input">
+                               <label class="label-radio item-content">
+                                    <input type="radio" name="my-radio3" id="fam_ped_his_ittuah" value="1" >
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-radio item-content">
+                                    <input type="radio" name="my-radio3" id="fam_ped_his_ittuah1" value="0" >
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                            </div>
+                          </div>
+                        </div>
+                      </li> -->
+                      <li>
+                    <div class="item-content">
+                       <div class="item-media"></div>
+                       <div class="item-inner" style="padding-bottom: 4px;margin-left:0px;">
+                          <div class="item-title label" style="width:100%;">Is there tabacoo use </br> in/around your household?</div>
+                           
+                          </div>
+                        </div>
+                        
+                              <label class="label-checkbox item-content" style="float:left;width: 50%;">
+                                    <input type="radio" name="my-radio3" id="fam_ped_his_ittuah" value="1" >
+                                     <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner" style="padding-bottom: 4px;">
+                                      <div class="item-title">  Yes  </div>
+                                    </div>
+                                  </label>
+                               <label class="label-checkbox item-content">
+                                    <input type="radio" name="my-radio3" id="fam_ped_his_ittuah1" value="0" >
+                                     <div class="item-media">
+                                      <i class="icon icon-form-checkbox">
+                                      </i>
+                                    </div>
+                                    <div class="item-inner">
+                                      <div class="item-title"> No </div>
+                                    </div>
+                                  </label>
+                            
+                      </li>
+					</ul>
+					 <input type="hidden" name="fam_ped_his_update" id="fam_ped_his_update" placeholder="please explain">
+				</div>
+		</div>
+		<!-- <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;">
+    <div class="toolbar-inner" style="background:#0DB7C4">
+      <a href="#" onclick="familypedformSubmit();" class="link icon-only" style="color:white;border-right:1px white solid ">Submit</a>
+      <a href="loginnormal.html" class="link icon-only" style="color:white">Cancel</a>
+    </div>
+  </div> -->
+  <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;" id="familypedhis_inbtn">
+      <div class="toolbar-inner" style="background:#0DB7C4;" >
+        <a href="#" class="link icon-only" onclick="familypedformSubmit();" style="color:white;border-right:1px white solid ">Update</a>
+        <a href="#" onclick="deletefamilyPedHis();" class="link icon-only" style="color:white">Delete</a>
+      </div>
+    </div>  
+    <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;" id="familypedhis_upbtn">
+      <div class="toolbar-inner" style="background:#0DB7C4;" >
+        <a href="#" class="link icon-only" onclick="familypedformSubmit();" style="color:white;border-right:1px white solid ">Submit</a>
+        <a href="loginnormal.html" class="link icon-only" style="color:white">Cancel</a>
+      </div>
+    </div>
+	</div>
+</div>
+					

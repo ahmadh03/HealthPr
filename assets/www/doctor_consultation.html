@@ -1,0 +1,182 @@
+<div class="navbar">
+    <div class="navbar-inner">
+     <div class="left sliding"><a href="loginnormal.html" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+     <div class="center sliding white" style="margin-right: 80px;">DOCTORS APPOINTMENTS</div>
+    <div class="right theme-white searchicon" >
+        <a href="#" onclick="doctor_appointmentadditioninfo()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i></a>
+      </div>
+      <div class="right theme-white navicon" >
+        <a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+        </a>
+      </div>
+   </div>
+ </div>
+
+ <div class="pages navbar-through">
+  <div data-page="doctor_consultation" class="page" >
+    <div style="overflow-y:scroll; height:inherit">
+    <div class="content-block-title" style="padding-top: 64px;font-size:18px;">All your doctors's appointments, the past and the upcoming, with reminders.</div>
+   <div class="list-block" style="margin-bottom: 100px">
+   <ul style="background-color:#FFFFFF">
+    <li>
+         <div class="item-content">
+         <div class="item-media"></div>
+        <div class="item-inner">
+        <div class="item-title label" style="width: 55%;">Physician Name</div>
+        <!-- <i class="fa fa-sort-desc" style="float:right;font-size: 30px;position: absolute;right: 6px;margin-top: -22px;"></i> -->
+          <div class="item-input" id="addphysicianprovider">
+           <input type="text" name="doc_apoint_phyname" id="doc_apoint_phyname" placeholder="physician Name">
+            <input type="hidden" name="doc_apoint_phyname_id" id="doc_apoint_phyname_id" placeholder="Date of Appointment : " />
+          </div>
+         </div>
+         </div>
+       </li>
+       <li id="doc_apoint_phyname_others_li" style="display:none;">
+         <div class="item-content">
+         <div class="item-media"></div>
+        <div class="item-inner">
+        <div class="item-title label" style="width: 55%;">Others</div>
+          <div class="item-input" id="addphysicianprovider">
+           <input type="text" name="doc_apoint_phyname_others" id="doc_apoint_phyname_others" placeholder="Specify">
+            <input type="hidden" name="doc_apoint_phyname_id" id="doc_apoint_phyname_id" placeholder="Date of Appointment : " />
+          </div>
+         </div>
+         </div>
+       </li>
+        <li>
+         <div class="item-content">
+         <div class="item-media"></div>
+        <div class="item-inner">
+        <div class="item-title label" style="width: 55%;">Specialty</div>
+        <!-- <i class="fa fa-sort-desc" style="float:right;font-size: 30px;position: absolute;right: 6px;margin-top: -22px;"></i> -->
+          <div class="item-input" id="addselectspeciality">
+           <input type="text" name="doc_apoint_speciality" id="doc_apoint_speciality" >
+            <input type="hidden" name="doc_apoint_speciality_id" id="doc_apoint_speciality_id" />
+          </div>
+         </div>
+         </div>
+       </li>
+       <li id="doc_apoint_speciality_others_li" style="display:none;">
+         <div class="item-content">
+         <div class="item-media"></div>
+        <div class="item-inner">
+        <div class="item-title label" style="width: 55%;"> Others</div>
+          <div class="item-input">
+           <input type="text" name="doc_apoint_speciality_others" id="doc_apoint_speciality_others" placeholder="Specify" >
+            <input type="hidden" name="doc_apoint_speciality_id" id="doc_apoint_speciality_id" placeholder="Others" />
+          </div>
+         </div>
+         </div>
+       </li>
+       <li>
+             <div class="item-content">
+               <div class="item-media"></div>
+                <div class="item-inner">
+                          <div class="item-title label" style="width: 55%;">Date of Appointment  </div>
+                            <div class="item-input">
+                              <input type="text" name="doc_apoint_dofapointment" id="doc_apoint_dofapointment" placeholder="Date of Appointment : "/>
+                            </div>
+                           </div>
+                    </div>   
+               </li>
+               <li>
+             <div class="item-content">
+               <div class="item-media"></div>
+                <div class="item-inner">
+                          <div class="item-title label" style="width: 55%;">Time</div>
+                            <div class="item-input">
+                              <input type="text" name="doc_apoint_time" id="doc_apoint_time" placeholder="Time "/>
+                            </div>
+                           </div>
+                    </div>   
+               </li>
+               <li>
+             <div class="item-content">
+               <div class="item-media"></div>
+                <div class="item-inner">
+                          <div class="item-title label" style="width: 55%;">Reminder Date</div>
+                            <div class="item-input">
+                              <input type="text" name="doc_apoint_reminder_date" id="doc_apoint_reminder_date" placeholder="Reminder Date : " />
+                            </div>
+                           </div>
+                    </div>   
+               </li>
+               <li>
+             <div class="item-content">
+               <div class="item-media"></div>
+                <div class="item-inner">
+                          <div class="item-title label" style="width: 55%;">Reminder Time</div>
+                            <div class="item-input">
+                              <input type="text" name="doc_apoint_reminder_time" id="doc_apoint_reminder_time" placeholder="Reminder Time : " />
+                            </div>
+                           </div>
+                    </div>   
+               </li>
+               <li>
+             <div class="item-content">
+               <div class="item-media"></div>
+                <div class="item-inner">
+                          <div class="item-title label" style="width: 55%;">Second Reminder Date</div>
+                            <div class="item-input">
+                              <input type="text" name="doc_apoint_sec_reminder_date" id="doc_apoint_sec_reminder_date" placeholder="Reminder Date : " />
+                            </div>
+                           </div>
+                    </div>   
+               </li>
+               <li>
+             <div class="item-content">
+               <div class="item-media"></div>
+                <div class="item-inner">
+                          <div class="item-title label" style="width: 55%;">Second Reminder Time</div>
+                            <div class="item-input">
+                              <input type="text" name="doc_apoint_sec_reminder_time" id="doc_apoint_sec_reminder_time" placeholder="Reminder Time : " />
+                            </div>
+                           </div>
+                    </div>   
+               </li>
+                <li>
+                     <div class="item-content">
+                     <div class="item-media"></div>
+                       <div class="item-inner">
+                        <div class="item-title label" style="width: 55%;">Reminder via email  </div>
+                       <div class="item-input">
+                              <label class="label-checkbox item-content">
+                               <!-- Checked by default -->
+                                <input type="checkbox" name="doc_aopint_rem_email" id="doc_aopint_rem_email" value="1" >
+                              <div class="item-media">
+                              <i class="icon icon-form-checkbox"></i>
+                               </div>
+                               <div class="item-inner">
+                                
+                               </div>
+                               </label>
+                       </div>
+                       </div>
+                     </div>
+                    </li> 
+   </ul>
+   <input type="hidden" name="doctors_id" id="doctors_id"  >
+   </div>
+    <!-- <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;">
+    <div class="toolbar-inner" style="background:#0DB7C4;">
+      <a href="#" onclick="doctorsAppointment()" class="link icon-only" style="color:white;border-right:1px white solid ">
+Submit</a>
+      <a href="loginnormal.html" class="link icon-only" style="color:white">
+Cancel</a>
+    </div>
+  </div> --> 
+  <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;" id="docappoint_inbtn">
+      <div class="toolbar-inner" style="background:#0DB7C4;" >
+        <a href="#" class="link icon-only" onclick="doctorsAppointment();" style="color:white;border-right:1px white solid ">Update</a>
+        <a href="#" onclick="deleteDocAppoint();" class="link icon-only" style="color:white">Delete</a>
+      </div>
+    </div>  
+    <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;" id="docappoint_upbtn">
+      <div class="toolbar-inner" style="background:#0DB7C4;" >
+        <a href="#" class="link icon-only" onclick="doctorsAppointment();" style="color:white;border-right:1px white solid ">Submit</a>
+        <a href="loginnormal.html" class="link icon-only" style="color:white">Cancel</a>
+      </div>
+    </div>
+    </div>
+   </div>
+  </div>

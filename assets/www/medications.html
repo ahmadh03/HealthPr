@@ -1,0 +1,396 @@
+<div class="navbar">
+   <div class="navbar-inner">
+     <div class="left sliding"><a href="loginnormal.html" class="back link"><i class="fa fa-arrow-left" style="font-size: 24px;"></i></a></div>
+     <div class="center sliding white" style="margin-right: 150px;">MEDICATIONS</div>
+     <div class="right theme-white searchicon" >
+        <a href="#" onclick="MedicationformInfo()" class="link icon-only"><i class="fa fa-info-circle" style="font-size:20px"></i></a>
+      </div>
+      <div class="right theme-white navicon" >
+        <a href="#" data-panel="right" class="link icon-only open-panel"> <i class="fa fa-bars" style="font-size:24px"></i>
+        </a>
+      </div>
+   </div>
+</div>
+
+<div class="pages navbar-through">
+  <div data-page="medications" class="page">
+    <div style="overflow-y:scroll; height:inherit">
+      <div class="content-block-title" style="padding-top: 64px;font-size:14px;word-wrap: break-word;color:black;">List of all previous and current medications</div>
+        <div class="list-block" style="margin-bottom: 70px;">
+          <ul style="background-color:#FFFFFF">
+            <li>
+              <div class="item-content">
+                <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-title label">Medicine Name</div>
+                      <div class="item-input">
+                        <input type="text" name="medi_medicine_name" id="medi_medicine_name" placeholder="Medicine Name :">
+                      </div>
+                  </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content">
+                 <div class="item-media"></div>
+                    <div class="item-inner">
+                      <div class="item-title label">Dosage</div>
+                        <div class="item-input">
+                          <input type="text" name="medi_dosage" id="medi_dosage" placeholder="Dosage" />
+                        </div>
+                     </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content">
+                <div class="item-media"></div>
+                  <div class="item-inner">
+                    <div class="item-title label">medication reference</div>
+                      <div class="item-input">
+                        <input type="text" name="medi_medi_reference" id="medi_medi_reference" placeholder="medication reference: " />
+                      </div>
+                     </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content">
+                 <div class="item-media"></div>
+                    <div class="item-inner">
+                      <div class="item-title label">Used for Treatment of</div>
+                        <div class="item-input">
+                          <input type="text" name="medi_used_treatment" id="medi_used_treatment" placeholder="Treatment of " />
+                        </div>
+                    </div>
+              </div>
+            </li>
+            <li>
+               <div class="item-content">
+                 <div class="item-media"></div>
+                    <div class="item-inner">
+                      <div class="item-title label">Prescribed by Dr.</div>
+                        <div class="item-input" id="addprescribed">
+                          <input type="text" name="medi_precribed" id="medi_precribed" placeholder="prescribed by"/>
+                          <input type="hidden" id="medi_precribed_id"/>
+                        </div>
+                     </div>
+                </div>
+            </li>
+            <li id="medi_precribed_others_li" style="display:none;">
+              <div class="item-content">
+                 <div class="item-media"></div>
+                    <div class="item-inner">
+                      <div class="item-title label">Others</div>
+                        <div class="item-input" id="addprescribed">
+                          <input type="text" name="medi_precribed_others" id="medi_precribed_others" placeholder="Specify"/>
+                          <input type="hidden" id="medi_precribed_id"/>
+                        </div>
+                     </div>
+              </div>
+             </li>
+              <li>
+                <div class="item-content">
+                   <div class="item-media"></div>
+                      <div class="item-inner">
+                        <div class="item-title label">Type of medication/drug</div>
+                          <div class="item-input" style="margin-top:0px;margin-bottom:0px">
+                             <label class="label-checkbox item-content">
+                                <!-- Checked by default -->
+                                <input type="radio" name="my-radio" id="medi_tab" value="1" >
+                                <div class="item-media">
+                                  <i class="icon icon-form-checkbox">
+                                  </i>
+                                </div>
+                                <div class="item-inner">
+                                  <div class="item-title"> tablets </div>
+                                </div>
+                            </label>
+                            <label class="label-checkbox item-content">
+                                <!-- Checked by default -->
+                                <input type="radio" name="my-radio" id="medi_cap" value="2" >
+                                <div class="item-media">
+                                  <i class="icon icon-form-checkbox">
+                                  </i>
+                                </div>
+                                <div class="item-inner">
+                                  <div class="item-title"> capsules </div>
+                                </div>
+                            </label>
+                           <label class="label-checkbox item-content">
+                              <!-- Checked by default -->
+                              <input type="radio" name="my-radio" id="medi_syrup" value="3" >
+                              <div class="item-media">
+                                <i class="icon icon-form-checkbox">
+                                </i>
+                              </div>
+                              <div class="item-inner">
+                                <div class="item-title"> syrup </div>
+                              </div>
+                          </label>
+                           <label class="label-checkbox item-content">
+                              <!-- Checked by default -->
+                              <input type="radio" name="my-radio" id="medi_suppos" value="4" >
+                              <div class="item-media">
+                                <i class="icon icon-form-checkbox">
+                                </i>
+                              </div>
+                              <div class="item-inner">
+                                <div class="item-title"> suppository </div>
+                              </div>
+                          </label>
+                           <label class="label-checkbox item-content">
+                              <!-- Checked by default -->
+                              <input type="radio" name="my-radio" id="medi_inj" value="5" >
+                              <div class="item-media">
+                                <i class="icon icon-form-checkbox">
+                                </i>
+                              </div>
+                              <div class="item-inner">
+                                <div class="item-title"> injection</div>
+                              </div>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                     <div class="item-content">
+                       <div class="item-media"></div>
+                        <div class="item-inner">
+                          <div class="item-title label">Date Started</div>
+                            <div class="item-input">
+                              <input type="text" name="medi_datestarted" id="medi_datestarted"  placeholder="Date Started :" readonly  />
+                            </div>
+                       </div>
+                     </div>
+                  </li>
+                <li>
+                 <div class="item-content">
+                   <div class="item-media"></div>
+                    <div class="item-inner">
+                      <div class="item-title label">End Date</div>
+                        <div class="item-input">
+                          <input type="text" name="medi_enddate" id="medi_enddate"  placeholder="End Date :" readonly/>
+                        </div>
+                    </div>
+                  </div>
+               </li>
+                <li>
+                 <div class="item-content ">
+                    <div class="item-media"></div>
+                       <div class="item-inner">
+                          <div class="item-title label">Still Using</div>
+                            <div class="item-input">
+                              <label class="label-checkbox item-content">
+                               <!-- Checked by default -->
+                                <input type="checkbox" name="medi_still_using" id="medi_still_using" value="1" >
+                                <div class="item-media">
+                                  <i class="icon icon-form-checkbox"></i>
+                                </div>
+                                <div class="item-inner">
+                                </div>
+                              </label>
+                            </div>
+                      </div>
+                  </div>
+                </li>
+                <li>
+                 <div class="item-content">
+                   <div class="item-media"></div>
+                    <div class="item-inner">
+                      <div class="item-title label">Starting Reminder Date</div>
+                        <div class="item-input">
+                         <input type="text" name="medi_start_remind" id="medi_start_remind"  placeholder="Starting Reminder Date" readonly />
+                        </div>
+                       </div>
+                    </div>
+               </li>
+               <li>
+                  <div class="item-content">
+                    <div class="item-media"></div>
+                      <div class="item-inner">
+                        <div class="item-title label">Reminder Time</div>
+                          <div class="item-input">
+                            <input type="text" name="medi_remind_time" id="medi_remind_time" placeholder="Reminder Time" readonly/>
+                          </div>
+                       </div>
+                  </div>
+               </li>
+               <!-- <div id="medi_remind_time_container"></div> -->
+                <li>
+                 <div class="item-content">
+                   <div class="item-media"></div>
+                    <div class="item-inner">
+                      <div class="item-title label">End Reminder Date</div>
+                        <div class="item-input">
+                          <input type="text" name="medi_end_remind" id="medi_end_remind"  placeholder="End Reminder Date :" readonly />
+                        </div>
+                     </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-media"></div>
+                      <div class="item-inner">
+                        <div class="item-title label">Repeated days of the week </div>
+                          <div class="item-input"  style="margin-top:0px;margin-bottom:0px">
+                            <label class="label-checkbox item-content">
+                               <!-- Checked by default -->
+                                <input type="checkbox" name="medi_all_days" id="medi_all_days" value="1" onclick="checkAll(this)">
+                              <div class="item-media">
+                                <i class="icon icon-form-checkbox"></i>
+                               </div>
+                               <div class="item-inner">
+                                <div class="item-title">All the Days</div>
+                               </div>
+                            </label>
+                            <label class="label-checkbox item-content">
+                             <!-- Checked by default -->
+                              <input type="checkbox" name="medi_monday" class="mon" id="medi_monday" value="1" >
+                              <div class="item-media">
+                                <i class="icon icon-form-checkbox"></i>
+                              </div>
+                             <div class="item-inner">
+                              <div class="item-title">Monday</div>
+                             </div>
+                            </label>
+                          <label class="label-checkbox item-content">
+                           <!-- Checked by default -->
+                            <input type="checkbox" name="medi_tuesday" class="mon" id="medi_tuesday" value="1" >
+                              <div class="item-media">
+                                <i class="icon icon-form-checkbox"></i>
+                               </div>
+                               <div class="item-inner">
+                                <div class="item-title">Tuesday</div>
+                               </div>
+                          </label>
+                          <label class="label-checkbox item-content">
+                           <!-- Checked by default -->
+                            <input type="checkbox" name="medi_wednesday" class="mon" id="medi_wednesday" value="1" >
+                            <div class="item-media">
+                              <i class="icon icon-form-checkbox"></i>
+                            </div>
+                             <div class="item-inner">
+                              <div class="item-title">Wednesday</div>
+                             </div>
+                          </label>
+                          <label class="label-checkbox item-content">
+                           <!-- Checked by default -->
+                            <input type="checkbox" name="medi_thursday" class="mon" id="medi_thursday" value="1" >
+                            <div class="item-media">
+                              <i class="icon icon-form-checkbox"></i>
+                            </div>
+                           <div class="item-inner">
+                            <div class="item-title">Thursday </div>
+                           </div>
+                          </label>
+                           <label class="label-checkbox item-content">
+                           <!-- Checked by default -->
+                            <input type="checkbox" name="medi_friday" class="mon" id="medi_friday" value="1" >
+                            <div class="item-media">
+                              <i class="icon icon-form-checkbox"></i>
+                             </div>
+                             <div class="item-inner">
+                              <div class="item-title">Friday </div>
+                             </div>
+                          </label>
+                           <label class="label-checkbox item-content">
+                           <!-- Checked by default -->
+                            <input type="checkbox" name="medi_saturday" class="mon" id="medi_saturday" value="1" >
+                            <div class="item-media">
+                              <i class="icon icon-form-checkbox"></i>
+                             </div>
+                             <div class="item-inner">
+                              <div class="item-title">Saturday </div>
+                             </div>
+                          </label>
+                           <label class="label-checkbox item-content">
+                           <!-- Checked by default -->
+                            <input type="checkbox" name="medi_sunday" class="mon" id="medi_sunday" value="1" >
+                            <div class="item-media">
+                              <i class="icon icon-form-checkbox"></i>
+                             </div>
+                             <div class="item-inner">
+                              <div class="item-title">Sunday </div>
+                             </div>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                   <div class="item-content">
+                    <div class="item-media"></div>
+                      <div class="item-inner">
+                        <div class="item-title label">would you like to receive reminders by email</div>
+                            <div class="item-input">
+                              <label class="label-checkbox item-content">
+                               <!-- Checked by default -->
+                                <input type="checkbox" name="medi_receive_email" id="medi_receive_email" value="1" >
+                                <div class="item-media">
+                                  <i class="icon icon-form-checkbox"></i>
+                                </div>
+                               <div class="item-inner">
+                               </div>
+                               </label>
+                            </div>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- <li>
+                     <div class="item-content">
+                       <div class="item-media"></div>
+                        <div class="item-inner">
+                          <div class="item-title label">Notification</div>
+                            <div class="item-input">
+                              <input type="text" id="message" />
+                              <input type="button" id="notify" value="Notify" onclick="sendNotification()" />
+                              <input type="button" id="clear" value="Clear" onclick="clearNotification()"/>
+                            </div>
+                       </div>
+                     </div>
+                  </li> -->
+                <li>
+                  <div data-role="content">
+                     <form method="post" onsubmit="return uploadMedicationPic()" id="file-attachment-form8"  enctype="multipart/form-data">
+                        <div data-role="fieldcontain" class="field">
+                          <div class="fileupload fileupload-new" data-provides="fileupload" style="overflow:hidden">
+                              <div class="fileupload-preview fileupload-exists thumbnail" id="medication_img_display" style="max-width: 200px; max-height: 200px;  line-height: 20px;"></div>
+                              <div >
+                                <span class="btn btn-file">
+                                  <span class="fileupload-new">Image</span>
+                                  <span class="fileupload-exists"></span>
+                                  <div class="image-upload">
+                                    <label for="medi_image">
+                                      <i class="fa fa-upload fa-2x" style=" color: #000;font-size: 40px;height:50px;"></i>
+                                        <!-- <span align="center" style="color:#000;font-size:13px;display:block;">Upload Image</span> -->
+                                    </label>
+                                    <input type="file" name="medi_image" id="medi_image" />
+                                  </div>
+                                
+                                </span>
+                                <a href="#" style=" margin-top: 10px;width: 200px;" class="button button-round" id="medicationimghide" onclick="removeMedicationImage();">Remove</a>
+                              </div>
+                          </div>
+                          <input type="hidden" name="medi_image_id" id="medi_image_id"/>
+                      </div>
+                    </form>
+                  </div>
+                </li>
+            </ul>
+            <input type="hidden" name="medicationsform_id" id="medicationsform_id"  placeholder="medi " >
+        </div>
+   </div>
+    <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;" id="medication_inbtn">
+        <div class="toolbar-inner" style="background:#0DB7C4;" >
+          <a href="#" class="link icon-only" onclick="medicationformSubmit();" style="color:white;border-right:1px white solid ">Update</a>
+          <a href="#" onclick="deleteMedication();" class="link icon-only" style="color:white">Delete</a>
+        </div>
+      </div>
+      <div class="toolbar tabbar" style="position:absolute;background:#173a62; height: 59px;" id="medication_upbtn">
+        <div class="toolbar-inner" style="background:#0DB7C4;" >
+          <a href="#" class="link icon-only"onclick="medicationformSubmit();" style="color:white;border-right:1px white solid ">Submit</a>
+          <a href="medications_listing.html" class="link icon-only" style="color:white">Cancel</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
